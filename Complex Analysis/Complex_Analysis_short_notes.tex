@@ -1,7 +1,9 @@
 \documentclass[11pt]{extarticle}
 \usepackage{fullpage}
 \usepackage[ampersand]{easylist}
-\ListProperties(Hide=10, Style*=$\bullet\;\,$, Style2*=$\;\,${\tiny$\blacksquare$}$\;\,$,Space*=0.5mm,Space2*=0mm)
+\ListProperties(Hide=10, 
+Style*=$\bullet\;\,$, Style2*=$\;\,${\tiny$\blacksquare$}$\;\,$,Style3*=$\;\,${\large $\star$}$\;\,$,
+Space*=0.5mm,Space2*=0mm, Space3*=0.5mm)
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -701,6 +703,12 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
  where $N_h,P_h$ denote the number of zeroes and poles of $h$ inside $C$ (counted with their multiplicities and order).
  & Alternative form of Rouche's Theorem : if same conditions as above hold for $g-f(z),f(z)$ and $|g(z)-f(z)|<|f(z)|$ then \[N_{g}-P_{g}=N_{f}-P_{f}.\] 
  (can used for calculating the number of zeroes of polynomial in a give loop)
+ & Application of Rouche's Theorem to polynomials 
+ && eg: consider the polynomial $ g(z)=z^6-5z^4+7 $ 
+&&& now $ |g(z)-7|\leq |z|^6+5|z|^4 \leq 7$ if $ |z|\leq 1 $\snote{ as $ 6+1\leq 7 $} thus $ g(z) $ has same number of zeroes as $ f(z)7 $ in $ |z|\leq 1 $ i.e. $ g(z) $ has no zeroes inside $ |z|\leq 1 .$
+ &&& similarly if $ f(z)=-5z^4 $ we have $ |g(z)-f(z)|\leq |z|^6+7\leq 5|z|^4 $ if $ |z|\leq 2 $ \snote{ as $ 2^6+7=71\leq 5.2^4=80 $} thus $ g(z) $ has $ 4 $ zeroes in $ |z|\leq 2 .$
+ &&& similarly if $ f(z)=z^6 $ we have $ |g(z)-f(z)|\leq 5|z|^4+7\leq |z|^6 $ if $ |z|\leq 3 $ \snote{as $ 5.3^4+7 =412 \leq 3^6=729$ } thus all zeroes of $ g(z) $ lie inside $ |z|\leq 3. $ 
+  
 \end{easylist}
 
 \section{Mics Properties}

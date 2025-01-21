@@ -131,7 +131,7 @@
 		\end{center}  
 		\section{Some limits and theorems}
 		& \textbf{L'Hospital Rule} : if $f,g$ are real differentiable functions in $(a,b)$ (for $-\infty\leq a<b\leq \infty$) such that $g'(x)\neq 0$ in $(a,b)$ then as $x\ra a$ $f(x)\ra 0,g(x)\ra 0$ or if $g(x)\ra \pm \infty$  and if $\frac{f'(x)}{g'(x)}\ra A$ then $\frac{f(x)}{g(x)}\ra A$ (analogous result holds for $x\ra b$)  (is also true if $f,g$ are complex valued and $f(x)\ra 0,g(x)\ra 0$)
-		& for $f,g:D\subset \R \ra \R$, if $\lim\limits_{x\ra c}f(x)=0$ and $g(x)$ is bounded in some deleted neighborhood of $c$ then $\lim\limits_{x\ra c}f(x)g(x)=0$ 
+		& for $f,g:D\subset \R \ra \R$, if $\lim\limits_{x\ra c}f(x)=0$ and $g(x)$ is bounded in some deleted neighbourhood of $c$ then $\lim\limits_{x\ra c}f(x)g(x)=0$ 
 		& if $\lim\limits_{x \ra c}f(x)=l$ and $g$ is continuous at $l$  or in some set whose limit point is $l$ then $\lim\limits_{x\ra c}g(f(x))=\lim\limits_{x\ra l}g(x)$ 
 		& $\lim\limits_{n \ra \infty}\sm{m=1}{n}\frac{1}{m}-\ln n =\gamma$ a fixed number 
 		& $\lim\limits_{n \ra \infty} |z|^n=0$ if $|z|<1$
@@ -147,6 +147,15 @@
 		& series $\sm{n=2}{\infty}\frac{1}{n(\ln n)^p}$ converges for $p>1$ and diverges for $p\leq1$
 		this result can be continued to series like $\sm{n=2}{\infty}\frac{1}{n\ln n(\ln\ln n)^p}$, $\sm{n=2}{\infty}\frac{1}{n\ln n\ln\ln n(\ln\ln\ln n)^p}$
 		and so on.\\
+		& for series such as $ \sm{n=0}{\infty}q^n z^{kn} $ for some $ k\geq 0 $ fixed we have the series equal to series $ \sm{n\geq 0}{}a_n z^n $ where 
+	\end{easylist}
+			$ a_n=
+			\begin{cases}
+				q^{n/k} & \text{if } n= 0,k,2k,3k,\dots\\
+				0 & \text{otherwise } 
+			\end{cases} $\\
+	\begin{easylist}
+		Thus $ R=\limsup1/|a_n|^{1/n}= q^{-1/k}. $ for $ \sm{n=0}{\infty}q^n z^{kn} $ series.
 	\end{easylist}
 	\section{Uniform Convergence}
 	\begin{easylist}
@@ -156,11 +165,13 @@
 		& \textbf{Dinni's Theorem }: if $ \{f_n\} $ is a monotone sequence of continuous functions on $ [a,b] $ (closed and bounded) that converges to $ f $ which is continuous on $ [a,b] $ then the convergence is uniform.
 		 
 	\end{easylist}
-%	\begin{thebibliography}{9}
-%		\bibitem{Ru}
-%		Rudin W.: Principles of Mathematical Analysis,McGraw-Hill,3,(1976).
-%		\bibitem{FCA}
-%		Ponnusamy S.: Foundations of Complex Analysis, Narosa pubsishing house,(2011)
-%	\end{thebibliography}
+	\begin{thebibliography}{9}
+		\bibitem{Ru}
+		Rudin W.: Principles of Mathematical Analysis,McGraw-Hill,3,(1976).
+		\bibitem{CVA}
+		Ponnusamy S., Silverman H.: Complex Variables and Applications,Birkhauser,(206).
+		\bibitem{BT}
+		Robert G. Bartle, Donald R. Sherbert: Introduction to Real Analysis, Wiley publishers, 4, (2011).
+	\end{thebibliography}
 \end{multicols}
 \end{document}
