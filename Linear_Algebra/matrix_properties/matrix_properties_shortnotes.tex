@@ -73,7 +73,7 @@
 	&& $A-A'$ is skew- symmetric.
 	&&  $A+A^*$ is Hermitian.
 	&&  $A-A^*$ is skew-Hermitian .
-	& By above any Square matrix can be decomposed (by +) into symmetric - skew-symmetric or Hermitian- skew-Hermitian pair.
+	& By preceding point any Square matrix can be decomposed (by +) into symmetric - skew-symmetric or Hermitian- skew-Hermitian pair.
 	& $B'AB$ is symmetric or skew as is $A$
 	& $B^*AB$ is hermitian or skew as is $A$
 	& Determinant is a Multiliear (row), Alternating and Normalized Function on Matrices.
@@ -153,6 +153,7 @@
 	 eigenvalue invariant , trace invariant.
 	& A matrix is diagonalizable if it is similar to a diagonal matrix
 	& A matric is diagonalizable iff for each of its eigenvalue Geometric multiplicity = Algebraic multiplicity.
+	& square matix $ A $ is diagonalizable iff minimal polynomial of $ A $ splits into distinct linear factors in the given field i.e. minimal polynomial of $ A $ is separable and has only linear irreducible factors.
 	& A non-zero Nil-potent ($A^m=0$) matrix has eigenvalues as zero only.
 	& A non-zero Nil-potent is never Diagonalizable. \\
 	\snote{if $ A $ is diagonalizable then $ P^{-1}AP=D$ so $ (P^{-1}AP)^m=P^{-1}A^mP=0=D^m $   }
@@ -169,7 +170,6 @@
 	& \textbf{A matrix is  Unitarily similar to diagonal matrix iff it is Normal.}
 	& A triangular normal matrix is Diagonal also a block diagonal normal matrix has off diagonal blocks =$0$.
 	& if $A$ is normal then $p(A)$ (specially $A+aI$ , $a \in \mathbb{C}$) is normal.
-	& Trace of A matrix is equal to the sum of its eigenvalues(with repeats).
 \end{easylist}
 
 
@@ -238,7 +238,7 @@ $J_k(\lambda)=
 	&&&&\lambda
 \end{bmatrix}_{k\times k}$
 \begin{easylist}
-	& $J_k(0)^{k-1+n}=0$
+	& $J_k(0)^{k+n}=0$ for $ n\geq 0 $ i.e. $ J_k(0) $ is nilpotent matrix such that $ J_k(0)^k=0.$ 
 	& $rank(J_k(0)^l)=max(k-l,0)$
 	& Convention: $rank(J_k(0)^0)=k$
 	& if $r_k(A,\lambda)=rank(A-\lambda I)^k$ and\\ $w_k(A,\lambda)=r_{k-1}(A,\lambda)-r_{k}(A,\lambda)$ then in Jordan Form of $A$ :
@@ -396,7 +396,7 @@ where $C_is$ are companion matrices related to minimal polynomial's irreducible 
 	&& Spectral norm $|||A|||_2=\sigma_1(A)$ = Largest Singular Value of $A$ 
 	& \textbf{Matrix norm induced by vector norm} : if $||\cdot||$ is norm in $\mathbb{C}^n$ then:\\
 	$|||A|||=\displaystyle \max_{||x||=1}||Ax||=\displaystyle \max_{x\neq 0 }\frac{||Ax||}{||x||}\\ =\displaystyle \max_{||x||\leq 1} ||Ax|| = \max_{||x||_\alpha = 1 }\frac{||Ax||}{||x||} $\\
-	(for any other norm $||\cdot||_\alpha in \mathbb{C}^n$) is a Matrix norm with additional properties:
+	(for any other norm $||\cdot||_\alpha $ in $ \mathbb{C}^n$) is a Matrix norm with additional properties:
 	&& $|||I|||=1$
 	&& $||Ay|| \leq |||A||| \; ||y||$
 	& For Any Matrix $A \in M_n(\mathbb{C})$ we have $|\lambda| \leq \rho (A)=\max(|\lambda_i|) \leq |||A|||$ and if $A$ is non-singular then $ \rho(A)\geq|\lambda|\geq 1/|||A|||$
@@ -433,7 +433,7 @@ where $C_is$ are companion matrices related to minimal polynomial's irreducible 
 	&& Eigenvalues of $A$ are all in the union of Gersgorin Discs of $A$ i.e.\\
 	$ \{\lambda_i\} \in G(A)=\bigcup_{i=1}^n \{z\in \mathbb{C} : |z-a_{ii}|\leq R'_i(A)\}$
 	&& if $G(A)$ forms a disjoint set $G_k(A)$ which is union of $k$ discs then $G_k(A)$ contains exactly $k$ eigenvalues (counted according to algebraic multiplicity).
-	&& The above statements remain true even if radius of the discs are $C'_j=\sum_{i\neq j} |a_ij|$ as $A^T$ has same eigenvalues.
+	&& The above statements remain true even if radius of the discs are $C'_j=\sum_{i\neq j} |a_{ij}|$ as $A^T$ has same eigenvalues.
 	&& from above we have \\
 	$ \rho(A) \leq \min \left\{ \max_i \sum_{j=1}^{n} |a_{ij}| , \max_j \sum_{i=1}^{n} |a_{ij}| \right\} $
 	&& if $p_1,p_2,...,p_n$ are positive real numbers then \\

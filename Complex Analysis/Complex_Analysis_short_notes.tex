@@ -328,7 +328,7 @@ Space*=0.5mm,Space2*=0mm, Space3*=0.5mm)
 	& now $\frac{1}{z}=\overline{\left(\frac{1}{ \overline{z}}\right)}$ so $\frac{1}{z}$ is reflection of inversion centered at origin with unit radius on real axis, so all properties of inversion holds as reflection preserves shapes.
 	&& now as both inversion and conjugation are anticonformal implies $1/z$ is a conformal map
 	& define inverse point w.r.t. circle $C_{(z_0,R)}= \{z||z-z_0|=R\} $ as $ a $ and $ a^* $ are inverse points w.r.t $ C_{(z_0,R)} $ if $ a\mapsto a^* $ under $ \mathfrak{J}_{C_{(z_0,R)}}(z) $ i.e. if \\
-	$ a^*=z_0+ \frac{ R^2 }{\overline{a-z_0}}$ or $ (a^*-z_0)\overline{(a-z_0)}=R^2. .$ 
+	$ a^*=z_0+ \frac{ R^2 }{\overline{a-z_0}}$ or $ (a^*-z_0)\overline{(a-z_0)}=R^2. $ 
 \end{easylist}	
 
 \subsection{Mobius Transforms}
@@ -605,13 +605,13 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	& from above we get: if $|f|\leq M$ in image of $K.$ then
 	\[\left|\int_{S}f(z)dz\right|\leq M . \text{length of }K.\]
 	& \textbf{Winding number and properties }:
-	& winding number for a closed loop $L$ and a point $a$ = $\nu(L,a)$ is the number of revolutions $z-a$ makes as it traces $L$ (where fixing a direction and counterclockwise revolution is +ve and clockwise is -ve by convention)
+	& winding number for a closed loop $L$ and a point $a$ = $\nu(L,a)$ is the number of revolutions $z-a$ makes as it traces $L$ (where  we fixing a direction for counterclockwise revolution is +ve and clockwise is -ve by convention)
 	& A simple loop is a closed curve that doesnt intersect with itself
 	& now as a point moves from left to right if it crosses a boundary of the loop and the loops direction is downwards (upwards) the winding number increased (decreases) by 1
 	(here the first entry of the point to loop is made to be in loop moving in downwards direction).
 	& we define inside of a loop $L$ to be regions (points) where $\nu[L,a]\neq 0.$
 	& Hopf's degree Theorem(ristricted to $\mathbb{C}$): A loop $K$ may be continuously deformed into another loop $L$, without ever crossing the point $p$, if and only if K and L have the same winding number round p.
-	& $d$is$p$-point of a function $f$ if set of pre-images of $p$ in $f$ contains $d$ i.e. $d \in {f^{-1}(p)}.$(pre-image)
+	& $d$ is a $p$-point of a function $f$ if set of pre-images of $p$ in $f$ contains $d$ i.e. $d \in {f^{-1}(p)}.$(pre-image)
 	& \textbf{Argument-Principle} theorem: If $f(z)$ is analytic inside and on a simple loop $\Gamma$ , and $N$ is the number of $p$-points (counted with their multiplicities) inside $\Gamma$ , then $N = \nu(f(\Gamma), p]$.
 	& if $f$ analytic, $f(a)-p=0$ and for $\Delta=z-a\quad f(a+\Delta)=p+\Omega(Z)\Delta^n$ (obtained by Taylor series) here algebraic multiplicity of $a$ in $f$ is $n$,
 	for sufficiently small circle $C_a$ around $a$ that doesnt have any other $p$-points then
@@ -623,7 +623,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	& clearly as analytical maps are conformal we have $\nu(a)$ is always +ve ($\neq 0.$ ) for analytic functions
 	& $\nu(a)=\text{sign of }det(J(a))$ where $J$ is Jacobian 
 	& \textbf{Topological Argument-Principle} theorem: for a continuous map $h$ the total number of $p$-points inside $\Gamma.$ (counted with their topological
-	multiplicities) is equal to the winding number of$ h(\Gamma)$ round $p.$.
+	multiplicities) is equal to the winding number of $ h(\Gamma)$ round $p.$.
 	& \textbf{Darboux’s Theorem }: If an analytic function h maps $\Gamma$ onto $ h(\Gamma)$ in one-to-one fashion, then it also maps the interior of $\Gamma$ onto the interior of 
 	$ h(\Gamma)$ in one-to-one fashion.
 	& \textbf{Rouche’s Theorem }: for $f,g$ analytic in and on $\Gamma$, If $|g(z)| < |f(z)|$ on $\Gamma$ , then $(f+g)$ must have the same number of zeros inside $\Gamma$ as $f$. 
@@ -631,13 +631,17 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	In general there must be a fixed point if the disc is mapped into its interior and there are at most a finite number of fixed points. (now if the map is analytic then the number of fixed points inside the disk is only one).
 	& \textbf{If f is analytic inside and on a simple loop $\Gamma$ then no point outside $f(\Gamma)$
 	can have a pre-image inside $\Gamma$.}(i.e interior of $\Gamma$ maps to interior of $f(\Gamma).$)
-	& \textbf{ Maximum Modulus Theorem} : The maximum (minimum) of $|f(z)|$ on a region where $f$ is analytic is always achieved by points on the boundary, never ones inside.
+	& \textbf{ Maximum Modulus Theorem} : The maximum (minimum respectively if $ f(z)\neq 0 $ inside the closed boundary) of $|f(z)|$ on a region where $f$ is analytic is always achieved by points on the boundary, never ones inside.
 	& \textbf{Schwarz's Lemma} : If an analytic mapping of the disc to itself leaves the center fixed,then either every interior point moves nearer to the center, or else the transformation is a simple rotation. (i.e. them map is contractive  towards the center).
 	& \textbf{General Schwarz's Lemma} : \\
 	If $f:\Delta(\{|z|<1\}) \mapsto \overline{\Delta}$ is analytic and has a zero of order $n$ at origin then:
 	&& \[|f(z)|\leq |z|^n \; \forall z\in\Delta.\]
 	&& \[|f^n(0)|\leq n!\]
-	&& Equality holds (any one) for any point in $\Delta$ other than $0$ iff $f(z)=az^n,|a|=1.$
+	&& if Equality holds (any one) for any point inside $\Delta$ other than $0$ then $f(z)=az^n,|a|=1.$
+	& modifying Schwarz's lemma we get for $ f $ analytic in $ \Delta(a,R) $ , $ |f(z)|\leq M $ in $ \Delta(a,R) $ and $ f(a)=0 $ then (applying Schwarz's lemma for $ g(z)=f(Rz+a)/M $ i.e. $ z\ra Rz+a $ for $ |z|<1 $)
+	&& \[|f(z)|\leq \frac{  M|z-a|  }{R} \] for every $ z\in \Delta(a,R) $.
+	&& \[|f'(a)|\leq \frac{ M }{R} .\]
+	&& and if equality holds for any two then $ f=M\epsilon(z-a)/R $ for some $ |\epsilon|=1 .$ 
 	& \textbf{Schwarz-Pick Lemma} : Unless an analytic mapping of the unit disc to itself is a automorphism the hyperbolic separation of every pair of interior points decreases.
 	\\ i.e.\\ 
 	if $f$ is analytic on $\Delta$ , $|f(z)|\leq1 \forall z\in \Delta$ and $f(a)=b \text{ for some }a,b \in \Delta$, then
@@ -726,7 +730,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	& if $f$ is analytic in a simply connected region $\Omega$ and $f(z)\neq 0$ in $\Omega$ then $\exists h$ analytic in $\Omega$ such that \[e^{h(z)}=f(z).\]
 	($h'(z)=f'(z)/f(z)$ claim $f.e^{-h(z)}=c=e^k$ prove by differentiating) (domain can be whole $\mathbb{C}$).
 	& if $f$ satisfies the above conditions then $\exists g$ analytic in $\Omega$ such that $g^2(z)=f(z)$ in $\Omega$ (choose $g(z)= e^{h(z)/2}$).
-	& \textbf{Cauchy's Inequality} : if $f$ is analytic in an open disk centered at a of radius $R$ $=\Delta(a,R)={|z-a|<R}$ and $|f(z)|\leq M$ on boundary $\overline{\Delta(a,r)}$ for $0<r<R$ then \[|f^k(a)|\leq \frac{M.k!}{r^k}.\]
+	& \textbf{Cauchy's Inequality} : if $f$ is analytic in an open disk centered at a of radius $R$ $=\Delta(a,R)={|z-a|<R}$ and $|f(z)|\leq M$ on boundary $\overline{\Delta(a,r)}$ for $0<r<R, \zeta\in \partial\Delta(a,r)$ we have \[|f^k(a)|\leq \frac{M.k!}{r^k}.\] (use estimation of Cauchy integral).
 	& for an open set $D$ if $f_n:D\mapsto \mathbb{C}$ are analytic for each $n$ and if $f_n \mapsto f$ uniformly on each compact subset of $D$ then $f$ is analytic and more over $f_n^k\mapsto f^k$ uniformly in the compact subsets, the same is true for series also if all conditions hold. 
 	& every zero of an analytical function is isolated.
 	& from above we have if ${a_n}$ are the zeros of analytical map $f$, $a_n\mapsto a \in \mathbb{C}$ then $f\equiv0.$

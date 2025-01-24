@@ -103,16 +103,16 @@
 \date{}
 \begin{document}
 	\maketitle
-	\section*{symbols used}
-	\begin{center}
-		$ \st \, \ra  $ such that.
-	\end{center}
 	\begin{multicols}{2}
+			\section*{symbols used}
+		\begin{center}
+			$ \st \, \ra  $ such that.
+		\end{center}
 		\section{Basic Definitions}
 			\tbx{ \textbf{Ring } $R$ : is a set together with two binary operations $ + $ and $ \tm $ \snote{addition  and multiplication} with properties :\\
 			\y $ (R,+) $ is an abelian group \\
-			\y $ \tm $ is associative \snote{$ a\tm (b \tm c)=(a\tm b)\tm c  $} \\
-			\y $ \tm $ distributes over $ + $ \snote{$(a+b)\tm c= (a\tm c)+(b\tm c)$}.} 
+			\y $ \tm $ is associative \snote{ i.e. $ a\tm (b \tm c)=(a\tm b)\tm c  $} \\
+			\y $ \tm $ distributes over $ + $ \snote{i.e. $(a+b)\tm c= (a\tm c)+(b\tm c)$}.} 
 
 \tbx{if $ R $ is commutative w.r.t. $ \tm $ then $ R $ is a \textbf{Commutative ring}.
 			} 
@@ -141,7 +141,7 @@
 \tbx{\textbf{Center} of a ring $ R $ is set $ \{ z\in R \st zr=rz \forall r\in R\} $ i.e. all the elements that commute in $ R. $ (multiplicatively.)
 			} 
 \tbx{$ a \in R $ commutative ring is \textbf{nilpotent} if $ a^m=0 $ for some $ m \in \Z^+ $}
-\newpage
+\tbx{$ a \in R $ commutative ring is \textbf{idempotent} if $ a^2=a $.}
 		\section{Properties of Rings}
 		\snote{instead of writing $ a\tm b $ we just write $ ab $}
 		
@@ -162,7 +162,7 @@
 			} 
 \tbx{if $S,T $ subgrings of $ R $ then :\\
 	\y $ S\cap T $ is subring of $ R .$ \snote{ thus any arbitrary non-empty intersection of subrings is a subring.}\\
-   \y $ S $ is subring of $ T $ subring of $ R $ then $ S $ subring of $ R. $
+   \y $ S $ is subring of $ T $ is subring of $ R $ then $ S $ is subring of $ R. $
 			} 
 \tbx[Properties of Center of a Ring]{
 	\y Center of a ring is a subring.\\
@@ -222,7 +222,7 @@
 			if $ \phi : R\ra S $ is a ring homomorphism then ker $ \phi $ is an ideal of $ R $, image of $ \phi $ in $ S $ is a subring of $ S $ and $ R/ker(\phi) $ is isomorphic (bijective ring homomorphism) to $ \phi(R) .$ let $ \cong $ denote Ring isomorphism from here on so $ R/ker(\phi)\cong \phi(R) $\\
 			if $ I $ is an ideal of $ R $ then the natural projection homomorphism $ \pi_I:R \ra R/I $ by $ \pi_I(r)=r+I $ is ring homomorphism   with kernel $ I $ i.e. ideal $ \iff $ kernel.\\
 			\y  \textbf{2st Isomorphism Theorems for Ring} : \\ 
-			If $ A $ is subring of $ R $ and $ B $ ideal of  $ R $ then $ A+B=\{a+b|a\in A,b\in B\} $ is a subring of $ R $, $ A\cup B $ is an ideal of $ A $ and $ (A+B)/B\cong A/(A\cap B) .$\\
+			If $ A $ is subring of $ R $ and $ B $ ideal of  $ R $ then $ A+B=\{a+b|a\in A,b\in B\} $ is a subring of $ R $, $ A\cap B $ is an ideal of $ A $ and $ (A+B)/B\cong A/(A\cap B) .$\\
 			\y  \textbf{3st Isomorphism Theorems for Ring} : \\ 
 			if $ I,J $ are ideals of $ R $ such that $ I	\subset J $ then $ J/I $ is an ideal of $ R/I $ and $ (R/I)/(J/I)\cong R/J $\\
 			\y \textbf{4st Isomorphism Theorems for Ring} :  \\
@@ -236,7 +236,7 @@
 			$ I+J $ is the smallest ideal containing both $ I $ and $ J $ in $ R, $\\
 			$ IJ \subset I \cap J $ and both $ IJ , I\cap J$  are ideals in $ R. $\\
 			} 
-\tbx{\textbf{Ideal Generated} by $ A  \subseteq R $ $ (A) $ is the smallest ideal of $ R $ ring containing $ A .$
+\tbx{\textbf{Ideal Generated} by $ A  \subseteq R $ denoted by $ (A) $ is the smallest ideal of $ R $ ring containing $ A .$
 			} 
 \tbx{define $ RA=\{r_1a_1+r_2a_2+\ck +r_na_n| r_i\in R, a_i\in A\} $ and $ AR=\{a_1r_1+a_2+r_2a_2+\ck +a_nr_n|a_i\in A, r_i\in A\} $ and $ RAR= \{r_1a_1r'_1+r_2a_2r'_2+\ck +r_na_nr'_n| r_i,r'_i\in R, a_i\in A\}$
 			} 
@@ -260,7 +260,7 @@ So we get $ R $ is a field iff the only ideals of $ R $ are $ \{0\} $ and $ R. $
 			} 
 \tbx[\textbf{Prime ideal }]{An ideal $ P $ is Prime Ideal of $ R $ ring if $ P\neq R $ and whenever $ ab\in R $ the $ a\in P $ or $ b\in P .$\\
 			\snote{this is sort of generalising `prime' to a give ring $ R $ as in $ \Z^+ $ if $ p $ is a prime and 
-				$ p|ab $ the $ p|a $ or $ p|b. $} 
+				$ p|ab $ then $ p|a $ or $ p|b. $} 
 			} 
 \tbx{for $R  $ a commutative ring $ P $ is prime ideal in $ R $ iff  $ R/P $ is an Integral domain.
 			} 
@@ -279,10 +279,6 @@ So we get $ R $ is a field iff the only ideals of $ R $ are $ \{0\} $ and $ R. $
 			} 
 \tbx{\textbf{In a finite commutative ring with identity every prime ideal is maximal ideal}.\\
 			\snote{use finite integral domain is a field.}
-			} 
-\tbx{\textbf{if a non zero finite commutative ring has no zero divisors then it is field} \\
-			\snote{note : identity being in the ring becomes redundant.\\
-				use $ a^n	\in R $ for every $ a \in R, n\in \Z^+$ so is equal to identity for some $ n $ as $ R $ is finite}
 			} 
 \tbx{if $R$ is commutative ring with property : for every $a\in R \; \exists n\in \Z^+${ depending on }$a \st a^n=a$ then every prime ideal of $ R $ is maximal idea.}
 
@@ -550,7 +546,7 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 \tbx[sort of converse of Gauss Lemma]{ Let $ R $ be a U.F.D. , $ F $ its field of fractions if $ p(x)\in R[x] \st$ the g.cd of its coefficients is $ 1 $ i.e. 
 			$ p(x) $ is primitive polynomial then $ p(x) $ is irreducible in $ R[x] $ iff $P(x) $ is irreducible in $ F[x] $, in particular if $ p(x) $ is monic polynomial irreducible in $ R[x] $ then $ p(x) $ is irreducible in $ F[x] $.
 			} 
-\tbx{from above point we get : Let $ R $ be a U.F.D. , $ F $ its field of fractions if $ p(x)\in R[x] $ is a monic polynomial reducible in  $F[x]  \st p(x) =a(x)b(x)$ where $ a(x),b(x)$ are monic and if $ a(x) \notin R[x]$ then 
+\tbx{from above point we get : Let $ R $ be a integral domain, $ F $ its field of fractions if $ p(x)\in R[x] $ is a monic polynomial reducible in  $F[x]  \st p(x) =a(x)b(x)$ where $ a(x),b(x)$ are monic and if $ a(x) \notin R[x]$ then 
 			$ R[x] $ is not a U.F.D.  
 			} 
 \tbx{$ R $ is a U.F.D. iff $R[x]$ is a U.F.D.
@@ -566,7 +562,8 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 \tbx[\textbf{Eisenstein's Criterion}]{  for $ P $ a prime ideal of integral domain $ R $ , 
 			$ f(x)=x^n +a_{n-1}x^{n-1}+\ck + a_1x+a_0 \, \in R[x] \st a_{n-1},\ck a_1,a_0$ are elements of $ P $ and $ a_0 $ is not an element of $ P^2 $ then $ f(x) $ is irreducible in $ R[x] $.\\
 			For  eg : $ f(x)=x^n+ a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i$ but if $ p^2\! \not\!\!| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.\\
-			\textbf{$ f(x)=a_n x^n +a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i \w{ for } 0<i<n$ but if $p\not|a_n, p^2 \not| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.} \snote{write $ D=\{0,a_n\} $ then the fraction ring $ D^{-1}\Z $ has $p\Z $ as prime ideal and $ f(x)  =x^n +\frac{ 1 }{a_n} (a_{n-1}x^{n-1}+\ck + a_0 )$ in $ D^{-1}\Z $ which satisfies original Eisenstiens criterion.}}
+			\textbf{$ f(x)=a_n x^n +a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i \w{ for } 0\leq i<n$ \\
+				but if $p\not|a_n, p^2\not| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.} \snote{write $ D=\{0,a_n\} $ then the fraction ring $ D^{-1}\Z $ has $p\Z $ as prime ideal and $ f(x)  =x^n +\frac{ 1 }{a_n} (a_{n-1}x^{n-1}+\ck + a_0 )$ in $ D^{-1}\Z $ which satisfies original Eisenstiens criterion.}}
 			
 \tbx{for any field $ F $ and $ 0\neq a\in F $ then \\
 \y $ af(x) $ is irreducible over $ F $ implies $ f(x) $ is irreducible in $ F $ \\  

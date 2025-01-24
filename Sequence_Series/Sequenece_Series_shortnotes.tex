@@ -26,6 +26,7 @@
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
 \newcommand{\ra}{\rightarrow}
 \newcommand{\w}[1]{\text{#1}}
 \newcommand{\sm}[2]{\displaystyle\sum_{#1}^{#2}}
@@ -39,23 +40,23 @@
 \begin{multicols}{2}
 	\begin{easylist}
 		\section{Trivial properties }
-		& The below properties are for in general complete spaces. whose defining property is the presiding point
+		& The below properties are for in general complete spaces. whose defining property is the following point
 		& Cauchy sequence $\iff$ Convergent sequence \\ ( in general metric spaces $\R^n$ for $n\in \mathbb{N}$ are complete in particular $\R$ and $\C$ are complete).
-		& $a_n \ra 0 \w{ as } n \ra \infty$ is a necessary condition for a series $\sm{n=1}{\infty} a_n$ to converge.
+		& $a_n \ra 0 \w{ as } n \ra \infty$ is a necessary condition for a series $\sm{n=1}{\infty} a_n$ to converge. \snote{not sufficient eg: $\sum1/n$ harmonic series }
 		\section{Tests for positive termed series}
 		
 		& Below tests apply for series whose general terms are positive only (i.e. $\geq0$)\\
-		 \snote{Note : it can also be used to check for absolute convergence as taking absolute value of each term results in $ \geq 0 $ terms}
+		 \snote{Note : it can also be used to check for absolute convergence as taking absolute value of each term results in terms $ \geq 0 $ }
 		& \textbf{Comparison test} : for series $\sum u_n,\sum v_n$ if $u_n\leq k\times v_n \w{ for } k>0$ then $u_n$ follows behaviour (convergence or divergence) of $v_n$
 		& \textbf{Limit form of comparison test} for series $\sum u_n,\sum v_n$ if \[l=\lim\limits_{n\ra \infty}\frac{u_n}{v_n}.\]
 		then:
 		&& if $l\neq 0$ then $\sum u_n$  follows behaviour of $\sum v_n.$
 		&& if $l=0$ then $\sum u_n$ converges if $\sum v_n$ converges. \\
 		(as $0<u_m\leq v_m$ holds for sufficiently large $m$, and also if $\sum u_n$ diverges then $\sum v_n$ diverges).
-		&& if $l=\infty$ $u_n$ diverges if $\sum v_n$ does\\
-		 (as $0<v_m\leq u_m$ holds like above point).
+		&& if $l=\infty$ $\sum u_n$ diverges if $\sum v_n$ diverges.\\
+		 (as $0<v_m\leq u_m$ holds like preceding point).
 
-		& \textbf{Condensation test} : if $f(n)$ is a monotone decreasing sequence of positive numbers $>1$ then for $m\in \mathbb{N}$ $\sum f(n) \w{ and } \sum m^nf(m^n)$ have same behaviour. 
+		& \textbf{Cauchy's Condensation test} : if $f(n)$ is a monotone decreasing sequence of positive numbers \snote{i.e. $ f(n)>0, f(k)\geq f(k+1)\; \forall k\in  \N$} then for $m\in \mathbb{N}$ $\sum f(n) \w{ and } \sum m^nf(m^n)$ have same behaviour. \snote{Mostly used in the form $ \sum 2^nf(2^n). $}
 		& \textbf{Raabe's Test} : for series $\sum u_n$ of positive real numbers if $D_n=n\left(1-\frac{u_n}{u_{n+1}}\right)$ and 
 		\[D=\limsup D_n,\; d=\liminf D_n\]
 		then :
@@ -87,8 +88,8 @@
 		& restatement of above point : $a_n,b_n>0$ and $\sum a_n,\sum b_n$ converge then $\sum a_n b_n$ converges
 		& if $a_n\geq 0$ and $\sum a_n$ converges then $\sum a_n^k$ for $k \geq 1$ converges (as $a_n \ra 0$, for sufficiently large $n$ we get $a_n<1\implies (a_n)^k\leq a_n$ and by comparison test convergence follows). 
 		& if $0 \leq a_n \ra a$ then \[ s_n=\frac{a_1+a_2+\dots+a_n}{n} \ra a\]
-		& for converse of above point if $s_n$ converges and if for $b_n=a_n-a_{n-1}$, $\lim nb_n=0$ then $s_n$ converges 
-		& similar to above point if $|nb_n|\leq M<\infty\; \forall n$ and $\lim s_n=s$ then $a_n \ra s$
+		& for converse of above point if $s_n$ converges and if for $a_n=s_n-s_{n-1}$, $\lim na_n=0$ then $a_n$ converges 
+		& similar to above point if $|na_n|\leq M<\infty\; \forall n$ and $\lim s_n=s$ then $a_n \ra s$
 		& if $0<a_n \ra a$ then \[ (a_1.a_2\dots a_n)^{1/n} \ra a\]
 		& if $\sum a_n$ converges then $\sum \frac{\sqrt{a_n}}{n}$ converges
 		& if $a_n>0$ and $\sum a_n$ converges then $\sum \sqrt{a_n a_{n+1}}$ converges.
@@ -113,7 +114,7 @@
 		$\sm{n=0}{\infty}b_n=B$ and $c_n=\sm{k=0}{n}a_kb_{n-k}$ (Cauchy product) then $\sum_{n=0}^{\infty}c_n=AB$
 		& Cauchy product of two absolutely convergent series is absolutely convergent. 
 		& if $\{k_n\}$ is a sequence in $\mathbb{N}$ such that every integer appears once and if $a'_n=a_{k_n}$ then a rearrangement of $\sum a_n$ is of type $\sum a'_n$
-		& \textbf{Riemann Rearrangement Theorem} : if series of real numbers $\sum a_n$ converges but not absolutely then for any $-\infty\geq \alpha\geq \beta \geq \infty$ series $\sum a_n$ and be rearranged to $\sum a'_n$ with partial sum $s'_n $ such that
+		& \textbf{Riemann Rearrangement Theorem} : if series of real numbers $\sum a_n$ converges but not absolutely then for any $-\infty\geq \alpha\geq \beta \geq \infty$ series $\sum a_n$ can be rearranged to $\sum a'_n$ with partial sum $s'_n $ such that
 		\begin{center}
 			$\liminf s'_n=\alpha$ and $\limsup s'_n=\beta$
 		\end{center}
@@ -128,13 +129,15 @@
  $ 1/n\ra dx $\\ 
  $ a=\lim\limits_{n\ra \infty}\alpha/n $\\ 
  $ b=\lim\limits_{n\ra \infty}\beta/n $ 
-		\end{center}  
+ 	\end{center}  
+ \snote{ to derive use simple notion of Riemann Integration: if $ f $ is integrable in $ [a,b] $ then for every $ \epsilon>0 $  $ \left|\sm{i=1}{n} f(t_i)\Delta(x_i)-\int\limits_{a}^{b}f(x)d(x)\right|<\epsilon$ holds for some  partition $ p([x_i,x_{i+1}]_1^{n-1}) $ of $ [a,b] $ and for any $ t_i\in [x_i,x_{i+1}] $}
+	
 		\section{Some limits and theorems}
 		& \textbf{L'Hospital Rule} : if $f,g$ are real differentiable functions in $(a,b)$ (for $-\infty\leq a<b\leq \infty$) such that $g'(x)\neq 0$ in $(a,b)$ then as $x\ra a$ $f(x)\ra 0,g(x)\ra 0$ or if $g(x)\ra \pm \infty$  and if $\frac{f'(x)}{g'(x)}\ra A$ then $\frac{f(x)}{g(x)}\ra A$ (analogous result holds for $x\ra b$)  (is also true if $f,g$ are complex valued and $f(x)\ra 0,g(x)\ra 0$)
 		& for $f,g:D\subset \R \ra \R$, if $\lim\limits_{x\ra c}f(x)=0$ and $g(x)$ is bounded in some deleted neighbourhood of $c$ then $\lim\limits_{x\ra c}f(x)g(x)=0$ 
 		& if $\lim\limits_{x \ra c}f(x)=l$ and $g$ is continuous at $l$  or in some set whose limit point is $l$ then $\lim\limits_{x\ra c}g(f(x))=\lim\limits_{x\ra l}g(x)$ 
 		& $\lim\limits_{n \ra \infty}\sm{m=1}{n}\frac{1}{m}-\ln n =\gamma$ a fixed number 
-		& $\lim\limits_{n \ra \infty} |z|^n=0$ if $|z|<1$
+		& $\lim\limits_{n \ra \infty} z^n=0$ if $|z|<1$
 		& if $a>1$ and $p(n)$ is a fixed polynomial in $n$ then $\lim\limits_{n \ra \infty}\frac{a^n}{p(n)}=\pm \infty$ (depends on $p(n)$, precisely on coefficient of largest degree term).
 		& $\lim\limits_{n \ra \infty} n^{1/n}=1$ in particular if $|z|\neq 0$ then $\lim\limits_{n \ra \infty}|z|^{1/n}=1$
 		& $\lim\limits_{n \ra \infty} \left(1+\frac{a}{n}\right)^{1/n}=e^a$
@@ -143,11 +146,13 @@
 		& if $\alpha,\beta>0$ and $x\in \R$ then :
 		&& $\lim\limits_{x \ra \infty} \frac{(\ln(x))^\alpha}{x^\beta} = 0$
 		&& $\lim\limits_{x \ra \infty} \frac{x^\alpha}{e^{\beta x}} = 0$
+		& from some preceding points we get \\
+		growth of $ ln(n) $ $ < $ growth of  $ n $ $ < $ growth of $ p(n) $ \snote{for non constant $ p(n) $.} $ < $ growth of   $ a^n $ \snote{$ a>1 $} $ < $ growth of $ n! $.
 		& series $\sm{n=1}{\infty}\frac{1}{n^p}$ converges for $p>1$ and diverges for $p\leq 1$
 		& series $\sm{n=2}{\infty}\frac{1}{n(\ln n)^p}$ converges for $p>1$ and diverges for $p\leq1$
 		this result can be continued to series like $\sm{n=2}{\infty}\frac{1}{n\ln n(\ln\ln n)^p}$, $\sm{n=2}{\infty}\frac{1}{n\ln n\ln\ln n(\ln\ln\ln n)^p}$
 		and so on.\\
-		& for series such as $ \sm{n=0}{\infty}q^n z^{kn} $ for some $ k\geq 0 $ fixed we have the series equal to series $ \sm{n\geq 0}{}a_n z^n $ where 
+		& for series such as $ \sm{n=0}{\infty}q^n z^{kn} $ for some $ k\geq 0 $ fixed then this series is equal to series $ \sm{n\geq 0}{}a_n z^n $ where 
 	\end{easylist}
 			$ a_n=
 			\begin{cases}

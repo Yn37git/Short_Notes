@@ -60,7 +60,7 @@
 	& \textbf{Archemidean property} : for every real number $x$ there exist a natural number $n_x$ such that $x<n_x .$
 	& Density property : if $x$ and $y$ are distinct real numbers say $x<y$ then there exist a rational number $r$ such that $x<r<y$,\\
 	similarly if $p$ and $q$ are distinct real numbers say $p<q ,$then there exist irrational number $s$ such that $p<s<q .$
-	& For every real $x>0$ and integer $n>0$there exist only one positive real $y$  such that $y^n=x$
+	& For every real $x>0$ and integer $n>0$ there exist only one positive real $y$  such that $y^n=x$
 	& If $r$ is rational and $x$ is irrational number then $r+x\w{ and }rx ,$ are irrational.
 	& We can define $b^x$ for every real $b$ and $x$ as the supremum of $\{b^t\}$
 	for $t\leq x$ , $t$ rational
@@ -94,6 +94,8 @@
 	(remark separated sets are disjoint but disjoint sets need not be separated)
 	& A metric space is \textbf{separable} if it contains a countable dense subset
 	(eg: every $\R^k$ is separable)
+	& set $ \{y\in X|d_X(x,y)<r \text{ for fixed } r>0, x\in X \} $ is called an \textbf{Open ball} of radius $ r $  centered at $ x $.
+	& A set $ A\subset (X,d) $ metric space is \textbf{Totally Bounded} if for every $ \epsilon>0 $ there exists a \textbf{finite} collections of open balls of radius $ \epsilon $ with centers in $ A $ whose union contains $ A $.
 	& A collection of open sets $\{V_\alpha\}$ is a \textbf{base } of $X$ if for every $x\in X$ and $x\in G$ open in $X$ then there exist $\alpha$ such that $x\subset V_\alpha \subset G$ i.e. every open set in $X$ is a union of sets of type $V_\alpha .$
 	& A point $p$ is \textbf{condensation point } of set $E$ if every neighborhood of $p$ contains uncountably many points of of $E$
 	\subsection{Properties and theorems in \\ Metric spaces}
@@ -107,18 +109,19 @@
 	& Closure of a set is closed
 	& $E=\bar{E} \iff$ $E$ is closed
 	& $\bar{E}$ is the smallest closed set containing $E$
-	& If $E$ is a closed set in $\R$ if bounded above then it contains its supremum if bounded below then it contains its infimum
+	& If $E$ is a closed set in $\R$ and if it is bounded above then it contains its supremum or if it is bounded below then it contains its infimum.
 	& For $Y\subset X$, $E\subset Y$ is open relative to $Y$ iff $E=Y\cap G$ for some open set $G$ in $X$
 	& For $K\subset Y\subset X$, $K$ is compact relative to $X$ iff $K$ is compact relative to $Y$
 	& Compact sets in metric spaces are closed
 	& Every closed subset of a compact set is compact
 	& If $F$ is closed and $K$ compact in a metric space then $F\cap K$ is closed so is compact.
-	& If $\{K_\alpha\}$ is a collection of compacts such that the intersection every finite subcollection is non empty then $\underset{\alpha}{\cap}K_\alpha .$
-	& If $E$ is an infinite subset in a compact set $K$ then $E$ has a limit point in $E$ 
-	& If  $E$ is compact set of $\R^k$ iff $E$ is closed and bounded iff every infinite subset of $E$ has a limit point in $E$
+	& If $\{K_\alpha\}$ is a collection of compact sets such that intersection of every finite sub-collection of these is non empty then $\underset{\alpha}{\cap}K_\alpha $ is non empty.
+	& If $E$ is an infinite subset of a compact set $K$ then $E$ has a limit point in $K$ 
+	&  \textbf{Heine-Borel Theorem}: $E$ is compact set of $\R^k$ iff ($\iff$) $E$ is closed and bounded 
+	& $ E $ is compact set of $ \R^k $ iff every infinite subset of $E$ has a limit point in $E$
 	& \textbf{Weierstrass theorem} : Every bounded infinite set of $\R^k$ has a limit point in $\R^k$
 	& Countable union of countable set are countable.
-	& If $P$ is a non empty perfect set in $\R^k$ the $P$ is uncountable
+	& If $P$ is a non empty perfect set in $\R^k$ then $P$ is uncountable
 	& \textbf{Cantor Set} $P$ :
 	construction: let $E_1=[0,1]$, $E_2=[0,1/3]\cup [2/3,1]$ , $E_3=[0,1/9]\cup[2/9,3/9]\cup [6/9,7/9]\cup [8/9,1]$ and $E_n$ be formed by removing middle 3rd of the intervals (open). then $P=\cap_{n=1}^\infty E_i .$\\
 	property : $P$ is non empty compact perfect set that does not contain any open intervals
@@ -126,7 +129,7 @@
 	& $E^o$(interior) is always open  
 	& $E^o=E$ iff $E$ is open
 	& Complement of $E^o$ is the closure of complement of $E$
-	& REMARK : $E$ and $\bar{E}$ may not have same interiors also $E$ and $E^o$ may not have same closures
+	& REMARK : $E$ and $\bar{E}$ may not have same interiors also, $E$ and $E^o$ may not have same closures
 	& Disjoint open and closed sets are separated 
 	& A connected Metric space having atleast two points is uncountable
 	& Closure of connected set is connected but interior of connected set may not be connected
@@ -136,12 +139,33 @@
 	& If $X$ is a metric space in which every infinite subset has a limit point then $X$ is compact.
 	& In a metric space $X$ with countable base for a subset $E$, set of condensation points $P$ in $E$ form a perfect set and $P^c\cap E$ is at most countable. 
 	& Every closed set of a separable metric space is union of a perfect set (may be empty set) and a set at most countable
-	& Every countable closed set in separable space has isolated point.
-	& Every open set in $\R^1$ is a union of an at most countable union of disjoint open intervals.
-	\\ \ckfil
+	& Every countable closed set in separable space has an isolated point.
+	& Every open set in $\R^1$ is at most countable union of disjoint open intervals.
+	& every Totally bounded set is bounced
+\end{easylist}
+\noindent (converse is not true eg: if we discrete define metric 
+	\begin{center}
+	$ d(x,y)\begin{cases}
+		0 & \text{if }x=y,\\
+		1 & \text{ otherwise}
+	\end{cases} $
+	\end{center}  for $ \R $ then any infinite subset is bounded for $ N\geq 1 $ but not totally bounded as for if $ \epsilon <1 $ then only infinite collection of $ \epsilon$-balls can the infinite set.)
+	\begin{easylist}
+		& Compact Set are Totally bounded.
+		& Closure of totally bounded sets are totally bounded.
+		& Finite  union of totally bounded sets is bounded.\\
+		& \textbf{Every subset} of totally bounded set is totally bounded (unlike compact sets).
+		& a set is compact iff it is complete and totally bounded.
+		& restating preceding point: a metric space is compact iff it is complete and totally bounded.
+		& with usual metric induced by norms $ L_1 $ or $ L_2 $ for $ \R^k $, Totally bounded is same as bounded so the preceding point just becomes Heine-Borel Theorem. 
+		& a metric space is totally bounded if every sequence has a Cauchy subsequence.
+		\\ 	 \ckfil
+	\end{easylist}
+
 	\section{Sequence and series}
+	\begin{easylist}
 	& A sequence $\{x_n\}$ \textbf{converges} to $x$ in a metric space if for every $\epsilon>0$ there exist an integer $N$ such that $d(x_n,x)<\epsilon$ if $n\geq N.$
-	& A sequence $\{x_n\}$ is a \textbf{Cauchy sequence} if for $\epsilon>0$ there exist integer $N$ such that $d(x_n,x_m)<\epsilon$ if $n,m\geq N.$
+	& A sequence $\{x_n\}$ is a \textbf{Cauchy sequence} whenever for $\epsilon>0$ there exist integer $N$ such that $d(x_n,x_m)<\epsilon$ if $n,m\geq N.$
 	& If sequence $s_n\ra s$ and $t_n \ra t$ then sequence $s_nt_n\ra st .$
 	& Every bounded sequence in a compact space contains a convergent subsequence
 	& Subsequential limits of a sequence $\{p_n\}$ forms a closed set
@@ -150,7 +174,7 @@
 	& In a compact metric space every cauchy sequence is convergent so it is complete 
 	& Every cauchy sequence is bounded 
 	& Cauchy sequences in $\R^k$ are convergent as every bounded set has a compact closure in $\R^k$ (namely a $k-cell$) so $\R^k$ is complete with usual $L_2$ norm
-	&  if $E$ is the set of subsequential limits for sequence $s_n$ the define 
+	&  if $E$ is the set of subsequential limits for sequence $s_n$ then define 
 	$\limsup s_n=sup(E)$ and $\liminf s_n = inf(E)$ (this is possible as $E$ is closed)
 	\\ \ckfil
  	\section{Continuity}
@@ -170,28 +194,28 @@
  	& If $f:X\ra Y$ is continuous function and $E\subset X$ is connected subset then $f(E)$ is connected i.e. $f$ \textbf{maps connected sets to connected set} 
  	& \textbf{intermediate value theorem} is a corollary of the above point.
  	& $f:(a,b)\subset \R \ra\R$ is monotonic if $x<y\implies f(x)\leq f(y)\; \forall x,y\in (a,b)$ (monotonic increasing) or if $f(x)\geq f(y)\; \forall x,y\in (a,b)$ (monotonic decreasing).
- 	& If $I$ as any interval in $\R$ and if $f:I\ra \R$ is continuous and one-one then $f$ is straightly monotone.  
+ 	& If $I$ is any interval in $\R$ and if $f:I\ra \R$ is continuous and one-one then $f$ is straightly monotone.  
  	& Define $f(x-)=\lim\limits_{t\ra x^-}f(t)$ and $f(x+)=\lim\limits_{t\ra x^+}f(t)$ 
  	& If $f:E\ra \R$ is monotonic then $f(x+)$ and $f(x-)$ exist for all $x\in E$
  	& If $f$ is continuous then $f(\bar{E})\subset \overline{f(E)}$
- 	& If $f$ a real function from some subset of $\R$ has intermediate value property : $f(a)<c<f(b)$ then $f(x)=c \w{ for }x\in (a,b)$ and for every rational $r$ the set $f(x)=r$ is closed then $f$ is continuous. 
+ 	& If $f$ a real function from some subset of $\R$ having intermediate value property ($f(a)<c<f(b)$ then $f(x)=c \w{ for }x\in (a,b)$) and for every rational $r$ the set $\{x|f(x)=r\}$ is closed then $f$ is continuous. 
  	& If $f$ and $g$ are continuous functions from $X\ra Y$ then for dense set $E\subset X$ dense in $X$ if $f(p)=g(p) \; \forall p\in E$ then $f\equiv g$ in $X$ i.e. if two continuous functions agree on a dense set in the domain then both are same (in that domain) i.e. a \textbf{continuous mapping is determined by its value on dense subset of its domain}
  	& $f:E\ra Y$ for $E$ compact is continuous iff graph of $f$ $=\{(x,f(x))\}$ is compact
  	& Every continuous open map from $\R \ra \R$ is monotonic.\\
 
 \subsection{Uniform continuity}
  	& A function $f:X \ra Y$ is uniformly continuous if for every $\epsilon>0$ there exists $\delta>0$ such that $d_Y(f(a),f(b))<\epsilon$ for all $a,b\in X$ when ever $d_X(a,b)<\delta .$
- 	& For  any non empty set $E$ of a metric space $X$ the function $\rho_E:X\ra \R$ defined by $\rho_E(x)=\inf(d_X(x,e))$ for $e\in E$ (i.e. the distance from $x$ to $E$) then $\rho_E$\textbf{is uniformly continuous}.
+ 	& For  any non empty set $E$ of a metric space $X$ the function $\rho_E:X\ra \R$ defined by $\rho_E(x)=\inf(d_X(x,e))$ for $e\in E$ (i.e. the distance from $x$ to $E$) \textbf{is uniformly continuous}.
  	& If $f$ is continuous function from a compact metric space $X$ into a metric space $Y$, then $f$ is uniformly continuous.
- 	& If $f:X\ra Y$ is uniformly continuous the $\{f(x_n)\}$ is a Cauchy sequence in $Y$ for every Cauchy sequence $\{x_n\}$ in $X$.
- 	& \textbf{$ \R $ Uniform Continuity Theorem :} for $ E \subseteq \R$ and $ f:E\ra \R$ is uniformly continuous on $ E $ \textbf{iff} for any sequences $ x_n,u_n $ such that $ |x_n-u_n|\ra 0 $ then $ |f(x_n)-f(u_n)|\ra 0 $. converse of this theorem can be (most of the time) used to prove non-uniform continuity in $ \R$ i.e.
+ 	& If $f:X\ra Y$ is uniformly continuous then $\{f(x_n)\}$ is a Cauchy sequence in $Y$ for every Cauchy sequence $\{x_n\}$ in $X$.
+ 	& \textbf{$ \R $ Uniform Continuity Theorem :} for $ E \subseteq \R$ and $ f:E\ra \R$ is uniformly continuous on $ E $ \textbf{iff} for any sequences $ x_n,u_n $ such that $ |x_n-u_n|\ra 0 $ then $ |f(x_n)-f(u_n)|\ra 0 $. Negation of this theorem can be (most of the time) used to prove non-uniform continuity in $ \R$ i.e.
  	&& $ f $ is not uniformly continuous \textbf{iff} there exist $ \epsilon_o>0 $  (fixed) and sequences $ x_n $ and $ u_n $ such that $ |x_n-u_n|\ra 0 $ but $ |f(x_n)-f(u_n)|\geq \epsilon_o .$ 
  	& for $ E\subset \R $ and $ f:E\ra \R $ is uniformly continuous then 
  	$ \exists A,B \in \R $ such that \\
  	$ |f(x)|\leq A|x|+B $ i.e. $ |f(x)|/x^2\ra 0 $ as $ x\ra \infty $.  
  	& For \textbf{non compact bounded set} $E\subset \R^1$ :
  	&& There exist continuous function from $E$ which is not uniformly continuous (set $f(x)=1/(x-x_0)$ for some limit point $x_0$ of $E$ such that $x_0\notin E$ this is possible as $E$ is bounded)
- 	& If $f:X\ra Y$ and if $E\subset X$ is dense in $X$ then $f(E)$ is dense in $f(X)$
+ 	& If $f:X\ra Y$ is continuous and if $E\subset X$ is dense in $X$ then $f(E)$ is dense in $f(X)$
  	& for $ f $ and $ g $ uniformly continuous :
  	&& $ f\circ g $ i.e. $ f(g(x)) $ is uniformly continuous (whenever it is defined)
  	&& $ af(x)+bg(x) $ is uniformly continuous for $ a,b\in \R .$
@@ -208,6 +232,7 @@
 	& if $ f:E\ra \R $ is a Lipschitz function then $ f $ is uniformly continuous on $ A .$   
 	& if $ f,g \ra E\ra \R$ are Lipschitz and bounded the $ fg=f(x)g(x) $ is Lipschitz. 
 	& a periodic function ($ f(x+p)=f(x)\; \forall x$ in defined range and $ p $ finite constant ) in $ \R $ is always Uniformly continuous.
+	\\ \ckfil
 \subsection{Discontinuity}
  	& Types
  	&& \textbf{first kind or simple discontinuity} : discontinuous at $x$ but $f(x-)$ and $f(x+)$  exists.
@@ -358,10 +383,10 @@
 \begin{center}
 	$|f_n(x)-f_m(x)|\leq \epsilon$
 \end{center}  for all $x\in E$
-& $f_n \ra f$ uniformly on $E$ iff for $M_n=\underset{x\in E}{\sup} |f_n(x)-f(x)|$ and $M_n\ra 0 \w{ as }n\ra \infty .$
-& if $ \lim\limits_{n\ra \infty}f_n(x)=f(x) $ for every $ x\in E $ and if $ M_n=\sup |f_n(x)-f(x)|$ for $ x\in E $ then 
-$ f_n\ra f $ uniformly in $ E $ iff $ M_n \ra 0$ as $ n\ra \infty $  
-& Sequence of functions  from $ A\subseteq \R $ i.e. $ f_n:A\ra \R $ converging to $ f(x) $ is non-uniformly convergent on $ A_0\subseteq A $ \textbf{iff} for some $ \epsilon_o>0 $  (fixed) there exists a subsequences $ f_{n_k} $ of $ f_n $ and a sequence $ \{x_k\}\in A_0 $ such that $ |f_{n_k}(x_k)-f(x_{x_k})|\geq \epsilon_o $ for all $ k\in \mathbb{N}. $ (direct converse of definition of uniform convergence in $ \R$)
+& if $ \lim\limits_{n\ra \infty}f_n(x)=f(x) $ for every $ x\in E $ and if $ M_n=\underset{x\in E}{\sup} |f_n(x)-f(x)|$ then 
+$ f_n\ra f $ uniformly in $ E $ \textbf{iff} $ M_n \ra 0$ as $ n\ra \infty .$  \\
+i.e. $ f_n\ra f $ convergence is uniform on a set $ E $ iff $ ||f_n-f||_E\ra  0$\\ (for norm $ ||.||_E :(f:E\ra \R)\ra \R^+$ defined as $ \underset{x\in E}{\sup}|f(x)| $.)
+& Sequence of functions  from $ A\subseteq \R $ i.e. $ f_n:A\ra \R $ converging to $ f(x) $ is non-uniformly convergent on $ A_0\subseteq A $ \textbf{iff} for some $ \epsilon_o>0 $  (fixed) there exists a subsequences $ f_{n_k} $ of $ f_n $ and a sequence $ \{x_k\}\in A_0 $ such that $\\ |f_{n_k}(x_k)-f({x_k})|\geq \epsilon_o $ for all $ k\in \mathbb{N}. $ (direct converse of definition of uniform convergence in $ \R$)
 & \textbf{Weierstrass $M$ test} : if $|f_n(x)|\leq M_n$ on every $x\in E$ and $\sum M_n$ converges in $E$ then $\sum f_n$ converges uniformly in $E$
 & \textbf{Limit and Continuity} : if $f_n\ra f$ uniformly in $E$ and $x$ is a limit point of $E$ then \begin{center}
 	$\lim\limits_{t\ra x}\lim\limits_{n\ra \infty}f_n(x)
@@ -378,8 +403,8 @@ i.e. integration and limits can be changed if convergence is uniform
 	$f'(x)=\lim\limits_{n\ra \infty}f'_n(x)$ 
 \end{center} in $[a,b]$\\
 i.e. if set of differentiable $f_n$ converge for any one point $x_0$ and their differentials converge uniformly then  $f_n \ra f$ uniformly and $f'_n\ra f'$ 
-& \textbf{Equicontinuous functions} : family of complex functions $\mathscr{F}=\{f\}$ on set $E$ is equicontinuous if for every $\epsilon>0$ there exist $\delta>0$ such that $|f(x)-f(y)|<\epsilon$ whenever $d(x,y)<\delta,x,y\in E$ and $f\in \mathscr{F}$ (this is another level of restriction on set of uniform continuous functions that $\delta$ depends only on $\epsilon$ and not on $f\in \mathscr{F}$)
-& \textbf{Pointwise bounded} : a sequence $\{f_n\}$ is point wise bounded on $E$ if $\{f_n(x)\}$ is bounded $\forall x\in E$ or there exist a finite valued function $\phi$ on $E$ such that $|f_n(x)|<\phi(x)\; \forall x\in E, n=1,2,\dots$ 
+& \textbf{Equicontinuous functions} : family of complex functions $\mathscr{F}=\{f\}$ on set $E$ is equicontinuous if for every $\epsilon>0$ there exist $\delta>0$ such that $|f(x)-f(y)|<\epsilon$ whenever $d(x,y)<\delta,x,y\in E$ for every $f\in \mathscr{F}$ (this is another level of restriction on set of uniform continuous functions that $\delta$ depends only on $\epsilon$ and not on $f\in \mathscr{F}$)
+& \textbf{Pointwise bounded} : a sequence $\{f_n\}$ is point wise bounded on $E$ if $\{f_n(x)\}$ is bounded $\forall x\in E$ or there exist a \textbf{finite valued function} $\phi$ on $E$ such that $|f_n(x)|<\phi(x)\; \forall x\in E, n=1,2,\dots$ 
 & \textbf{Uniformly bounded} : $\{f_n\}$ is uniformly bounded on $E$ is there exist a number $M$ such that $|f_n(x)|<M\; \forall x\in E, n=1,2,\dots$
 & Every uniformly convergent sequence of functions is uniformly bounded.
 & If $\{f_n\}$ is an equicontinuous sequence of function on compact set $K$ and $f_n$ converges point wise on $K$ then the convergence is uniform.
@@ -393,7 +418,7 @@ i.e. if set of differentiable $f_n$ converge for any one point $x_0$ and their d
 i.e. every continuous function (in $\R$ or $\C$) can be approximated to a given error by a polynomial (in $\R$ or $\C$). 
 & \textbf{Algerbra } $\mathscr{A}$ in $E$ : is a family of complex functions defined on $E$ such that if $f,g\in \mathscr{A}$ then $f+g,fg,cf\in \mathscr{A}$ for any complex constant $c$ i.e $\mathscr{A}$ is closed under addition, multiplication and scalar multiplication
 & If for every $\{f_n\}\subset \mathscr{A}$ , $f_n \ra f$ uniformly and if this implies $f \in \mathscr{A}$ then $\mathscr{A}$ is said to be uniformly closed 
-& If $\mathscr{B}$ is set of all functions which are limit of uniformly convergent sequences in $\mathscr{A}$ then $\mathscr{B}$ is uniform closure of $\mathscr{A}$ and it forms an algebra congaing $\mathscr{A}$ 
+& If $\mathscr{B}$ is set of all functions which are limit of uniformly convergent sequences in $\mathscr{A}$ then $\mathscr{B}$ is uniform closure of $\mathscr{A}$ and it forms an algebra containing $\mathscr{A}$ 
 & \textbf{Stone-Weierstrass Theorem} : if $\mathscr{A}$ is an algebra of real continuous functions on a compact set $K$, $\mathscr{A}$ separates points on $K$ (i.e. if $x_1\neq x_2 \in K\; \exists g\in \mathscr{A} : g(x_1)\neq g(x_2)$) and vanishes at no point in $K$ then the uniform closure $\mathscr{B}$ of $\mathscr{A}$ consist of all real continuous functions on $K$ 
 & If same conditions as in above point hold for $\mathscr{A}$ algebra of complex functions and in addition is $\mathscr{A}$ self adjoint (i.e $f\in \mathscr{A} \implies \bar{f}\in \mathscr{A}$) then its uniform closure contains all complex continuous functions on $K$\\
 \ckfil
@@ -446,7 +471,7 @@ for $x\in E$ define
 & If $f$ maps \textbf{convex open set} $E\subset \R^n\ra \R^m$, $f$ is differentiable in $E$ and if there exist real number $M$ such that $||f'(x)||\leq M\;\forall x\in E$ then $|f(b)-f(a)|\leq M|b-a|\; \forall a,b\in E$ (use mean value theorem by converting domain to $\R$)
 & $f$ is said to be continuously differentiable if $f'$ is continuous in the domain $E$ and this is denoted by $f\in \mathscr{C}'(E)$
 & Suppose for open $E\subset R^n$, $f:E\ra R^m$ then $f\in \mathscr{C}'(E)$ iff partial derivatives $\pfrac{f_i}{x_j}(x)$ exists and are continuous for each $1\leq i\leq m$ and $1\leq j\leq n$.
-& For $f:E\ra\R $ (a real valued function) defined on an open set $E\subset \R^n$ and if its partial derivatives $\pfrac{f}{x_1},\ck,\pfrac{f}{x_n}$ are bounded in $E$ (obviously exists) then $f$ is continuous in $E$ (a weaker hypothesis and weaker result compered to above point)
+& For $f:E\ra\R $ (a real valued function) defined on an open set $E\subset \R^n$ and if its partial derivatives $\pfrac{f}{x_1},\ck,\pfrac{f}{x_n}$ are bounded in $E$ (obviously exists) then $f$ is continuous in $E$ (a weaker hypothesis and weaker result compared to above point)
 & If $f$ is differentiable mapping from \textbf{open connected set} $E\subset \R^n \ra \R^m$ and $f'(x)=0\, \forall x\in E$ then $f$ \textbf{is constant in} $E$
 & \textbf{Contraction functions} (used in proofs):
 && $\phi:X\ra X$ is a contraction if there is $c<1$ such that $d(\phi(x),\phi(y))<cd(x,y) \forall x,y\in X$
@@ -501,7 +526,7 @@ $J_f(x)=\pfrac{(y_1,\ck y_n)}{(x_1,\ck ,x_n)}=det(f'(x))$
 \subsection{Maximum, minimum of \\ real valued functions}
 & If $f$ is a real valued differentiable function in an open set $E\subset \R^n$ and if $f$ has a local maximum or minimum at $x\in E$ then $f'(x)=0$ ($0_{1\times n}$)
 & \textbf{Gradient } $(\nabla f)(x)$: if $f:E\subset \R^n\ra\R$ a differentiable map, for $x\in E$ define $(\nabla f)(x)=\sm{i=1}{n}\pfrac{f}{x_i}(x)e_i .$
-\textbf{Directional derivative} $(D_uf)(x)$ : if $f$ is as above and vector $u\in \R^n$ be unit vector (i.e. $|u|=1$) then 
+& \textbf{Directional derivative} $(D_uf)(x)$ : if $f$ is as above and vector $u\in \R^n$ be unit vector (i.e. $|u|=1$) then 
 $(D_uf)(x)=\lim\limits_{t\ra 0} \frac{f(x+tu)-f(x)}{t}=(\nabla f )(x) . u$
 && Now if $x$ ix fixed and $u$ varies then $(D_uf)(x)$ achieves its maximum if $u$ is in direction of $(\nabla f)(x)$ and minimum if $u$ is in direction of $-(\nabla f)(x)$
 && Thus given $x$ if we move $(\nabla f )(x)$ direction from $x$ we can get values such that $f(y)\geq f(x)$ and similarly if we move in $-(\nabla f )(x)$ from $x$ we can get $f(y)\leq f(x)$ thus repeatedly using this process one can find a local minimum or maximum of function $f$ (Gradient Descent).
@@ -509,8 +534,8 @@ $(D_uf)(x)=\lim\limits_{t\ra 0} \frac{f(x+tu)-f(x)}{t}=(\nabla f )(x) . u$
 i.e. if $x$ is a local minimum or maximum of $x$ then $(\nabla f) (x)=0$ (converse may not hold eg: saddle points)
 & Now if for $f$ as above $\nabla f(a)=0$ then by Taylor's theorem we have \\
 $f(a+x)-f(a)=\frac{1}{2}\sum_{i_1,i_2} \pfrac{^2f}{x_{i_1}\partial x_{i_2}}x_{i_1}x_{i_2}+r(x)$
-now if not all second order derivatives are zero then define \textbf{Hessian matrix} $H$ as $[H(a)]=h_{ji}= \pfrac{^2f}{x_{i}\partial x_{j}}(a)$ (if ordering of domain variable is $\{1,2,\ck ,n\}$) now the sum in the Taylor's polynomial can be written as $H(a)x^T.x=x^T H(a) x $ (standard representation of a quadratic form ) now this can if 
-&& $x^TH(a)x>0\; \forall x\neq 0$ then $H(a)$ is is positive definite iff  $k\times k$ principal minors (determinant of principle partitioned matrix of size $k\times k$) of it is $>0$ thus $f(a+x)-f(x)>0$ which implies $f(a)$ is a local minimum
+now if not all second order derivatives are zero then define \textbf{Hessian matrix} $H$ as $[H(a)]=h_{ji}= \pfrac{^2f}{x_{i}\partial x_{j}}(a)$ (if ordering of domain variable is $\{1,2,\ck ,n\}$) now the sum in the Taylor's polynomial can be written as $H(a)x^T.x=x^T H(a) x $ (standard representation of a quadratic form ) now  if 
+&& $x^TH(a)x>0\; \forall x\neq 0$ then $H(a)$ is positive definite iff  $k\times k$ principal minors (determinant of principle partitioned matrix of size $k\times k$) of it is $>0$ thus $f(a+x)-f(x)>0$ which implies $f(a)$ is a local minimum
 && Similarly if $x^tH(a)x<0\; \forall x\neq 0$ then $H(a)$ is negative definite iff  $k\times k$ principal minors of has  $(-1)^k$ in signs then $f(a)$ is positive.
 && Eg: if $f:E\subset \R^2\ra \R$ with variables $(x,y)$ and is in  $\mathscr{C}^2(E)$ then all 2nd order partial derivatives are continuous also  $\pfrac{^2f}{x\partial y}=\pfrac{^2f}{y\partial x}$ at every $x\in E$ and if $(\nabla f)(a)=0$ and not all 2nd order partial derivatives are zero then 
 \end{easylist}
@@ -803,7 +828,7 @@ where $n(u,v)$ is the unit vector along $N(u,v)$ and $dA=|N(u,v)|dudv$ is the ar
 && \textbf{Generalized version } : for open set $E\subset\R^n$,$k$-form $\omega$ of class $\mathscr{C}'(E)$, $f$ real function of class $\mathscr{C}'(E)$ and $\Phi$ a $k$-surface of class $\mathscr{C}''$ in $E$ then 
 \[\int_{\Phi}fd\omega=\int_{\partial\Phi}{f\omega}-\int_{\Phi}{(df)\land\omega}\]
 \ckfil
-\section{Lebesgue Integration and measures}
+\section{Lebesgue Integration \\ and measures}
 & \textbf{ring} (not the same as abstract but is relevant) : a family of sets $ \mathfrak{R} $ is a ring if $ A\in \mathfrak{R}, \, B \in \mathfrak{R} $ implies
 \begin{center}
 	$ A\cup B \in \mathfrak{R},\,A-B \in \mathfrak{R}.$
@@ -815,14 +840,14 @@ property that if $ A_n \in \mathfrak{R} $ then
 	$ \displaystyle \cup_{i=1}^{\infty}A_n \in \mathfrak{R}.$
 \end{center}
 (note $ \displaystyle \cap_{i=1}^{\infty}A_n \in \mathfrak{R}.$)
-& \textbf{Set function} $ \phi:\\mathfrak{R}\ra \R+{\infty} $ i.e. $\phi $ maps sets in a ring to extended real line 
+& \textbf{Set function} $ \phi:\mathfrak{R}\ra \R+{\infty} $ i.e. $\phi $ maps sets in a ring to extended real line 
 && $ \phi $ is additive if $ A\cap B=0 $(empty set) implies 
 \begin{center}
 	$ \phi(A\cup B)=\phi(A)+\phi(B) .$
 \end{center}
 && $ \phi $ is countably additive if $ A_i\cap A_j=0 $ implies 
 \begin{center}
-	$ \phi(\cap_{i=1}^{\infty}A_i)=\sm{i=1}{\infty}\phi(A_i).$
+	$ \phi(\cup_{i=1}^{\infty}A_i)=\sm{i=1}{\infty}\phi(A_i).$
 \end{center}
 & properties of additive set function $ \phi $ :
 && $ \phi(0)=0. $
@@ -864,18 +889,18 @@ i.e. $ \phi(A) $ can be taken as a limit of $ \phi $ in open superset or closed 
 \begin{center}
 	$ \mu^*(E)=\inf \sm{n=1}{\infty}\mu(A_n) .$
 \end{center} 
-(one similarly define inner measure as supremum of didjoint closed elementary subsets of $ A $ and can cunstuct Lebesgue measure also but the measure obtained is same for a given $ \mu $)
+(one similarly define inner measure as supremum of disjoint closed elementary subsets contained in $ A $ and can construct Lebesgue measure also but the measure obtained is same for a given $ \mu $)
 & properties of outer measure :
 && for every $ A\in \mathscr{E},\, \mu^*(A)=\mu(A) $ i.e. outer measure is just an extension of $ \mu $ 
 && if $ E=\cup_1^\infty E_n $ then $ \mu^*(E)\leq \sm{1}{\infty}\mu^*(E_n) $ i.e.
 $ \mu^* $ is sub-additive.
 & \textbf{Symmetric difference} $ S(A,B) $ : $ A,B\in \R^p\; S(A,B)=(A-B)\cup (B-A) $
-& define $ d(A,B)=\mu*(S(A,B)) $ and $ A_n \ra A $ if $ \lim\limits_{n\ra \infty}
+& define $ d(A,B)=\mu^*(S(A,B)) $ and $ A_n \ra A $ if $ \lim\limits_{n\ra \infty}
 d(A,A_n)=0 $ for sequence of elementary sets $ \{A_n\} $.
 & $ \mathfrak{M}_F(\mu) $ contains sets $ A $ (finitely $ \mu $ measurable) if there exist elementary set sequence $ \{A_n\} $ such that $ A_n\ra A $
 (i.e. $ \lim\limits_{n\ra \infty}d(A,A_n)=0 $ )
 & $\mathfrak{M}(\mu) $ contains all sets that are countable union of finitely $ \mu $-measurable sets.
-& \textbf{Measure theorem } on Euclidean space : $ \mathfrak{M}(\mu) $ is a $ \sigma $-ring and $ \mu* $ is countable additive.
+& \textbf{Measure theorem } on Euclidean space : $ \mathfrak{M}(\mu) $ is a $ \sigma $-ring and $ \mu^* $ is countable additive.
 & such extended set function (nonnegative, countably additive, regular and finite) 
 on $ \sigma $-ring is called as \textbf{measure} 
 & \textbf{Lebesgue measure} $ m $ is extension of set function $ m $ (defined earlier) on
@@ -887,11 +912,9 @@ closed $ F $ and open $ G $ such that $ F\subset A\subset G $ and
 \begin{center}
 	$ \mu(G-A)<\epsilon ,\, \mu(F-A)<\epsilon .$
 \end{center}
-&& \textbf{Borel sets} : sets which are countable union, intersection or complementunion or intersection of open sets, clearly the collection $ \mathscr{B} $ of all 
+&& \textbf{Borel sets} : sets which are countable union, intersection or complement union or intersection of open sets, clearly the collection $ \mathscr{B} $ of all 
 Borel sets in $ \R^p $ is the smallest $ \sigma $-ring containing all open sets and
 $ \mathscr{B}\subset \mathfrak{M}(\mu) $
-&& 
-\subsection{Lebesgue integration}
 & relevance to Riemann integration
 
 && if $ A\in \mathfrak{M}(\mu) $ and for every $ \epsilon >0 $ there exist Borel sets $ F, G $ such that $ F\subset A\subset G $ and 
@@ -968,7 +991,7 @@ $ f\in \mathscr{L}(\mu) $ on $ E $ if its Lebesgue integral is finite on $ E $
 	$ \int_E f d\mu \leq \int_E g d\mu .$
 \end{center}
 && for any real (constant) $ c $ if $f\in \mathscr{L}(\mu)$ on $E$ then $ cf \in \mathscr{L}(E) $ and $ \int_E cfd\mu = c\int_E fd\mu $
-&& if $ \mu(E)=0 $ then for measurable $ f \quad \int_E f d\mu =0.$ 
+&& if $ \mu(E)=0 $ then for measurable $ f,\int_E f d\mu =0.$ 
 && if $f\in \mathscr{L}(\mu)$ on $ E $ and measurable $A\subset E$ then $ f \in \mathscr{L}(\mu) $ on $ A $
 & for measurable, nonnegative $ f $ on $X$ and a measurable set $ A\subset X $ define $ \phi(A)= \int_A fd\mu $ then $ \phi $ is countably additive on measurable sets
 i.e. for a sequence $ \{ A_n\} $ of measurable sets
@@ -986,26 +1009,26 @@ and
 
 & if $ f $ measurable on $ E $, $ |f|\leq g $ and $ g\in \mathscr{L}(\mu) $ on $ E $ then $ f\in \mathscr{L}(\mu) $ on $ E $
 & \textbf{Lebesgue monotone convergence theorem} : for $ E\in \mathfrak{M} $ and 
-$ \{f_n\} $ a sequence of measurable functions such that $ 0\geq f_1(x)\geq f_2(x)
+$ \{f_n\} $ a sequence of measurable functions such that $ 0\leq f_1(x)\leq f_2(x)
 \ck $ on $ E $, if $ f_n \ra f $ as $ n\ra \infty $ on $ E $ then as $n\ra \infty$
 \begin{center}
 	$ \int_E f_n d\mu \ra \int_E fd\mu .$
 \end{center}
 & Consequences 
-&& if $ f_1,f_2\in\\mathscr{L}(\mu) $ on $ E \mathfrak{M}$ then $ f_1+f_2 \in \mathscr{L}(\mu)$on $ E $
+&& if $ f_1,f_2\in \mathscr{L}(\mu) $ on $ E\in \mathfrak{M}$ then $ f_1+f_2 \in \mathscr{L}(\mu)$on $ E $
 && if $ \{f_n\} $ is a sequence of nonnegative measurable functions on
-$ E  \mathfrak{M}$ and $ f(x)=\sum f_n(x) $ on $ E $ then 
+$ E  \in \mathfrak{M}$ and $ f(x)=\sum f_n(x) $ on $ E $ then 
 \begin{center}
 	$ \int_E fd\mu=\sum \int_E f_n d\mu .$
 \end{center}
-& \textbf{Fatou's Theorem} : if $ \{f_n\} $ is a sequence of nonnegative measurable functions on $ E  \mathfrak{M}$ and 
+& \textbf{Fatou's Theorem} : if $ \{f_n\} $ is a sequence of nonnegative measurable functions on $ E\in   \mathfrak{M}$ and 
 $ f(x)=\liminf_{n\ra \infty} f_n(x) $ on $ E $ then 
 \begin{center}
 	$ \int_E fd\mu \leq \liminf_{n\ra \infty} \int_E f_n d\mu .$
 \end{center}
 
 & \textbf{Lebesgue Dominated convergence Theorem} : if $ \{f_n\} $ is a sequence of
-nonnegative measurable functions on $ E  \mathfrak{M}$,
+nonnegative measurable functions on $ E\in  \mathfrak{M}$,
 $  f_n(x) \ra f(x) $ on $ E $ and if there exist $g\in \mathscr{L}(\mu)  $ on 
 $ E $ such that $ |f_n(x)|\leq g(x)\, \forall n $ on $ E $ then 
 \begin{center}
