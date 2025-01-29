@@ -452,14 +452,14 @@ $M(z)=\frac{ax+b}{cz+d} \leftarrow\!\rightarrow [M]
 
 	 
 	& if $\mathbb{H}^\pm$ represents the upper or lower half plane ($Im(z) > 0 \; or\; < 0 $) , $\delta=\Delta(0,1)$ unit disk at origin  and $\partial\Delta =\{|z|=1\}$ then :
-	&& for fixed $\beta \in \mathbb{C},\theta\in \mathbb{R}$ if $Im(\beta)>0$ then \[w=f(z)=e^{i\theta}\frac{z-\beta}{z-\bar{\beta}}.\]
+	&& for fixed $\beta \in \mathbb{C},\theta\in \mathbb{R}$ if $Im(\beta)>0$ then \[w=f(z)=e^{i\theta}\frac{z-\beta}{z-\overline{\beta}}.\]
 	are the only conformal maps that maps \\
-	$\mathbb{H}^+ \mapsto \delta$ , $\beta \mapsto 0$ and real line$ +\infty= \mathbb{R}_\infty \mapsto \partial \Delta$ (to see assume $|w|<1 \iff |z-\bar{\beta}|^2-|z-\beta|^2>0 \iff -2Re(z(\beta-\bar{\beta}))=4(Im(z))(Im(\beta))>0.$)
+	$\mathbb{H}^+ \mapsto \delta$ , $\beta \mapsto 0$ and real line$ +\infty= \mathbb{R}_\infty \mapsto \partial \Delta$ (to see assume $|w|<1 \iff |z-\overline{\beta}|^2-|z-\beta|^2>0 \iff -2Re(z(\beta-\overline{\beta}))=4(Im(z))(Im(\beta))>0.$)
 	& now if we use transform $R_0^\pi(z) = e^{i\pi}z=-z$ which rotates $\mathbb{H}^+$ to $\mathbb{H}^-$ we get $g=f\circ\phi(Z).$ 
 	\[ g(z)=e^{i\theta} \frac{z-b}{z- \overline{b}}.\]
 	for $Im(b)<0$, are the only conformal maps that map 
 	$\mathbb{H}^- \mapsto \delta$ , $b \mapsto 0$ and $\mathbb{R}_\infty \mapsto \partial \Delta.$
-	& similarly if $h(z)=f\circ R_0^{\pi/2}$ \[h(z)=e^{i\theta} \frac{z-\gamma}{z-\bar{\gamma}} .\]
+	& similarly if $h(z)=f\circ R_0^{\pi/2}$ \[h(z)=e^{i\theta} \frac{z-\gamma}{z+\overline{\gamma}} .\]
 	for $Re(b)>0$, are the only conformally maps that map
 		Right half plane $(Re(z)>0)\mapsto \delta$ , $\gamma \mapsto 0.$
 	& a Mobius transform $ w=az+b/cz+d $ maps $\mathbb{H}^+\mapsto \mathbb{H}^+$ iff $a,b,c,d\in \mathbb{R}, ad-bc > 0$ (i.e. automorphisms of $\mathbb{H}^+.$) 
@@ -586,7 +586,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	& \textbf{Schwarzian Reflection}:
 	&& Given a sufficiently smooth curve $K$, it is possible to find an analytic function $S_K(z)$ such that $z\in K\; \implies \; S_K(z)= \overline{z}$ then 
 	&& Schwarz function of $K$ = $\tilde{z}=\Re_K(z)=\overline{S_K(z)}.$
-	&& clearly if $q\in K\quad \tilde{q}=\overline{S_K(q)}=\bar{ \overline{q}}=q$ i.e. remains unchanged.
+	&& clearly if $q\in K\quad \tilde{q}=\overline{S_K(q)}=\overline{ \overline{q}}=q$ i.e. remains unchanged.
 	&& Also as $S_K$ just amplitwists infinitesimal disk at $q\in K$ to infinitesimal disk in $ \overline{q}\in  \overline{K}$ we observe that for $S_K|qp\mapsto  \overline{q} \overline{p}$(for $p,q\in K , qp $ infinitesimal ) amplification $=1$ and twist $=-2\phi$  where $\phi$ is the angle b/w tangent to $K$ at $q$ with horizontal
 	&& so from above we get if $ a $ is on infinitesimal circle passing through 
 	$K$ then $\tilde{a}=\Re_K(a)$ is reflection along the tangent of $K$. i.e $\Re_K$ near $K$ is sort of like Reflection in $K$ (pseudo).
@@ -605,7 +605,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	& from above we get: if $|f|\leq M$ in image of $K.$ then
 	\[\left|\int_{S}f(z)dz\right|\leq M . \text{length of }K.\]
 	& \textbf{Winding number and properties }:
-	& winding number for a closed loop $L$ and a point $a$ = $\nu(L,a)$ is the number of revolutions $z-a$ makes as it traces $L$ (where  we fixing a direction for counterclockwise revolution is +ve and clockwise is -ve by convention)
+	& winding number for a closed loop $L$ and a point $a$ = $\nu(L,a)$ is the number of revolutions $z-a$ makes as it traces $L$ (where  we fixing a direction for counter-clockwise revolution is +ve and clockwise is -ve by convention)
 	& A simple loop is a closed curve that doesnt intersect with itself
 	& now as a point moves from left to right if it crosses a boundary of the loop and the loops direction is downwards (upwards) the winding number increased (decreases) by 1
 	(here the first entry of the point to loop is made to be in loop moving in downwards direction).
