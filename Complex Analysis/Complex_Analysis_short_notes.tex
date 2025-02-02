@@ -366,7 +366,7 @@ i.e. Mobius transforms are cross-ratio invariant.
 \begin{easylist}
 	& now as coefficients of mobius transform are not unique if $ad-bc=1$ in $M(z)$ then
 \end{easylist}
-$M(z)=\frac{ax+b}{cz+d} \leftarrow\!\rightarrow [M]
+$M(z)=\frac{az+b}{cz+d} \leftarrow\!\rightarrow [M]
 =\begin{bmatrix}
 	a&b\\
 	c&d\\
@@ -709,7 +709,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
  (can used for calculating the number of zeroes of polynomial in a give loop)
  & Application of Rouche's Theorem to polynomials 
  && eg: consider the polynomial $ g(z)=z^6-5z^4+7 $ 
-&&& now $ |g(z)-7|\leq |z|^6+5|z|^4 \leq 7$ if $ |z|\leq 1 $\snote{ as $ 6+1\leq 7 $} thus $ g(z) $ has same number of zeroes as $ f(z)7 $ in $ |z|\leq 1 $ i.e. $ g(z) $ has no zeroes inside $ |z|\leq 1 .$
+&&& now $ |g(z)-7|\leq |z|^6+5|z|^4 \leq 7$ if $ |z|\leq 1 $\snote{ as $ 1+5\leq 7 $} thus $ g(z) $ has same number of zeroes as $ f(z)7 $ in $ |z|\leq 1 $ i.e. $ g(z) $ has no zeroes inside $ |z|\leq 1 .$
  &&& similarly if $ f(z)=-5z^4 $ we have $ |g(z)-f(z)|\leq |z|^6+7\leq 5|z|^4 $ if $ |z|\leq 2 $ \snote{ as $ 2^6+7=71\leq 5.2^4=80 $} thus $ g(z) $ has $ 4 $ zeroes in $ |z|\leq 2 .$
  &&& similarly if $ f(z)=z^6 $ we have $ |g(z)-f(z)|\leq 5|z|^4+7\leq |z|^6 $ if $ |z|\leq 3 $ \snote{as $ 5.3^4+7 =412 \leq 3^6=729$ } thus all zeroes of $ g(z) $ lie inside $ |z|\leq 3. $ 
   
@@ -730,7 +730,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	& if $f$ is analytic in a simply connected region $\Omega$ and $f(z)\neq 0$ in $\Omega$ then $\exists h$ analytic in $\Omega$ such that \[e^{h(z)}=f(z).\]
 	($h'(z)=f'(z)/f(z)$ claim $f.e^{-h(z)}=c=e^k$ prove by differentiating) (domain can be whole $\mathbb{C}$).
 	& if $f$ satisfies the above conditions then $\exists g$ analytic in $\Omega$ such that $g^2(z)=f(z)$ in $\Omega$ (choose $g(z)= e^{h(z)/2}$).
-	& \textbf{Cauchy's Inequality} : if $f$ is analytic in an open disk centered at a of radius $R$ $=\Delta(a,R)={|z-a|<R}$ and $|f(z)|\leq M$ on boundary $\overline{\Delta(a,r)}$ for $0<r<R, \zeta\in \partial\Delta(a,r)$ we have \[|f^k(a)|\leq \frac{M.k!}{r^k}.\] (use estimation of Cauchy integral).
+	& \textbf{Cauchy's Inequality} : if $f$ is analytic in an open disk centered at a of radius $R$ $=\Delta(a,R)={|z-a|<R}$ and $|f(z)|\leq M$ on boundary $\overline{\Delta(a,r)}$ for $0<r<R$ then we have \[|f^k(a)|\leq \frac{M.k!}{r^k}.\] (use estimation of Cauchy integral).
 	& for an open set $D$ if $f_n:D\mapsto \mathbb{C}$ are analytic for each $n$ and if $f_n \mapsto f$ uniformly on each compact subset of $D$ then $f$ is analytic and more over $f_n^k\mapsto f^k$ uniformly in the compact subsets, the same is true for series also if all conditions hold. 
 	& every zero of an analytical function is isolated.
 	& from above we have if ${a_n}$ are the zeros of analytical map $f$, $a_n\mapsto a \in \mathbb{C}$ then $f\equiv0.$
@@ -742,8 +742,8 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	&& $f$ is bounded in deleted neighborhood of $z_0.$
 	&& $\lim\limits_{z\mapsto z_0}f(z).$ exists
 	&& $\lim\limits_{z\mapsto z_0}(z-z_0)f(z)=0.$
-	& \textbf{Picard's Little Theorem} : every non constant entire function only omits at most one value \\ from this we get if a entire function omits two value then it is a constant.
-	& \textbf{Picard's Great theorem} : if $z_0$ is the essential singularity of $f(z)$  analytic in then $\Delta(z_0,r)-z_0$ then $\mathbb{C}-{f(\Delta(z_0,r)-z_0)}$ is a singleton set.
+	& \textbf{Picard's Little Theorem} : every non constant entire function only omits at most one value, \\ from this we get if a entire function omits two value then it is a constant.
+	& \textbf{Picard's Great theorem} : if $z_0$ is the essential singularity of $f(z)$  analytic in  $\Delta(z_0,r)-z_0$ then $\mathbb{C}-{f(\Delta(z_0,r)-z_0)}$ is a singleton set.
 	& \textbf{Picards little theorem for meromorphic functions}: A meromorphic function omits three distinct values then it is a constant.
 	& if $f$ is an even anlytic function (i.e. f(-z)=f(z)) then for $z_0$ isolated singularity of $f$ $Res(f(z),z_0)=0.$ (there are no odd power terms in Laurent series expansion).
 	& if analytic function $f$ is such that $f(z)=f(z+z_1)=f(z+z_2)$ (doubly periodic)and if $z_1/z_2 \notin \mathbb{R}$ then $ f$ is a constant (as $z_1,z_2$ will be linearly independent).

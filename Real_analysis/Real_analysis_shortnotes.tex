@@ -194,7 +194,7 @@
  	& If $f:X\ra Y$ is continuous function and $E\subset X$ is connected subset then $f(E)$ is connected i.e. $f$ \textbf{maps connected sets to connected set} 
  	& \textbf{intermediate value theorem} is a corollary of the above point.
  	& $f:(a,b)\subset \R \ra\R$ is monotonic if $x<y\implies f(x)\leq f(y)\; \forall x,y\in (a,b)$ (monotonic increasing) or if $f(x)\geq f(y)\; \forall x,y\in (a,b)$ (monotonic decreasing).
- 	& If $I$ is any interval in $\R$ and if $f:I\ra \R$ is continuous and one-one then $f$ is straightly monotone.  
+ 	& If $I$ is any interval in $\R$ and if $f:I\ra \R$ is continuous and one-one then $f$ is strictly monotone.  
  	& Define $f(x-)=\lim\limits_{t\ra x^-}f(t)$ and $f(x+)=\lim\limits_{t\ra x^+}f(t)$ 
  	& If $f:E\ra \R$ is monotonic then $f(x+)$ and $f(x-)$ exist for all $x\in E$
  	& If $f$ is continuous then $f(\bar{E})\subset \overline{f(E)}$
@@ -536,7 +536,7 @@ i.e. if $x$ is a local minimum or maximum of $x$ then $(\nabla f) (x)=0$ (conver
 $f(a+x)-f(a)=\frac{1}{2}\sum_{i_1,i_2} \pfrac{^2f}{x_{i_1}\partial x_{i_2}}x_{i_1}x_{i_2}+r(x)$
 now if not all second order derivatives are zero then define \textbf{Hessian matrix} $H$ as $[H(a)]=h_{ji}= \pfrac{^2f}{x_{i}\partial x_{j}}(a)$ (if ordering of domain variable is $\{1,2,\ck ,n\}$) now the sum in the Taylor's polynomial can be written as $H(a)x^T.x=x^T H(a) x $ (standard representation of a quadratic form ) now  if 
 && $x^TH(a)x>0\; \forall x\neq 0$ then $H(a)$ is positive definite iff  $k\times k$ principal minors (determinant of principle partitioned matrix of size $k\times k$) of it is $>0$ thus $f(a+x)-f(x)>0$ which implies $f(a)$ is a local minimum
-&& Similarly if $x^tH(a)x<0\; \forall x\neq 0$ then $H(a)$ is negative definite iff  $k\times k$ principal minors of has  $(-1)^k$ in signs then $f(a)$ is positive.
+&& Similarly if $x^tH(a)x<0\; \forall x\neq 0$ then $H(a)$ is negative definite iff  $k\times k$ principal minors of has  $(-1)^k$ in signs then $f(a)$ is local maxima.
 && Eg: if $f:E\subset \R^2\ra \R$ with variables $(x,y)$ and is in  $\mathscr{C}^2(E)$ then all 2nd order partial derivatives are continuous also  $\pfrac{^2f}{x\partial y}=\pfrac{^2f}{y\partial x}$ at every $x\in E$ and if $(\nabla f)(a)=0$ and not all 2nd order partial derivatives are zero then 
 \end{easylist}
 $H(a)=
@@ -930,8 +930,8 @@ $ \mathscr{B}\subset \mathfrak{M}(\mu) $
 to extended Reals such that the sets $ \{x:f(x)>a\} $ is measurable for every real $ a $
 & this definition is equivalent to 
 \begin{center}
-	$ \{x:f(x)\geq a\} .$
-	$ \{x:f(x) < a\} .$
+	$ \{x:f(x)\geq a\} .$\\
+	$ \{x:f(x) < a\} .$\\
 	$ \{x:f(x) \leq a\} .$
 \end{center}
 & if $ f,g $ are measurable on $ X $ then :

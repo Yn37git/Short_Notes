@@ -100,7 +100,7 @@
 	& $rank(A)=rank(A')=rank(A^*)$
 	& Elementary transformation: exchange of rows, multiplication of row by non zero constant, addition of k multiple of a row to another row.
 	& Elementary transformations doesn't change the rank of a matrix.
-	& Every elementary transformation has a corresponding non singular matrix which when multiplied gives the operation.
+	& Every elementary transformation has a corresponding non singular matrix which when pre-multiplied to a given matrix gives the respective operation.
 	& Normal form of a matrix: (row reduced Echelon form) A matrix which can be partitioned into identity and null matrices and the identity is present in upper-left part.
 	& $\exists P,Q$ non-singular square matrices such that $N=PAQ$ where $A$ is any matrix and $N$ is its normal or row-reduced Echelon form.
 	& $rank(AB) \leq min(\{rank(A),rank(B)\})$. 
@@ -112,11 +112,12 @@
 	\w{so }	rank(A) &+Rank(B)-k&\leq rank(AB)\\
 		&\leq min(\{rank(A),Rank(B)\}).
 	\end{align*}}
-	\snote{use $ ABx=A(Bx) =0$ iff $ x\in Im(B)\cap ker(A) $ and that $ dim(Im(B)\cap ker(A))\leq null(A)=k-r(A) $ so $ -dim(Im(B)\cap ker(A))\geq r(A)-k .$  }
+	\snote{use: for $ Bx\neq0 $, $ ABx=A(Bx) =0$ iff $ x\in Im(B)\cap ker(A) $ and that $ dim(Im(B)\cap ker(A))\leq null(A)=k-r(A) $ so $ -dim(Im(B)\cap ker(A))\geq r(A)-k .$  }
 	& \textbf{Frobenius Inequality} :\\
 	 for $A_{m\times k},B_{k \times p},C_{p\times n}$
 	{\footnotesize \[rank(AB)+rank(BC)\leq rank(B)+rank(ABC). \]}
 	& $rank(A)=rank(A^*A)$
+	& if all entries of $ A $ are real then $ rank(A'A)=rank(A) $.
 	& if $A$ is n-squared then :
 	&& $rank(A)=n \implies rank(adj(A))=n$.
 	&& $rank(A)=n-1 \implies rank(adj(A))=1$.
