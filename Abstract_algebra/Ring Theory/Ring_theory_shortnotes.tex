@@ -106,7 +106,8 @@
 	\begin{multicols}{2}
 			\section*{symbols used}
 		\begin{center}
-			$ \st \, \ra  $ such that.
+			$ \st \, \ra  $ such that.\\
+			
 		\end{center}
 		\section{Basic Definitions}
 			\tbx{ \textbf{Ring } $R$ : is a set together with two binary operations $ + $ and $ \tm $ \snote{addition  and multiplication} with properties :\\
@@ -192,7 +193,7 @@
 			\y $ \phi(a+b)=\phi(a)+\phi(b) $ \\
 			\y $ \phi(ab)=\phi(a)\phi(b) $ \\
 			} 
-\tbx{\y kernel of $ \phi  $ ker $\phi $ is the set in $ R $ mapped to $ o $ in $ S $
+\tbx{\y kernel of $ \phi  $ denoted by ker $\phi $ is the set in $ R $ mapped to $ o $ in $ S $
 \\
 \y image of $ \phi $ and ker $\phi  $ are subrings.\\
 \y if $\alpha\in   $ ker $ \phi $ then $ r\alpha \in  $ ker $ \phi $ $ \forall r \in R $\\
@@ -551,19 +552,37 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 			} 
 \tbx{$ R $ is a U.F.D. iff $R[x]$ is a U.F.D.
 			} 
-\tbx[Irreducibility Criterion and properties]{
-\y for $ F $ is a field and $ p(x)\in F[x] $ has a factor of degree one iff $ p(x) $ has a root in $ F$.\\
-\y immediately from above point we get polynomial of degree two or three in $ F[x] $ for $ F $ field is reducible  iff it has roots in $ F $.
-\tbx[Rational root Theorem]{ let $ p(x)=a_nx^n+a_{n-1}x^{n-1}+\ck + a_0 $ be a polynomial with integer coefficients, if $ r/s \in \Q$ in lowest form \snote{i.e. $ (r,s) =1$ } is a root of $ p(x) $ then $ r|a_0 $ and $ s|a_n $, in particular if  $ p(x)$ is monic with integer coefficients and $ p(d)\neq 0 $ for all integer dividing the constant term of $ p(x) $ then 
-			$ p(x) $  has no root in $ \Q $.}
-\y if $ I $ is a prime ideal of Integral Domain $ R $, $ p(x) $ a non constant monic polynomial in $ R[x]\st $ its image in $ (R/I)[x] $ cannot be factored into two polynomials of smaller degree in $ (R/I)[x] $ then $ p(x) $ is irreducible in $ R[x] $. From this we get :}
-\tbx[\textbf{Mod $ p $ irreducibility test} ]{For $ f(x)\in \Z[x] $ with $ deg(f(x))\geq 1 $, $ \overline{f(x)} \in \Z_p[x]$ obtained from reducing coefficients of $ f(x) $ modulo $ p $ for a prime $ p\in \Z $ and  if $ \overline{f(x)} $ is irreducible in $ \Z_p[x] $ and $ deg(f(x))=deg(\overline{f(x)}) $ then $ f(x) $ is irreducible in $ Q$  \snote{\textbf{converse is not true} : i.e. if $ \overline{f(x)} $ is reducible in $ \Z_p $ then it may not be reducible in $ \Z[x] $}} 
 			
-\tbx[\textbf{Eisenstein's Criterion}]{  for $ P $ a prime ideal of integral domain $ R $ , 
-			$ f(x)=x^n +a_{n-1}x^{n-1}+\ck + a_1x+a_0 \, \in R[x] \st a_{n-1},\ck a_1,a_0$ are elements of $ P $ and $ a_0 $ is not an element of $ P^2 $ then $ f(x) $ is irreducible in $ R[x] $.\\
-			For  eg : $ f(x)=x^n+ a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i$ but if $ p^2\! \not\!\!| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.\\
-			\textbf{$ f(x)=a_n x^n +a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i \w{ for } 0\leq i<n$ \\
-				but if $p\not|a_n, p^2\not| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.} \snote{write $ D=\{0,a_n\} $ then the fraction ring $ D^{-1}\Z $ has $p\Z $ as prime ideal and $ f(x)  =x^n +\frac{ 1 }{a_n} (a_{n-1}x^{n-1}+\ck + a_0 )$ in $ D^{-1}\Z $ which satisfies original Eisenstiens criterion.}}
+\tbx{if $ f(x) \in F[x]$ has $ a_1,a_2,\ck a_k $ as roots in $ F $ field then $ f(x) $ has $ (x-a_1)(x-a_2)\ck (x-a_k) $ as factors, in particular \textbf{a polynomial of degree $ n $ over $ F $ has at most $ n $ roots in $ F .$}
+} 
+\tbx{\textbf{every finite subgroup of multiplicative group of a field is cyclic} , in particular $ F^*=F-\{0\} $ for $ F $ field is a cyclic group (multiplicative). \\
+	\snote{use fundamental theorem of finite abelian groups and last point to show subgroup is $ \cong \Z/n_1\Z\tm 
+		\Z/n_2\Z\tm \ck \Z/n_k\Z$ so has more than $ n_k $ roots for $ x^{n_k}-1 $  if $ k\geq 2 $ as for each $ d||G| $ cyclic group there are exactly $ d $ elements of order dividing $ d $ in G, so $ k=1 $ i.e.  subgroup is $ \cong \Z/n_1\Z$ only.}\\
+	eg : now as $ \Z/p\Z $ is a field for prime $ p $ we get $ (\Z/p\Z )^* $ is cyclic group of order $ p-1 $ (multiplicative).}
+
+\tbx{$ \Z/p^\alpha\Z $ is cyclic group of order $ p^{\alpha-1}(p-1) $ for all odd primes $ p, \alpha \geq 1$ \\
+	\snote{ use $ (1+p)^{p^{n-1}}\equiv 1 \pmod p^n $ but $ (1+p)^{p^{n-2}}	\not\equiv 1 \pmod p^n $ so Sylow $ p $ subgroup is cyclic and homomorphism  $ \phi : (\Z/p^\alpha\Z )^*\ra (\Z/p\Z )^*$ by $ \phi(a) = a \pmod p $ then $ \phi $ is serjective so any $ p\neq q| p-1 $ is Sylow $q$ subgroup is mapped isomorphically to subgroup of $ (\Z/p\Z )^*$ which is cyclic so all Sylow subgroups of $(\Z/p^\alpha\Z )^*$ are cyclic so by direct product and order deduction we have $ (\Z/p^\alpha\Z )^* $ is cyclic.}}
+	
+	\tbx{  $ g(x) \in F[x] $ for a field $ F $ is such that $ g(x)=f_1(x)^{n_1} f_2(x)^{n_2}\ck f_k(x)^{n_k}$ be its factorization where $ f_i(x) $ are distinct primes then 
+		\begin{center}
+			$ F[x]/(g(x))\cong F[x]/(f_1(x)^{n_1})\tm F[x]/(f_2(x)^{n_2})\tm \ck \tm F[x]/(f_k(x)^{n_k}) .$
+		\end{center}  \snote{use Chinese remainder theorem.}
+	} 
+\subsection{Irreducibility Criterion and properties}
+\tbx{
+\y for $ F $ is a field and $ p(x)\in F[x] $ has a factor of degree one iff $ p(x) $ has a root in $ F$.\\
+\y immediately from above point we get polynomial of degree two or three in $ F[x] $ for $ F $ field is reducible  iff it has roots in $ F $.}
+\tbx[Rational root Theorem]{ let $ p(x)=a_nx^n+a_{n-1}x^{n-1}+\ck + a_0 $ be a polynomial with integer coefficients, if $ r/s \in \Q$ in lowest form \snote{i.e. $ (r,s) =1$ } is a root of $ p(x) $ then $ r|a_0 $ and $ s|a_n $, in particular if  $ p(x)$ is monic with integer coefficients and $ p(d)\neq 0 $ for all integer dividing the constant term of $ p(x) $ then 
+	$ p(x) $  has no root in $ \Q $.}
+\tbx{if $ I $ is a prime ideal of Integral Domain $ R $, $ p(x) $ a non constant monic polynomial in $ R[x]\st $ its image in $ (R/I)[x] $ cannot be factored into two polynomials of smaller degree in $ (R/I)[x] $ then $ p(x) $ is irreducible in $ R[x] $. From this we get :
+\tbx[\textbf{Mod $ p $ irreducibility test} ]{For $ f(x)\in \Z[x] $ with $ deg(f(x))\geq 1 $, $ \overline{f(x)} \in \Z_p[x]$ obtained from reducing coefficients of $ f(x) $ modulo $ p $ for a prime $ p\in \Z $ and  if $ \overline{f(x)} $ is irreducible in $ \Z_p[x] $ and $ deg(f(x))=deg(\overline{f(x)}) $ then $ f(x) $ is irreducible in $ Q$  \snote{\textbf{converse is not true} : i.e. if $ \overline{f(x)} $ is reducible in $ \Z_p $ then it may not be reducible in $ \Z[x] $}} }
+			
+\tbx[\textbf{Eisenstein's Criterion}]{  for $ P $ a prime ideal of integral domain $ R,$  
+			$ f(x)=x^n +a_{n-1}x^{n-1}+\ck + a_1x+a_0 \, \in R[x] \st a_{n-1},\ck a_1,a_0$ are elements of $ P $ and $ a_0 $ is not an element of $ P^2 $ then $ f(x) $ is irreducible in $ R[x] $.
+			For  eg : \\
+			\y $ f(x)=x^n+ a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i$ but if $ p^2 \not\!| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.\\
+			\y \textbf{$ f(x)=a_n x^n +a_{n-1}x^{n-1}+\ck + a_0 \, \in \Z[x] \st p|a_i \w{ for } 0\leq i<n$ 
+				but if $p\not| a_n, \\ p^2\!\not| a_0 $ then $ f(x) $ is irreducible in $ \Z[x] $ which makes it irreducible in $ \Q[x] $.} \snote{write $ D=\{0,a_n\} $ then the fraction ring $ D^{-1}\Z $ has $p\Z $ as prime ideal and $ g(x)=f(x)/a_n  =x^n +\frac{ 1 }{a_n} (a_{n-1}x^{n-1}+\ck + a_0 )$ in $ D^{-1}\Z $ which satisfies original Eisenstiens criterion.}}
 			
 \tbx{for any field $ F $ and $ 0\neq a\in F $ then \\
 \y $ af(x) $ is irreducible over $ F $ implies $ f(x) $ is irreducible in $ F $ \\  
@@ -573,20 +592,8 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 
 \tbx{Cyclotomic polynomial : $\Phi_p(x)=  \frac{ x^p-1 }{x-1}  $ for a prime $ p $ is irreducible over $ \Q $ \snote{ use $ \Phi_p(x+1) $ is irreducible by Eisenstien's criterion. }
 			 }
-\tbx{  $ g(x) \in F[x] $ for a field $ F $ is such that $ g(x)=f_1(x)^{n_1} f_2(x)^{n_2}\ck f_k(x)^{n_k}$ be its factorization where $ f_i(x) $ are distinct primes then 
-			\begin{center}
-				$ F[x]/(g(x))\cong F[x]/(f_1(x)^{n_1})\tm F[x]/(f_2(x)^{n_2})\tm \ck \tm F[x]/(f_k(x)^{n_k}) .$
-			\end{center}  \snote{use Chinese remainder theorem.}
-			} 
-\tbx{if $ f(x) \in F[x]$ has $ a_1,a_2,\ck a_k $ as roots in $ F $ field then $ f(x) $ has $ (x-a_1)(x-a_2)\ck (x-a_k) $ as factors, in particular \textbf{a polynomial of degree $ n $ over $ F $ has at most $ n $ roots in $ F .$}
-			} 
-\tbx{\textbf{every finite subgroup of multiplicative group of a field is cyclic} , in particular $ F^*=F-\{0\} $ for $ F $ field is a cyclic group (multiplicative). \\
-			\snote{use fundamental theorem of finite abelian groups and last point to show subgroup is $ \cong \Z/n_1\Z\tm 
-				\Z/n_2\Z\tm \ck \Z/n_k\Z$ so has more than $ n_k $ roots for $ x^{n_k}-1 $  if $ k\geq 2 $ as for each $ d||G| $ cyclic group there are exactly $ d $ elements of order dividing $ d $ in G, so $ k=1 $ i.e.  subgroup is $ \cong \Z/n_1\Z$ only.}\\
-			eg : now as $ \Z/p\Z $ is a field for prime $ p $ we get $ (\Z/p\Z )^* $ is cyclic group of order $ p-1 $ (multiplicative).}
-			 
-\tbx{$ \Z/p^\alpha\Z $ is cyclic group of order $ p^{\alpha-1}(p-1) $ for all odd primes $ p, \alpha \geq 1$ \\
-			\snote{ use $ (1+p)^{p^{n-1}}\equiv 1 \pmod p^n $ but $ (1+p)^{p^{n-2}}	\not\equiv 1 \pmod p^n $ so Sylow $ p $ subgroup is cyclic and homomorphism  $ \phi : (\Z/p^\alpha\Z )^*\ra (\Z/p\Z )^*$ by $ \phi(a) = a \pmod p $ then $ \phi $ is serjective so any $ p\neq q| p-1 $ is Sylow $q$ subgroup is mapped isomorphically to subgroup of $ (\Z/p\Z )^*$ which is cyclic so all Sylow subgroups of $(\Z/p^\alpha\Z )^*$ are cyclic so by direct product and order deduction we have $ (\Z/p^\alpha\Z )^* $ is cyclic.}}
+
+
 			
 
 		\subsection{ Multivariable Polynomial Rings }
