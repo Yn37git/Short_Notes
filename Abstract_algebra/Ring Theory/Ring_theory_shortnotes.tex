@@ -183,6 +183,7 @@
 			} 
 \tbx{for rings $R  $ and $ S $ their direct product $ R\tm S $ is ring under corresponding component wise operation. \snote{ thus even any number of direct product of rings is a ring }
 			} 
+	\tbx{now if $ R,S $ are non zero fields then $ R\tm S $ is never a field. \snote{as $ (1,0)(0,1)=(0,0) $}}
 \tbx[\textbf{Characteristic } $ ch(R) $  ]{Characteristic  of a ring is a number \\
 			$ n \st n1=\overbrace{1+1+\ck +1}^{n \w{ times }}=0$ if order of $ 1 $ is infinite then characteristic is said to be $ 0 $ \snote{ not $ \infty $.}
 			} 
@@ -318,40 +319,7 @@ If $ R$ is an integral domain, $ Q $ its field of fractions then if any field $ 
 			if $ F $ is Field then $ F $ contains a unique smallest subfield that is either isomorphic to 
 			$Q $ or $ \Z/p\Z .$ \snote{ depending on its characteristic.}}
 			
-		\section{Chinese Remainder Theorem (c.r.t)}
-
-\tbx{proper ideals $ I,J $ of $ R $ ring are comaximal ideals if $ I+J=R $
-			} 
-\tbx[c.r.t]{ let $ A_1,A_2,\ck , A_k $ be ideals in $ R $ then the map 
-			$ R \ra R/A_1 \tm R/A_2 \tm \ck \tm R/A_k $ defined by $ r \ra (r+A_1,r+A_2,\ck , r+A_k) $ is a 
-			ring homomorphism with kernel $ A_1\cap A_2 \cap \ck \cap A_k. $\\
-			and if for each $ i,j \in \{1,2,\ck , k\} $ with $ i\neq j $ $ A_i,A_j $ are comaximal then this 
-			map is surjective and  $ A_1\cap A_2 \cap \ck \cap A_k=A_1A_2\ck A_k. $ 
-			} 
-\tbx[Consequences of c.r.t]{
-			\y if $ n=p_1^{a_1}p_2^{a_2}\ck p_k^{a_k} \; \in \Z $ where $ p_i's$ are prime in $ \Z, a_i\in  
-			\Z^+ $ then 
-			\begin{center}
-				$ \Z/n\Z \cong (\Z/p_1^{a_1}\Z)\tm (\Z/p_2^{a_2}\Z)\tm \ck \tm (\Z/p_k^{a_k}\Z). $
-				$ (\Z/n\Z)^* \cong (\Z/p_1^{a_1}\Z)^*\tm (\Z/p_2^{a_2}\Z)^*\tm \ck \tm (\Z/p_k^{a_k}\Z)^*. $
-			\end{center}
-			
-			\y Chinese Remainder problem : \\
-			if $ n_1,\ck ,n_k $ are integers which are relatively prime i.e. $ (n_i,n_j)=1 \w{ for } i\neq q$
-			and $ a_1,\ck , a_k \in \Z $  then there is a solution to simultaneous congruences 
-			\begin{center}
-				$ x\equiv a_1 \pmod{n_1},$\\
-				$x\equiv a_2\pmod{n_2} $\\
-				$\vdots$\\
-				$ x\equiv a_k\pmod{n_k}  .$
-			\end{center} $ \st x\in \Z $ and is unique $ \mod n=n_1n_2\ck n_k $
-			the solution given by :\\
-			let $n=n_1n_2\ck n_k , \, n'_i=n/n_i$ and $ t_i $  be the inverse of $ n'_i \pmod{n_i }$ then
-			\begin{center}
-				$ x=a_1t_1n'_1+a_2t_2n'_2+\ck +a_kt_kn'_k \pmod n $
-			\end{center}
-			} 
-\tbx{now if $ R,S $ are non zero fields then $ R\tm S $ is never a field. \snote{as $ (1,0)(0,1)=(0,0) $}}
+	
 		
 		\section{Euclidean Domain.}
 
@@ -454,6 +422,42 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 \y  Subrings and Subdomains of P.I.D maynot be P.I.D \snote{eg: $ Z[x] $ subring of $ Q[x] $, $ Z[x] $ is not a P.I.D as $ \gen{x,2} $ is not principle ideal}\\
 \y Subrings and Subdomains of Euclidean Domains may not be Euclidean Domain \snote{eg $ Z[x]\subset Q[x] $}\\
 \y Subrings and Subdomains of Fields maynot be fields \snote{eg $ Z\subset Q $} }
+\section{Quotient rings and its properties}
+\tbx{ \y if $ R $ is commutative ring then $ R/I $ is also a commutative ring (converse may not be true).\\
+\y if $ R $ is commutative and $ M/I $ is an ideal in $ R/I $ iff $ M $ is an ideal containing $ I $ in $ R $ \snote{restatement of $ 4^{th} $ isomorphism theorem}.	 }
+	\subsection{Chinese Remainder Theorem (c.r.t)}
+
+\tbx{proper ideals $ I,J $ of $ R $ ring are comaximal ideals if $ I+J=R $
+} 
+\tbx[c.r.t]{ let $ A_1,A_2,\ck , A_k $ be ideals in $ R $ then the map 
+	$ R \ra R/A_1 \tm R/A_2 \tm \ck \tm R/A_k $ defined by $ r \ra (r+A_1,r+A_2,\ck , r+A_k) $ is a 
+	ring homomorphism with kernel $ A_1\cap A_2 \cap \ck \cap A_k. $\\
+	and if for each $ i,j \in \{1,2,\ck , k\} $ with $ i\neq j $ $ A_i,A_j $ are comaximal then this 
+	map is surjective and  $ A_1\cap A_2 \cap \ck \cap A_k=A_1A_2\ck A_k. $ 
+} 
+\tbx[Consequences of c.r.t]{
+	\y if $ n=p_1^{a_1}p_2^{a_2}\ck p_k^{a_k} \; \in \Z $ where $ p_i's$ are prime in $ \Z, a_i\in  
+	\Z^+ $ then 
+	\begin{center}
+		$ \Z/n\Z \cong (\Z/p_1^{a_1}\Z)\tm (\Z/p_2^{a_2}\Z)\tm \ck \tm (\Z/p_k^{a_k}\Z). $
+		$ (\Z/n\Z)^* \cong (\Z/p_1^{a_1}\Z)^*\tm (\Z/p_2^{a_2}\Z)^*\tm \ck \tm (\Z/p_k^{a_k}\Z)^*. $
+	\end{center}
+	
+	\y Chinese Remainder problem : \\
+	if $ n_1,\ck ,n_k $ are integers which are relatively prime i.e. $ (n_i,n_j)=1 \w{ for } i\neq q$
+	and $ a_1,\ck , a_k \in \Z $  then there is a solution to simultaneous congruences 
+	\begin{center}
+		$ x\equiv a_1 \pmod{n_1},$\\
+		$x\equiv a_2\pmod{n_2} $\\
+		$\vdots$\\
+		$ x\equiv a_k\pmod{n_k}  .$
+	\end{center} $ \st x\in \Z $ and is unique $ \mod n=n_1n_2\ck n_k $
+	the solution given by :\\
+	let $n=n_1n_2\ck n_k , \, n'_i=n/n_i$ and $ t_i $  be the inverse of $ n'_i \pmod{n_i }$ then
+	\begin{center}
+		$ x=a_1t_1n'_1+a_2t_2n'_2+\ck +a_kt_kn'_k \pmod n $
+	\end{center}
+} 
 
 		\section{\normalsize  Quadratic Field and Quadratic Integer Ring}
 
@@ -496,6 +500,7 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 			$ a(x)b(x)= \sum_{i=1}^{m+n}(\sum_{j=0}^{i}a_ib_{i-j})x^i$\\
 			\snote{we can write any number of terms in a given polynomial for these operations by assuming coefficients are 0}
 			} 
+		
 \tbx{ if 	$ R $ is an \textbf{Integral domain }then  \\
 			\y degree $ a(x)b(x) $= degree $ a(x) $ +degree $b(x)$ \\
 			\y the only units of $ R[x] $ are the units of $ R $ \\
@@ -568,6 +573,15 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 			$ F[x]/(g(x))\cong F[x]/(f_1(x)^{n_1})\tm F[x]/(f_2(x)^{n_2})\tm \ck \tm F[x]/(f_k(x)^{n_k}) .$
 		\end{center}  \snote{use Chinese remainder theorem.}
 	} 
+		\tbx{  If $ R $ is commutative, $ f(x) $ is a monic polynomial of degree $ n\geq 1 $ and if bar  denotes the passage to quotient ring $ R[x]/(f(x)) $ then\\
+		\y every element of $ R[x]/(f(x)) $ is of form $ \overline{p(x)} $ for some polynomial $ p(x) \in R[x]$ of degree less than $ n $ i.e.\\
+		\begin{center}
+			$ R[x]/(f(x))=\{\overline{a_0}+\overline{a_1x}+\ck+\overline{a_{n-1}x^{n-1}}|a_0,a_1,\ck ,a_{n-1}\in R\} .$
+		\end{center} 
+		\y if $ p(x) $ and $ q(x) $ are distinct polynomial of $ R[x] $ of degree less than $ n $ then $ \overline{p(x)}\neq \overline{q(x)} $ in $ R[x]/(f(x)) $ .\\
+		\y if $ f(x)=a(x)b(x)$ for $ a(x) $ and $ b(x) $ degree less than $ n $ in $ R[x] $ the $ \overline{a(x)},\overline{b(x)} $ are zero divisors in $ R[x]/(f(x)) $ i.e. if non-unit factors of $ f(x) $ \snote{of degree less thn that of $ f(x) $} in $ R[x] $ are zero divisors in $ R[x]/(f(x)) $.\\
+		\y if $ f(x)=x^n-a $ for some nilpotent element $ a \in R$ then $ \overline{x} $ is nilpotent in $ R[x]/(f(x)) $ \snote{use: $ \overline{x^n}=\overline{a} $ in $ R[x]/(f(x)) $}.\\
+		\y for a prime $ p $ if $ R=\mathbb{F}_p $ \snote{field with $ p $ elements} and $ f(x)=x^p-a $ for some $ a\in R $ then $ \overline{x-a} $ is nilpotent in $ R[x]/(f(x)) $.}
 \subsection{Irreducibility Criterion and properties}
 \tbx{
 \y for $ F $ is a field and $ p(x)\in F[x] $ has a factor of degree one iff $ p(x) $ has a root in $ F$.\\
@@ -607,8 +621,34 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 			where a monic term $  x_1^{d_1}x_2^{d_2}\ck x_n^{d_n} $ is called \textbf{monomial}\\
 			$ d_i $ is degree of $ x_i $, the sum $ d=d_1+d_2+\ck +d_n $ is called the degree of the term and \\
 			the ordered $ n $-tuple $ (d_1,d_2,\ck d_n) $  is called \textbf{ multidegree } of the term.}
-			
-			\vspace*{1em}
+
+		\section{Ring of functions and evaluation maps}
+		\tbx{ If $ A $ is a ring and $ X $ a non empty subset of $A $ then $ R $ the set of all functions from $ X\ra A $ forms a Ring with usual point  wise addition and multiplication of functions \snote{note multiplication is not composition of functions}.\\
+		\y This ring $ R $ is commutative iff $ A $ is commutative.\\
+		\y $ R $ has identity iff $ A $ has Identity \snote{if so then constant function mapping to identity is identity in $ R $.}\\}
+		\tbx{ familiar examples and their properties:\\
+			\y  Consider the set of all functions from $ \R \ra \R $ with compact support \snote{i.e. $ f(x)\neq 0 $ only in a compact set of $ \R $} then this set forms a commutative Ring with no identity.\\
+			\y if $ R $ is ring of all functions from $ [0,1]\ra \R $ then units in $ R $ are functions that are not zero at any point, and if $ f\in  R$ is not a unit and not zero then it is a zero divisor as $ g(x) $ defined by $g(x)= 1 $ at point where $ f(x)=0 $ and $ g(x)=0 $ at points $ f(x)\neq 0 $ are such that $ f(x)g(x)\equiv0 $.\\
+			\y Similarly if $ R $ is ring of \textbf{continuous} functions from $ [0,1]\ra \R $ then units are same as presiding point but not true for zero divisors, functions with countably many zeros are neither units nor zero divisors and $ R $ also has zero divisors \snote{like continuous functions with zero on a closed interval in $ [0,1] $. } }
+		\tbx{ If $ R $ is a ring of functions from a non-empty set $ X $ to a \textbf{field} $ F $ then $ R $ contains no nonzero nilpotent elements. }
+		\tbx[Evaluation map]{  for $ X $ non-empty subset of ring $ A $ let $ R $ be ring of functions from $ X\ra A $ for each $ c \in X$ fixed the evaluation map $ E_c:R\ra A $ defined by $ E_c(f)=f(c) $ is a surjective ring homomorphism \snote{if $ a\in A  $ then constant function $ f(x)=a $ is in preimage of $ a $ i.e. $ f\in E_c^{-1}(a) $ } with a kernel  $ M_c=\{f\in R|f(c)=0\} $ thus $ R/ker E_c \cong A. $\\
+		\y thus the set $ M_c=\{f\in R|f(c)=0, c\in A\} $ is an ideal in $ R. $\\
+		}
+		\tbx{ Examples and their properties :\\
+		\y consider $ R $ ring of all functions from $ [0,1]\ra \R $ then for $ c\in [0,1] $  let $ M_c $ be the kernel of evaluation at $ c $ then $ M_c $ is generated by $ g(x) $ defined by $ 0 $ at $ c $ and $ 1 $ elsewhere, \snote{ as $ f.g=f $ for all $ f\in M_c $} thus $ M_c $ is principle ideal in $ R. $ \snote{more precisely $ M_c $ is generated by any function with zero at $ c $  and nonzero elsewhere.}\\
+		\y now as $ R/M_c\cong \R $ so we get $ M_c $ is a maximal ideal in $ R $ as $ \R $ is a field. i.e. any ring of functions to a field has kernel of evaluations as maximal ideals \snote{thus prime ideals also	}.
+		\y if $ R' $ is ring of \textbf{continuous} functions from $ [0,1]\ra \R $ then \\
+		\tbx{ \y $ M $ is any maximal ideal in $ R' $ then $ M=M_c $ for some $ c\in [0,1] $ i.e. $ M $ is maximal ideal in $ R' $ iff $ M=M_c $.\\
+		\y if $ a\neq b  $ in $ [0,1] $ then $ M_a\neq M_b $ in $ R' $ \\
+		\y $ M_c $ is not principle and not even finitely generated.\\
+		\snote{note: compactness of $ [0,1] $ plays a major role in proofs of preceding points, if this is taken out then we get the following exception}}
+		\y Consider $ R" $ ring of continuous functions from $ \R\ra \R $ here 
+		\tbx{ \y $ I $ a collection of continuous functions with compact support forms an Ideal that is not prime in $ R" $. \\
+		\y if $ M $ is a maximal ideal of $ R" $ containing  $ I $  then $ M\neq M_c $ for any $ c\in \R $.}
+		
+	
+		\y now if $ I_{a,b} $ is a subset of $ R' $ ring of continuous functions from $ [0,1]\ra \R $ with such that $ I=\{f\in R|f(a)=f(b)=0 $ for some $ a,b\in [0,1] $ and $ a\neq b \}$ then $ I $ is not a prime ideal. }
+		
 		\section{Matrix Rings}
 
 \tbx{for any non trivial \snote{$\neq \{0\} $} ring $ R $ let $ M_n(R) =[a_{ij}]$ be set of all $ n\tm n $ matrices with entries $ a_{ij} $ from $ R $ with component wise addition and matrix multiplication this $ M_n(R) $ forms ring with properties as follows :\\
@@ -617,6 +657,11 @@ so any Subring of Integral domain containing unity is a Subdomain\\
 \y The set of scalar matrices \snote{$ a_{ii}=a \forall i\; a_{ij}=0 $ if $ i\neq j. $ } in $ M_n(R)$ forms a subring isomorphic to $ R .$\\
 \y center of $ M_n(R) $ is the set of scalar matrices.\\
 \y if $ S $ is a subring of $ R $ then $ M_n(S) $ is subring of $ M_n(R) $}
+\tbx{ if $ M_n(R) $ for $ n\geq 2 $ is a matrix ring of $ R $ a commutative ring with identity then consider the set $ C_j $  \snote{$ j\in \{1,2,\ck , n\} $} of matrices with arbitrary entries in $ j^{th} $ column and $ 0 $ in all other columns then 
+\y $ C_j $ is a group under matrix addition\\
+\y $ C_j $ is closed only under left multiplication.
+\y And $TC_j=C_j  $ for any $ T\in M_n(R) $ thus $ C_j $ is left ideal that is not a right ideal in $ M_n(R) $\\
+Similarly one can construct $ R_j $ with $ 0 $ entries in rows except $ j^{th} $ one, then $ R_j $ is a right ideal that is not a left ideal in $ R $.}
 \tbx{ All rings with unity of order $ p $ and $ p^2 $ are commutative the ring $ \left\lbrace\begin{bmatrix}
 		a&b\\
 		0&c
