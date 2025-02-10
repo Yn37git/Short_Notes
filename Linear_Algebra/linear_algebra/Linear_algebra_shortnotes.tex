@@ -113,11 +113,11 @@
 	\tbx{\centering
 	$ A_{m\tm n} \ra$ $ m\tm n $ matrix. \\
 	 $ A_n \ra n\tm n$ matrix.\\
-	 $ \sim \ra $ the relation below $ A\sim B\implies A=P^{-1}AP.$\\ 
-	 iff $ ra $  
+	 $ \sim \;\ra $ the relation below $ A\sim B\implies A=P^{-1}AP.$\\ 
+	 iff $ \ra\; \iff $  
 	}
 	\section{Basic Linear equations theory}
-	\tbx{ Every $ A_{m\tm n}=PR_{m\sim n} $ for Row reduced Echelon form $ R $and an invertible matrix $ P $ let this relation be denoted by $ A \w{\small{ rrec }} R$}
+	\tbx{ Every $ A_{m\tm n}=PR_{m\tm n} $ for Row reduced Echelon form $ R $ and an invertible matrix $ P $ let this relation be denoted by $ A \w{\small{ rrec }} R$}
    \tbx{ if $ m<n $ then the homogeneous system $ A_{m\tm n}X=0 $ has a non trivial solution \\
    i.e. if the number of equations is less than the number of variables then the Homogeneous System has a non trivial solution }
    \tbx[Inverse Properties]{  
@@ -132,24 +132,29 @@
 	\tbx[Consistency ]{System of linear equations : \\$ A_{m\tm n}X_{n\tm 1}=b_{1\tm m}$ for $ b\neq 0 $  is consistent \snote{has a solution}  iff the row reduced Echelon form of augmented matrix $ [A:b] $ has same number of non zero rows as in row reduced echelon form of $ A.$ }
 	\section{Vector Spaces}
 	\tbx[Definition]{$ (V,\F,+) $ denoted by $ V(\F) $   : $ V $ is vector space over Field $ \F $ if 
-	\y $ (V,+) $ is a commutative group\\
+	\yi $ (V,+) $ is a commutative group, \\
 	for every $ \alpha,\beta \in \F$ and every  $ a,b\in V $ 
 	\yi $ 1a=a $ where $ 1\in \F $ is multiplicative identity of $ \F. $ 
 	\yi $ (\alpha+\beta)a=\alpha a+\beta a $ 
 	\yi $ \alpha (a+b)=\alpha a+\alpha b $ 
-	\yi $ (\alpha\beta)a=\alpha(\beta a) $ 
+	\yi $ (\alpha\beta)a=\alpha(\beta a) $ \\
 	The elements of $ V $ are called \textbf{vectors }and elements of $ \F $ are called \textbf{scalars}}
+	\tbx[Span]{ if $ K=\{v_1,v_,\ck, v_n\} \subseteq V(\F)$ then span of $ K$ is the set $ \{\sum \alpha_iv_i| v_i \in K, \alpha_i \in \F\} $ i.e. is all the formal sums from set $ K $ with $ \F. $ This is denoted by $ span(K).$ 
+		 }
 	\tbx[Subspace]{ A subset $ S $ of vector space $ V(\F)$ is a subspace if $ S(\F) $ is a vector space by same operations as in $ V $ 
+	\yi given any $ K\subseteq V(F) $ $ span(K) $ is a subspace of $ V(\F) .$
 	\yi $ S $ is a subspace of $ V $ iff $ \alpha a+b \in S\; \forall a,b\in S $ and $ \alpha\in \F $ the underlying field of both spaces  
-	\yi Intersection of subspaces (arbitrary) is again a subspace}
-	\tbx[Span]{ if $ K=\{v_1,v_,\ck, v_n\} \subseteq V(\F)$ then span of $ K$ is the set $ \{\sum \alpha_iv_i| v_i \in K, \alpha_i \in \F\} $ i.e. is all the formal sums from set $ K $ with $ \F. $ 
-	\y given any $ K\subseteq V(F) $ $ span(K) $ is a subspace of $ V(\F) .$ }
+	\yi Intersection of subspaces (arbitrary) is again a subspace i.e. if $ W_1,W_2 $ are subspaces of $ V $ then
+	$ W_1\cap W_2 $ is also a subspace of $ V $.
+	\yi Union of subspaces may not be a subspace
+	\yi Union of two subspaces is a subspace iff one of them is contained in another i.e. for  $ W_1,W_2 $ subspaces of $ V $, $ W_1\cup W_2 $ is a subspace iff $ W_1\subseteq W_2 $ or $ W_2\subseteq W_1. $\\ \snote{note: this is not the same in case of $ 3 $ subspaces : consider $ Z_2\tm Z_2 (Z_2) $ vector space here  $ Z_2\tm Z_2=span((0,1))\cup span((1,0))\cup span((1,1)) $.} }
+
 	\tbx[Dependence]{ a set of vectors $ \{v_1,v_,\ck, v_n\} \subseteq V(\F)$ are called Linearly independent in $ V $ if $ \alpha_1v_1+\alpha_2v_2+\ck+\alpha_nv_n=0 \implies $ all $ \alpha_i's$ are $ 0 $ and no other choice is left. Other wise the subset is called linearly dependent}
 	\tbx[Basis]{  a subset $ K $ of $ V $ is a spanning set of $ V $ if $ span(K)=V.$\\
 	A Linearly independent spanning set of $ V(\F) $ is called a Basis of $ V. $ 
 	}
 	\tbx[Dimension]{ In a given vector space $ V(\F) .$
-	\y The number of elements in Basis is constant $ n\in \Z^+. $ 
+	\yi The number of elements in Basis is constant $ n\in \Z^+. $ 
 	\yi if a set contains more vectors than the Basis set of a vector space then it is linearly dependent.
 	\yi if a linearly independent set contains exactly the same number of elements as a Basis then it is also a Basis.
 	\yi These above points leads us to the Definition : Number of elements $ n $  in The Basis set of $ V(\F) $ is unique and is called the Dimension of $ V(\F)$ denoted by $ dim(V)=n. $ }
@@ -163,26 +168,26 @@
 	\snote{note: there cannot be a definite formula for $ dim(\sum_{i=1}^{n}W_i) $ using dimensions of $ W_i's $ and their counterparts (union, intersections) if $ n\geq 3 $. }}
 	\tbx[Matrix Representation of vectors]{ Fix a basis $ \beta=\{b_1,b_2,\ck, b_n\} $ for a vector space $ V(\F) $ then as $ B $ spans $ V $  every vector  $x \in  V $ can be written as $ x=x_1b_1+x_2b_2+\ck x_nb_n $ for $ x_i\in \F $ and $ b_i\in B $ and this representation is unique so each vector can be associated with a column matrix $ x_\beta=[x_1\; x_2\ck x_n]^T $ }
 	\tbx[Change of Basis Matrix]{  Given two basis $ \beta= \{b_1,b_2,\ck, b_n\}, \; \beta' =\{b'_1,b'_2,\ck, b'_n\} $ for $ V $ Then one can change the representation of $ x\in V $ from $ [x]_\beta $ to $ [x]_{\beta'} $ by 
-	\[[x]_{\beta'}=P[x]_\beta\] where $ P_n $ is a invertible matrix given by if $ b'_j=p_{1j}b_1+p_{2j}b_2+\ck +p_{nj}b_n$ then $ [p_{1j}\; p_{2j} \ck p_{nj}]^T $ forms the $ j^{th} $ column of $ P. $}
+	\[[x]_{\beta'}=P[x]_\beta\] where $ P_n $ is a invertible matrix given by if $ b_j=p_{1j}b'_1+p_{2j}b'_2+\ck +p_{nj}b'_n$ then $ [p_{1j}\; p_{2j} \ck p_{nj}]^T $ forms the $ j^{th} $ column of $ P. $}
 	\section{Linear Transform}
-	\tbx[Definition]{ a map $ T:V(\F)\ra W(\F) $ (between vectorspaces with same underlying field)  is called a linear transform if for every $ v,u\in V $ and $ \alpha\in F $ 
-	\y $ T(v+u)=T(v)+T(u) $ 
+	\tbx[Definition]{ a map $ T:V(\F)\ra W(\F) $ (between vector spaces with same underlying field)  is called a linear transform if for every $ v,u\in V $ and $ \alpha\in F $ 
+	\yi $ T(v+u)=T(v)+T(u) $ 
 	\yi $ T(\alpha v)=\alpha T(V) $}
 	\tbx[Range and Null space]{ For a linear transform $ T:V\ra W $ :\\
-	\y Rangespace of $ T $ denoted by $ R(T)\subseteq W$ is $ \{w|w=T(v)\w{ for some }v\in V\} $
-	\yi NullSpace of $ T $ denoted by $ N(Y)\subseteq V $ is $ \{v|T(v)=0\in W\} $
+	\y Range Space of $ T $ denoted by $ R(T)\subseteq W$ is $ \{w|w=T(v)\w{ for some }v\in V\} $
+	\yi Null Space of $ T $ denoted by $ N(T)\subseteq V $ is $ \{v|T(v)=0\in W\} $
 	\yi Both of them are subspaces of the underlying space.
 	\yi $ T $ is one-one iff $ N(T)=\{0\} .$
 	\yi $ T $ is onto if $ R(T)=W $ 
 	\yi if $ dim(V)=dim(W) $ and $ N(T)=\{0\} $ then $ T $ is onto thus $ T $ is bijective. }
 	\tbx{ if $ T,U $ are both liner transforms from $ V\ra W $ and if both agree on a basis of $ V $ \snote{i.e. $ T(b_i)=U(b_i) \; \forall i$ for some basis $ \beta=\{\ck,b_i,\ck\} $ of $ V $} then both of then are same i.e. $ T\equiv U .$}
-	\tbx[Rank Nullity Theorem]{for a linear transform  $ T:V(\F)\ra W(\F) $ $ rank(T)=dim(R(T)) $ $ nullity(T)=dim(N(T)) $ and   \[ rank(T)+nullity(T)=dim(V)\]
+	\tbx[Rank Nullity Theorem]{for a linear transform  $ T:V(\F)\ra W(\F) $ if $ rank(T)=dim(R(T)) $ and  $ nullity(T)=dim(N(T)) $ then \[ rank(T)+nullity(T)=dim(V)\]
 	\snote{this is just an analogue of $ 1^{st} $ isomorphism theorems of Groups}}
 	\tbx[Matrix of Linear Transform]{Given a linear transform $ T:V\ra W$, basis $ \beta=\{b_1,b_2\ck,b_n\}  $ of $ V $ and basis $ \beta'=\{b'_1,b'_2,\ck,b'_m\} $ of $ W $ then we can write the liner transform in the corresponding matrix representation of vectors as 
 	\[ [T(x)]_{\beta'}=[T]_{\beta}^{\beta'}[x]_\beta \]
 	 where $ [T]_{\beta}^{\beta'}$ is a $ m\tm n $ matrix  called Matrix of linear transform of $ T $ and is given by if $ T(b_j)=t_{1j}b'_1+t_{2j}b'_1 +\ck +t_{mj}b'_m$  then $ [t_{1j}\; t_{2j} \ck t_{mj}]^T $ forms the $ j^{th} $ column of $ [T]_{\beta'}^{\beta} .$}
-	 \tbx[Change of Basis]{  if $ T:V\ra V $ then $ [T]_\beta^\beta $ is simply written as $ [T]_\beta $ now if $ P $ is the change of basis matrix from basis $ \beta'$ to basis $ \beta$ of $ V $ i.e. $ [x]_\beta=P[x]_\beta' $ then
-	 \[[T]_\beta'= P^{-1}[T]_\beta P\]
+	 \tbx[Change of Basis]{  if $ T:V\ra V $ then $ [T]_\beta^\beta $ is simply written as $ [T]_\beta $ now if $ P $ is the change of basis matrix from basis $ \beta'$ to basis $ \beta$ of $ V $ i.e. $ [x]_\beta=P[x]_{\beta' }$ then
+	 \[[T]_{\beta'}= P^{-1}[T]_\beta P\]
 	 \snote{This can be treated as the origin of 'similar' equivalence matrix relationship $ A\sim B \iff A=P^{-1}BP .$}
 	 }
 	 \tbx[Isomorphism of Vector spaces]{ Two spaces $ V,W $ over same vector space $ \F $ are said to be isomorphic to each other if there exist an invertible linear transform $ T :V\ra W$ (i.e. $ T $ is linear bijective map) and this is denoted by $ V\cong W. $ 
@@ -209,11 +214,14 @@
  \[f(x)=a_1x_1+a_2x_2+\ck +a_nx_n\]  in which $ a_i=f(b_i).$ are fixed but $ x_i $ varies on input representation $ x. $ }
  \tbx[Annihilator]{ if $ A\subset V(\F) $ be any subset of $ V $ then annihilators  of $ A$ is the set of linear functionals $ A^o=\{f|f(A)=0,f\in V^*\}\subseteq V^* $ 
  \yi clearly $ A^o$ is a subspace of $ V^* $ for any subset $ A $ of $ V $ 
- \yi subspaces $ W_1=W_1 $ iff $ W_1^o=W_2^o$ and $ (W_1+W_2)^o=W_1^o\cap W_2^o.$ 
+ \yi subspaces $ W_1=W_1 $ iff $ W_1^o=W_2^o$ 
+ \yi $ (W_1+W_2)^o=W_1^o\cap W_2^o.$ 
  \yi if $ W $ is subspace of $ V $ then 
- \[dim(W)+dim(W^o)=dim(V)\] 
- \yi if $ W $ is subspace of $ V $ then $ W=W^{oo} .$ }
- \tbx[Transpose of linear transform]{ if $ T:V\ra W $ is linear transform then its transpose $T^t:W^*\ra V^* $ is a linear transform defined by the evaluation \\ $ T^t(g(.))=g(T(.)) $  i.e. for $ g\in  W^*$ 
+ \begin{center}
+ 	$ dim(W)+dim(W^o)=dim(V) .$
+ \end{center}
+ \y if $ W $ is subspace of $ V $ then $ W\cong W^{oo} .$ }
+ \tbx[Transpose of linear transform]{ if $ T:V\ra W $ is linear transform then its transpose $T^t:W^*\ra V^* $ is a linear transform defined by the evaluation \\ $ T^t(g(.))=g(T(.)) $  i.e. for $ g\in  W^*$,
  $ T^t(g) $ is the functional $ f=g(T(.)) \in V^*$
  \yi $ [T^t]_{\gamma^*}^{\beta*}=([T]_\beta ^\gamma)^t $ i.e. the corresponding matrix of $ T^t $ in dual basis of $ \gamma $ in $ W $ and $ \beta $ in $ V $ is just the Transpose of the matrix of $ T $ in $ \beta  $ and $ \gamma. $ 
  \yi if $ W $ is finite dimensional then for linear $ T:V\ra W $ we have\\
@@ -224,11 +232,11 @@
 \tbx{ if linear transform $ T\in L(V)=L(V,V) $ then it is called a linear operator. }
 	\section{Determinant}
 \tbx[Motivation]{for a finite dimensional space every linear transform in $ L(V) $ can be represented as a unique Matrix, but we need to 'uncover' this matrix to gain the properties of corresponding linear transform one such way is to create a Function from set of matrices to the underlying field with some properties which helps us with this 'gain'. }
-\tbx{ Some Properties need for such a function is :
+\tbx{ Some Properties needed for such a function are :
 \yi It must be a linear in terms of rows (or columns) of the matrix this is called $ n $-linear.
-\yi It must be alternating i.e. if any 2 rows (or columns )are equal the it is zero.
+\yi It must be alternating i.e. if any 2 rows (or columns) are equal then it is zero.
 \yi its vale on Identity should be $ 1 $.}
-\tbx{  Say we obtain a function $ D $ with this property for $ (n-1)\tm ?(n-1) $ matrices then this can be extend to $ n\tm n $ by 
+\tbx{  Say we obtain a function $ D $ with this property for $ (n-1)\tm (n-1) $ matrices then this can be extend to $ n\tm n $ by 
 \[E_j(A_n)=\sum\limits_{i=1}^{n}a_{ij}D(A_{ij})\] for fixed $ j\in \{1,2,\ck , n\} $, where $ a_ij $ is the $ i^{th} $ row $ j^{th} $ column entry of $ A $ and $ A_ij $ is the $ n-1\tm n-1 $ matrix obtained from $ A_n $ by removing $ i^{th} $ row and $ j^{th} $ column.}
 \tbx[Definition ]{ From above points we get determinant for a $ n\tm n  $ matrix with entries from $ \F $ as $ D: \F^{n\tm n}\ra \F$ that is $ n$-linear, Alternating and $ D(I)=1 $ is Defined by 
 recursion from the above point or if $ (i_1,i_2,\ck,i_n) $ runs trough all the possible permutations of $ n $ i.e $ n $- tuple with elements from $ \{1,2,\ck, n\} $ with out repetition then 

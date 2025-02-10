@@ -110,8 +110,14 @@
 			\end{axis}
 			\end{tikzpicture}
 	\end{easylist}
+		\end{multicols}
+\begin{easylist}
+	& Distance to a closed set function
+	&& if $ A $ is any closed set in $ \R $ define $ D_A(x)=\inf(d(x,a)) $ for $ a\in A $ and a metric $ d $ on $ \R $ (usually the Euclidean metric). 
+	&& for $ x,y\in \R $ say $ \inf(d(a,x)) $ for $ a\in A $ occurs at $ p\in A $ and  $ \inf(d(a,y))$ for $ a\in A $ occurs at $ q\in A $ i.e. $ |D_A(x)-D_A(y)|=|d(p,x)-d(q,y)| $ (this is possible since $ A $ is closed in $ \R $ ) now as $ d(q,y)\leq d(p,y) $ we have  $|D_A(x)-D_A(y)|\leq |d(p,x)-d(p,y)|\leq |d(x,y)| $ as $ d(p,x)\leq d(p,y)+d(x,y) $ so we get if $ d(x,y)<\epsilon $ then $|D_A(x)-D_A(y)|<\epsilon $ thus $ D_A $ is uniformly continuous.
+	&& Thus there exist a uniformly continuous function of $ \R $ that has zeroes exactly equal to a given closed set in $ \R $ (namely $ D_A$ for a given closed set $ A\subset \R $).
+\end{easylist}
 
-	\end{multicols}
 
 	
 \end{document}

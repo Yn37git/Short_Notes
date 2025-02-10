@@ -50,10 +50,10 @@
 	%A\oplus B \quad&\rightarrow\quad\text{Hadamard product or element wise multiplication}\\
 	A^{-1} \quad&\rightarrow\quad\text{Inverse of Matrix}\\
 	I \quad&\rightarrow\quad\text{Identity}\\
-	im(A) \quad&\rightarrow\quad \text{Image or range space of }A\\
+	Im(A) \quad&\rightarrow\quad \text{Image or range space of }A\\
 	rank(A)\w{ or } r(A)\quad&\rightarrow\quad \text{Dimension of Range space of }A\\
 	ker(A) \quad&\rightarrow\quad \text{Null space of }A\\
-	null(A) \quad&\rightarrow\quad \text{Dimension off Null space of }A\\ 
+	null(A) \quad&\rightarrow\quad \text{Dimension of Null space of }A\\ 
 	\mathbb{F}  \quad&\rightarrow\quad \text{Field}
 \end{align*}}
 
@@ -86,7 +86,7 @@
 	& $B^{-1}-A^{-1}=B^{-1}(A-B)A^{-1}$
 	& Cramer's rule for a system of linear equations $Ax=b$ where $A$ is square and for 
 	$x=[x_1,x_2,\ck,x_n]^T$ we have $x_i=\frac{|A\leftarrow_i b|}{|A|}$ where $A\leftarrow_i b$ is obtained by replacing $i^{th}$ column of $A$ by $b$.
-	& $[A\leftarrow_i b]_{i=1..n} = adj(A)b $
+%	& $[A\leftarrow_i b]_{i=1..n} = adj(A)b $
 	& $|adj(A)|=|A|^{n-1}$ where $A$ is an $n\times n$ matrix
 	& $adj(A^*)=Adj(A)^*$
 	& $adj(A^{-1})=adj(A)^{-1}=A/|A|$
@@ -95,14 +95,14 @@
 	& $A$ is orthogonal if $A'A=I$
 	& $A$ is orthogonal $\implies |A|=\pm1 \implies$ invertible.
 	& $A$ is unitary if $A^*A=I$
-	& if $A,B$ are orthogonal the so are $AB,BA$ similar in hermitian case also.
-	& $rank(A)=r$ iff all the $r+1$ order minors are zero i.e. if any one of $r$ order minor is non zero then $rank(A)\geq r$.
+	& if $A,B$ are orthogonal then so are $AB,BA$. Similar result follows in unitary case also.
+	& $rank(A)=r$ iff all the $r+1$ order minors are zero i.e. if any one of $r^{th}$ order minor is non zero then $rank(A)\geq r$.
 	& $rank(A)=rank(A')=rank(A^*)$
 	& Elementary transformation: exchange of rows, multiplication of row by non zero constant, addition of k multiple of a row to another row.
 	& Elementary transformations doesn't change the rank of a matrix.
 	& Every elementary transformation has a corresponding non singular matrix which when pre-multiplied to a given matrix gives the respective operation.
-	& Normal form of a matrix: (row reduced Echelon form) A matrix which can be partitioned into identity and null matrices and the identity is present in upper-left part.
-	& $\exists P,Q$ non-singular square matrices such that $N=PAQ$ where $A$ is any matrix and $N$ is its normal or row-reduced Echelon form.
+	& Normal form of a matrix : (Echelon form) A matrix which can be partitioned into identity and null matrices where the identity is present in upper-left part.
+	& $\exists P,Q$ non-singular square matrices such that $N=PAQ$ where $A$ is any matrix and $N$ is its normal or Echelon form. 
 	& $rank(AB) \leq min(\{rank(A),rank(B)\})$. 
 	& $rank(A+B)\leq rank(A)+rank(B)$.
 	& \textbf{Sylvester inequality} : \\for any matrices $A_{m\times k},B_{k \times n}$ 
@@ -137,7 +137,7 @@
 	& Real Eigenvalues of Orthogonal Matrices are $1$,$-1$ only.
 	& Eigenvalues of $A$ and $A'$ are same.
 	& Eigenvalues of triangular, diagonal matrices are its diagonal elements.
-	& if $\lambda$ is a eigenvalue of non-singular matrix $A$ then
+	& if $\lambda$ is an eigenvalue of non-singular matrix $A$ then
 	&& $\lambda \neq 0$
 	&& $\frac{1}{\lambda}$ is the eigenvalue of $A^{-1}$.
 	&& $\lambda^k$ is the eigenvalue of $A^k$.
@@ -145,7 +145,7 @@
 	& if $\{\lambda_i\}$  are eigenvalues of $A$ then eigenvalues of $B=p(A)$ are of form $p(\lambda_i)$ only.
 	& For $A_n$ with eigenvalues $\lambda_1,\lambda_2,\ck , \lambda_n$ $trace(A)=\sum_{i=1}^{n}\lambda_i$ ,
 	$det(A)=\prod_{i=1}^{n} \lambda_i$ and $trace(adj(A))=\sum_{i=1}^{n}\prod_{j\neq i}^{n}\lambda_i.$
-	& If $A=P^{-1}BP$ the $A$ and $B$ have same eigenvalues
+	& If $A=P^{-1}BP$ then $A$ and $B$ have same eigenvalues
 	& for square Matrices $A,B$ eigenvalues of $AB$ and $BA$ are same. \\
 	\snote{ use if $ ABx=\lambda x $ then $ BA(Bx)=B(ABx) =\lambda Bx$ so $ \lambda $ is eigenvalue of $ BA $ also and vis-a-viz.}
 	& Geometric multiplicity (no of eigenvectors for an eigenvalue) $\leq$ 
@@ -156,21 +156,20 @@
 	& A matric is diagonalizable iff for each of its eigenvalue Geometric multiplicity = Algebraic multiplicity.
 	& square matix $ A $ is diagonalizable iff minimal polynomial of $ A $ splits into distinct linear factors in the given field i.e. minimal polynomial of $ A $ is separable and has only linear irreducible factors.
 	& A non-zero Nil-potent ($A^m=0$) matrix has eigenvalues as zero only.
-	& A non-zero Nil-potent is never Diagonalizable. \\
-	\snote{if $ A $ is diagonalizable then $ P^{-1}AP=D$ so $ (P^{-1}AP)^m=P^{-1}A^mP=0=D^m $   }
+	& A non-zero Nil-potent matrix is never Diagonalizable. \\
+	\snote{if $ A $ is diagonalizable then $ P^{-1}AP=D$ so $ (P^{-1}AP)^m=P^{-1}A^mP=0=D^m \implies D\equiv 0$   thus $ A\equiv 0 $ }
 	& \textbf{ Schurs theorems: }
 	&& Every Square matrix $A$ is Unitarily similar to Upper triangular matrix whose diagonals are eigenvalues of $A$ (complex values included).  
 	&& If $A\in M_n(\mathbb{R})$ and has only real eigenvalues then it is real orthogonally similar to real upper triangular matrix.\\
-	\snote{say $  \lambda_1,\lambda_{2},\ck , \lambda_{n} $ are eigenvalues of $ A_{n\tm n} $ (with repeats) let $ x $ be normalised eigenvector of $ A $ to eigenvalue $ \lambda_{1} $ then $ x*x=1 $ $ Ax=\lambda_{1}x $ now from an orthonormal basis with $ x $ and let this matrix be $ U_1=[x\; u_2\ck u_n] $ thus we have $ U_1^*AU_1=[\lambda_1,\star;\; 0,A_1] $ for $ A_{1_{n-1\tm n-1}} $ and as $ U_1 $ is unitary we have eigenvalues of $ A_1 $ are $ \lambda_{2},\ck , \lambda_{n}  $ only so lets commence the same procedure for $ A_{1_{n-1\tm n-1}} $ we get $ U_2 $ join this to form $ V_2=[1,0;\; 0,U_2] $ then we get $ (U_1V_2)^*AU_1V_2=[\lambda_{1},\star,\star;\; 0,\lambda_{2},\star;\; 0,0,A_2] $ clearly $ U_1V_2 $ was unitary so proceeding similarly we get the theorem}
+	\snote{say $  \lambda_1,\lambda_{2},\ck , \lambda_{n} $ are eigenvalues of $ A_{n\tm n} $ (with repeats) let $ x $ be normalised eigenvector of $ A $ to eigenvalue $ \lambda_{1} $ then $ x^*x=1 $ and $ Ax=\lambda_{1}x $, now from an orthonormal basis with $ x $ and let this matrix be $ U_1=[x\; u_2\ck u_n] $ thus we have $ U_1^*AU_1=[\lambda_1,\star;\; 0,A_1] $ for $ A_{1_{n-1\tm n-1}} $ and as $ U_1 $ is unitary we have eigenvalues of $ A_1 $ are $ \lambda_{2},\ck , \lambda_{n}  $ only so lets commence the same procedure for $ A_{1_{n-1\tm n-1}} $ we get $ U_2 $ join this to form $ V_2=[1,0;\; 0,U_2] $ then we get $ (U_1V_2)^*AU_1V_2=[\lambda_{1},\star,\star;\; 0,\lambda_{2},\star;\; 0,0,A_2] $ clearly $ U_1V_2 $ was unitary so proceeding similarly we get the theorem}
 	&& If $A\in M_n(\mathbb{R})$ has complex eigenvalues then it is similar to a matrix with diagonal blocks of $1$-by-$1$ and $2$-by-$2$ only (has upper triangular entries). Where $1$-by-$1$ blocks are real eigenvalue of $A$ and $2$-by-$2$ blocks are $[a\quad b;-b\quad a]$ for $a+ib$ eigenvalue.\\
-	\snote{for $ A_{n\tm n} $ let $ \lambda=a+ib $ and its eigenvector is $ x=u+iv $ then prove $ \overline{\lambda},\overline{x} $ are eigenpairs so $ x,\overline{x} $ are linearly independent so are $ u,v $ and as $ Au=au-bv,Av=bu+av $ and if $ S=[u,v,S_1]_{n\tm n} $ be made non singular  thus $ S^{-1} AS=[B,\star;\; 0 A_1]$ for $ B= [a\quad b;-b\quad a]$ 
-	 }
+	\snote{for $ A_{n\tm n} $ let $ \lambda=a+ib $ and its eigenvector is $ x=u+iv $ then prove $ \overline{\lambda},\overline{x} $ are eigenpairs so $ x,\overline{x} $ are linearly independent so are $ u,v $ and as $ Au=au-bv,Av=bu+av $ and if $ S=[u,v,S_1]_{n\tm n} $ be made non singular  thus $ S^{-1} AS=[B,\star;\; 0 A_1]$ for $ B= [a\quad b;-b\quad a]$. }
 	& \textbf{Every Symmetric matrix ($A\in M_n(\mathbb{R})$) is orthogonally similar to diagonal matrix $(D)$ i.e. $D=P^TAP,\; P^TP=I$.}
 	& \textbf{ Every Hermitian matrix ($A$) is unitarily similar to diagonal matrix $(D)$ i.e. $D=P^*AP,\; P^*P=I$.}
 	& A matrix $A$ is normal iff $A^*A=AA^*$
 	& \textbf{A matrix is  Unitarily similar to diagonal matrix iff it is Normal.}
 	& A triangular normal matrix is Diagonal also a block diagonal normal matrix has off diagonal blocks =$0$.
-	& if $A$ is normal then $p(A)$ (specially $A+aI$ , $a \in \mathbb{C}$) is normal.
+	& if $A$ is normal then $p(A)$ (specially $A+aI$ , $a \in \mathbb{C}$) is normal. In other words if $ A $ is diagonalisable then so is $ P(A) $ \snote{ note: even zero matrix is considered as a diagonal matrix}.
 \end{easylist}
 
 
@@ -210,7 +209,7 @@
 	&& Signature = no of +ve - no of -ve eigenvalues.
   	& from above we have for a real Quadratic form $Q$ with matrix $A$ then $Q$ is:
   	&& positive definite iff all eigenvalues are positive or $>0$.
-  	&& negative definite iff  all eigenvalues are positive or $<0$.
+  	&& negative definite iff  all eigenvalues are negative or $<0$.
   	&& positive semi-definite iff at-least one eigenvalues is $0$ and others $>0$.
   	&& negative semi-definite iff at-least one eigenvalues is $0$ and others $<0$.
   	&& indefinite iff eigenvalues are -ve as well as +ve.
@@ -248,7 +247,7 @@ $J_k(\lambda)=
 	&& so $w_1(A,\lambda)= n-r_1(A,\lambda)$ = number of Jordan Blocks with eigenvalue $\lambda$ = Geometric multiplicity of  of $\lambda$ as eigenvalue of $A$
 	&& $w_{k}(A,\lambda)-w_{k+1}(A,\lambda)$ = number of blocks of Size $k$
 	&& $q$ : index of $\lambda$ in $A$ = smallest integer such that $rank(A-\lambda I)^{q+1}=rank(A-\lambda I)^q=r_{q+1}(A,\lambda)=r_q(A,\lambda)$
-	&& $w_1(A,\lambda)+w_2(A,\lambda)\ck +w_q(A,\lambda)$ = Sum of dimensions (with repeat) all Jordan blocks in $\lambda$ = Algebraic Multiplicity of $\lambda$ as eigenvalue of $A$
+	&& $w_1(A,\lambda)+w_2(A,\lambda)\ck +w_q(A,\lambda)$ = Sum of dimensions all Jordan blocks in $\lambda$ = Algebraic Multiplicity of $\lambda$ as eigenvalue of $A$
 	&& Weyr characteristic of $A \in M_n$ associated with $\lambda \in \mathbb{C}$ is \\
 	$ w(A,\lambda)=(w_1(A,\lambda),w_2(A,\lambda)\ck ,w_q(A,\lambda))$
 	&& Segre characteristic of $A \in M_n$ associated with $\lambda \in \mathbb{C}$ is\\
