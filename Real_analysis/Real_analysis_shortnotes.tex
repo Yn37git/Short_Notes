@@ -68,7 +68,7 @@
 	\ckfil
 	\section{Metric Spaces}
 	\subsection{Definitions}
-	& Ordered pair set $X$ is \textbf{Metric space} if there exist $d$ a function from $X$ to $R$ with following properties for any $p,q,r\in X$
+	& Ordered pair set $X$ is \textbf{Metric space} if there exist $d$ a function from $X$ to $\R$ with following properties for any $p,q,r\in X$
 	\begin{enumerate}
 		\item $d(p,q)>0$ if $p\neq q$ and $d(p,p)=0$
 		\item $d(p,q)=d(q,p)$
@@ -85,7 +85,7 @@
 	& Set $E$ is \textbf{perfect set} if $E$ is closed and every point of $E$ is a limit point of $E$
 	& $E$ is \textbf{bounded} if there exist a real number $M$ and a point $q\in X$ such that $d(p,q)<M$ for all $p\in E$
 	& $E$ is \textbf{dense} in $X$ if every point of $X$ is a limit point of $E$ or a point of $E$.
-	& \textbf{Closure} of a set $E$ ($=\bar{E}$)is the union of the set and its limit points
+	& \textbf{Closure} of a set $E$ ($=\bar{E}$) is the union of the set and its limit points
 	& \textbf{Interior } of a set $E$ ($=E^o$) is the set of all interior points of $E$
 	& \textbf{Open cover} of a set $E$ is a collection of open subset $\{G_\alpha\}$ of $X$ such that $X\subset \underset{\alpha}{\cup}G_\alpha .$
 	& $E$ is \textbf{compact} if every open cover of $E$ has finite sub cover
@@ -141,15 +141,15 @@
 	& Every closed set of a separable metric space is union of a perfect set (may be empty set) and a set at most countable
 	& Every countable closed set in separable space has an isolated point.
 	& Every open set in $\R^1$ is at most countable union of disjoint open intervals.
-	& every Totally bounded set is bounced
+	& every Totally bounded set is bounded
 \end{easylist}
-\noindent (converse is not true eg: if we discrete define metric 
+\noindent (converse is not true eg: if we define discrete metric 
 	\begin{center}
 	$ d(x,y)\begin{cases}
 		0 & \text{if }x=y,\\
 		1 & \text{ otherwise}
 	\end{cases} $
-	\end{center}  for $ \R $ then any infinite subset is bounded for $ N\geq 1 $ but not totally bounded as for if $ \epsilon <1 $ then only infinite collection of $ \epsilon$-balls can the infinite set.)
+	\end{center}  for $ \R $ then any infinite subset is bounded for $ N\geq 1 $ but not totally bounded as, if $ \epsilon <1 $ then only infinite collection of $ \epsilon$-balls can cover the infinite set.)
 	\begin{easylist}
 		& Compact Set are Totally bounded.
 		& Closure of totally bounded sets are totally bounded.
@@ -181,11 +181,11 @@
  	& \textbf{Limit} : a function $f(x)$ maps an open set $E\subset X$ into $Y$ then for a limit point $p$ of $E$ if $f(x)\ra q$ as $x\ra p$ then the limit is denoted by $\lim\limits_{x\ra p}f(x)=q$ or equivalently if there is a point $q\in Y$ such that for every $\epsilon>0,\; \exists \delta>0$ such that $d_Y(f(x),q)<\epsilon$ for all points $x\in E $ for which $0<d_X(x,p)<\delta .$
  	& $\lim\limits_{x \ra p}f(x)=q$ iff for every sequence $\{p_n\}$ in $E$ such that $p_n\neq p \; \lim\limits_{n\ra \infty}p_n=p$ then $\lim\limits_{n \ra \infty}f(p_n)=q$ \\
  	i.e. limit $f(p)$ exist and is equal to $q$ iff every sequence $\{p_n\}$ converging to the $p$ has same limit $f(p_n)\ra q$ 
- 	& A function $f: X \ra Y$ is continuous at $p\in X$ if for every $\epsilon>0\; \exists \delta >0$ such that $d_Y(f(x),f(p))<\epsilon$ whenever $d_X(x,p)<\delta .$ , if $f$ is continuous at every point in $X$ then it is said to be continuous which is equivalent to :\\
+ 	& A function $f: X \ra Y$ is continuous at $p\in X$ if for every $\epsilon>0\; \exists \delta >0$ such that $d_Y(f(x),f(p))<\epsilon$ whenever $d_X(x,p)<\delta$ , if $f$ is continuous at every point in $X$ then it is said to be continuous which is equivalent to :\\
  	$f(x)$ is continuous iff for every open set $V\subset Y$ the preimage $f^{-1}(V)$ is open in $X$ (or equivalently preimage of closed sets are closed).
  	& If $X$ is a compact space and and $f$ is continuous map from $X$ to any space $Y$ then $f(X)$ is compact i.e. $f$ \textbf{maps compact sets to compact sets}.
  	& From above point we get if $f$ is a continuous function from a compact space $X$ then $\exists p,q\in X$ such that $f(q)\leq f(x)\leq f(p)\quad\forall x\in X$ \\
- 	i.e. $f(x)$ attains its supremum and infimum in for points $x\in X$ itself.
+ 	i.e. $f(x)$ attains its supremum and infimum for points $x\in X$ itself.
  	& If $f$ is a \textbf{one-one continuous map} from compact space $X$ then $f^{-1}$ defined as $f^{-1}(f(x))=x$ is a continuous map from $f(X)
  	\ra X$
  	& If $E$ is non-compact set of $R^1$ then :
@@ -198,16 +198,23 @@
  	& Define $f(x-)=\lim\limits_{t\ra x^-}f(t)$ and $f(x+)=\lim\limits_{t\ra x^+}f(t)$ 
  	& If $f:E\ra \R$ is monotonic then $f(x+)$ and $f(x-)$ exist for all $x\in E$
  	& If $f$ is continuous then $f(\bar{E})\subset \overline{f(E)}$
- 	& If $f$ a real function from some subset of $\R$ having intermediate value property ($f(a)<c<f(b)$ then $f(x)=c \w{ for }x\in (a,b)$) and for every rational $r$ the set $\{x|f(x)=r\}$ is closed then $f$ is continuous. 
+ 	& If $f$ a real function from some subset of $\R$ having intermediate value property ($f(a)<c<f(b)$ then $f(x)=c \w{ for }x\in (a,b)$) and for every rational $r$ and the set $\{x|f(x)=r,r \text{ is rational in domain of }f\}$ is closed then $f$ is continuous. 
  	& If $f$ and $g$ are continuous functions from $X\ra Y$ then for dense set $E\subset X$ dense in $X$ if $f(p)=g(p) \; \forall p\in E$ then $f\equiv g$ in $X$ i.e. if two continuous functions agree on a dense set in the domain then both are same (in that domain) i.e. a \textbf{continuous mapping is determined by its value on dense subset of its domain}
+ 	&  If $f:X\ra Y$ is continuous and if $E\subset X$ is dense in $X$ then $f(E)$ is dense in $f(X)$
  	& $f:E\ra Y$ for $E$ compact is continuous iff graph of $f$ $=\{(x,f(x))\}$ is compact
  	& Every continuous open map from $\R \ra \R$ is monotonic.\\
 
-\subsection{Uniform continuity}
+\section{Uniform continuity}
  	& A function $f:X \ra Y$ is uniformly continuous if for every $\epsilon>0$ there exists $\delta>0$ such that $d_Y(f(a),f(b))<\epsilon$ for all $a,b\in X$ when ever $d_X(a,b)<\delta .$
  	& For  any non empty set $E$ of a metric space $X$ the function $\rho_E:X\ra \R$ defined by $\rho_E(x)=\inf(d_X(x,e))$ for $e\in E$ (i.e. the distance from $x$ to $E$) \textbf{is uniformly continuous}.
  	& If $f$ is continuous function from a compact metric space $X$ into a metric space $Y$, then $f$ is uniformly continuous.
  	& If $f:X\ra Y$ is uniformly continuous then $\{f(x_n)\}$ is a Cauchy sequence in $Y$ for every Cauchy sequence $\{x_n\}$ in $X$.
+ 	& For $f:X\ra Y$ , $g:Y\ra Z$, $Y$ compact, if $g$ is continuous and one-one and
+ 	&& If $h(x)=g(f(x))$ is continuous then $f$ is continuous 
+ 	&& If $h(x)=g(f(x))$ is uniformly continuous then $f$ is uniformly continuous\\ 
+ 	(use $g^{-1}$ is uniformly continuous)\\
+ \ckfil
+ 	\subsection{Uniform continuity on $ \R $}
  	& \textbf{$ \R $ Uniform Continuity Theorem :} for $ E \subseteq \R$ and $ f:E\ra \R$ is uniformly continuous on $ E $ \textbf{iff} for any sequences $ x_n,u_n $ in $ E $ such that $ |x_n-u_n|\ra 0 $ then $ |f(x_n)-f(u_n)|\ra 0 $. Negation of this theorem can be (most of the time) used to prove non-uniform continuity in $ \R$ i.e.
  	&& $ f $ is not uniformly continuous on $ E $ \textbf{iff} there exist $ \epsilon_o>0 $  (fixed) and sequences $ x_n $, $ u_n $ in $ E $ such that $ |x_n-u_n|\ra 0 $ but $ |f(x_n)-f(u_n)|\geq \epsilon_o .$ 
  	& for $ E\subset \R $ and $ f:E\ra \R $ is uniformly continuous then 
@@ -215,7 +222,6 @@
  	$ |f(x)|\leq A|x|+B $ i.e. $ |f(x)|/x^2\ra 0 $ as $ x\ra \infty $.  
  	& For \textbf{non compact bounded set} $E\subset \R^1$ :
  	&& There exist continuous function from $E$ which is not uniformly continuous (set $f(x)=1/(x-x_0)$ for some limit point $x_0$ of $E$ such that $x_0\notin E$ this is possible as $E$ is bounded)
- 	& If $f:X\ra Y$ is continuous and if $E\subset X$ is dense in $X$ then $f(E)$ is dense in $f(X)$
  	& for $ f $ and $ g $ uniformly continuous :
  	&& $ f\circ g $ i.e. $ f(g(x)) $ is uniformly continuous (whenever it is defined)
  	&& $ af(x)+bg(x) $ is uniformly continuous for $ a,b\in \R .$
@@ -223,15 +229,14 @@
  	&& if $ f(x) $ is uniformly continuous on $ A\subseteq \R $ and $ |f(x)|\geq k>0\; \forall x\in A $ then
  	 $ \frac{ 1 }{f(x)}$ is uniformly continuous.  
  	& $f:E\subset \R \ra \R$ for bounded set $E$ is uniformly continuous then $f(E)$ is bounded.
- 	& For $f:X\ra Y$ , $g:Y\ra Z$, $Y$ compact, if $g$ is continuous and one-one and
- 	&& If $h(x)=g(f(x))$ is continuous then $f$ is continuous 
- 	&& If $h(x)=g(f(x))$ is uniformly continuous then $f$ is uniformly continuous\\ 
- 	(use $g^{-1}$ is uniformly continuous)
+ 	& if $ f:(a,b) \ra \R $ is continuous on $ (a,b) $ and $ \lim\limits_{x\ra a^+}f(x) $ and $ \lim\limits_{x\ra b^-} f(x)$ exists finitely then $ f(x) $ is uniformly continuous in $ (a,b) $ (note the domain interval may be unbounded also i.e. like $ (-\infty, a) $ or $ (-\infty,\infty) $ and converse that if $ f $ is uniformly continuous then these limits existing for unbounded intervals may not be true).
+ 	& if $ f:\R \ra \R $ is differentiable in $ \R $ and $ \lim\limits_{x\ra \infty \text{ or } -\infty}|f'(x)|\ra \infty $   then $ f $ is not uniformly continuous on $ \R $ (use mean value theorem i.e. $ |f(x)-f(x+1)|=|f'(x+\delta)| $ for some $ 0<\delta<1  $.)
  	& \textbf{Continuous Extension Theorem}: A function continuous from $ (a,b)\subset\R $ can be extended to being continuous in $ [a,b] $ iff it is uniformly continuous.
-	& \textbf{Lipschitz Function} : $ f: E\subseteq \R \ra \R $ is a Lipschitz function if there exists $ k>0 \; \in \R $ such that $ |f(x)-f(y)|\leq k|x-y| \; \forall x,y\in A.$
+	& \textbf{Lipschitz Function} : $ f: E\subseteq \R \ra \R $ is a Lipschitz function if there exists $ k>0 \; \in \R $ such that $ |f(x)-f(y)|\leq k|x-y| \; \forall x,y\in E.$
+	& if $ f'(x) $ is bounded then $ f(x) $ is Lipschitz (use mean value theorem).
 	& if $ f:E\ra \R $ is a Lipschitz function then $ f $ is uniformly continuous on $ A .$   
-	& if $ f,g \ra E\ra \R$ are Lipschitz and bounded the $ fg=f(x)g(x) $ is Lipschitz. 
-	& a periodic function ($ f(x+p)=f(x)\; \forall x$ in defined range and $ p $ finite constant ) in $ \R $ is always Uniformly continuous.
+	& if $ f,g $ function from $E\ra \R$ are Lipschitz and bounded the $ fg=f(x)g(x) $ is Lipschitz. 
+	& a periodic function ($ f(x+p)=f(x)\; \forall x$ in defined range and $ p $ finite constant) in $ \R $ is always Uniformly continuous (use the interval of periodicity i.e. the region of function which gets repeated is a compact interval).
 	\\ \ckfil
 \subsection{Discontinuity}
  	& Types
@@ -378,7 +383,7 @@
  	$|f_n(x)-f(x)|\leq \epsilon .$
  \end{center}
  for all $x\in E$
-& Difference between these convergence is that for point wise convergence $N$ depends on both $x$ and $\epsilon$ but in uniform $N$ depends only on $\epsilon$
+& Difference between these convergence is that for point wise convergence $N$ depends on both $x$ and $\epsilon$ but for uniform $N$ depends only on $\epsilon$
 & \textbf{Cauchy analogue } : $\{f_n\}$ converges uniformly on $E$ iff for every $\epsilon>0\;\exists N$ such that for $n,m\geq N$ 
 \begin{center}
 	$|f_n(x)-f_m(x)|\leq \epsilon$

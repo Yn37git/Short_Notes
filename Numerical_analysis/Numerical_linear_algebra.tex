@@ -125,7 +125,7 @@
 				 \y Now for matrix representation if $ A=D+L+U $ where $ D $ is diagonal $ L $ is lower diagonal with diagonal entries $ 0 $ and $ U $ is upper diagonal with diagonal entries $ 0 $ then for Jacobi method we have 
 				 \begin{align*}
 				 	(D+L+U)x&=b\\
-				 	\implies Dx*&= -(L+U)x+b.\\
+				 	\implies Dx&= -(L+U)x+b.\\
 				 	\implies x&=-D^{-1}(L+U)x+D^{-1}b.\\
 				 	i.e. \quad x^{(k)}&=-D^{-1}(L+U)x^{(k-1)}+D^{-1}b.
 				 	\end{align*}  
@@ -141,13 +141,13 @@
 				 	(D+L)x^{(k)}&=-Ux^{(k-1)}+b.\\
 				 	i.e. x^{(k)}&= -(D+L)^{-1}Ux^{(k-1)}+(D+L)^{-1}b.
 				 	\end{align*}}
-			 	so we get $ T=-(D+L^{-1})U,c=(D+L)^{-1}b. $ }
+			 	so we get $ T=-(D+L)^{-1}U,c=(D+L)^{-1}b. $ }
 			 	\tbx{ for system $ Ax=b $ , $ A=D+L+U $ \\
 			 		\y if $  A$ is strictly diagonal then both Jacobi and Gauss-Seidel methods converge for every initial approximation $ x^{(0)}. $ \\
 			 		\y  Gauss-Seidel method is twice as fast as Jacobi's method for convergence \\
 			 		now from general iterative methods we have \\
 			 		\y sufficient condition for convergence of Jacobi's method is that 
-			 		\[||T||=||-D^{-1}(L+U)||<1\quad i.e. \rho(T)<1.\]
+			 		\[||T||=||-D^{-1}(L+U)||<1\quad i.e.\; \rho(T)<1.\]
 			 		\y similarly  sufficient condition for convergence of Gauss-Seidel method is that 
 			 		\[ ||T||=||-(D+L)^{-1}U||<1.\]
 			 		\y Both these method also converge if $ A =[a_{ij}]$ is such that \\
