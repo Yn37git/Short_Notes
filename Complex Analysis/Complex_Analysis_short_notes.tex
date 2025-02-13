@@ -51,13 +51,13 @@ Space*=0.5mm,Space2*=0mm, Space3*=0.5mm)
 \begin{easylist}
 	& $P(z)=a_0+a_1z+a_2z^2+a_3z^3\dots= \ddsum{n}{0}{\infty} a_n z^n.$
 	& If $P(z)$ converges at $z=a$ then it converges absolutely  for all $|z|<|a|.$
-	& If $P(z)$ diverges at $z=d$ then it diverges absolutely  for all $|d|<|z|.$
-	& If two power series $A(z)=\ddsum{n}{0}{\infty} a_n z^n,\\ B(z)=\ddsum{n}{0}{\infty} b_n z^n$ agree on an infinite sequence ($\neq 0$) converging to zero then they are same i.e. $a_i=b_i \; \forall i.$
-	& In general for $P_b(z)\ddsum{n}{0}{\infty}a_n(z-b)^n$ above holds as in displacement or translation of $b$ to $0$ i.e. $P_b(z)=P(w)\; for \; w=z-b.$
-	& Radius of convergence of $P(z)=\ddsum{n}{0}{\infty} a_n z^n$ is $R$ then:
-	&& $R=\lim_{i\rightarrow\infty}\left|\frac{a_n}{a_{n+1}}\right|.$
-	&& $R=\lim_{i\rightarrow\infty}\left|\frac{1}{^n\sqrt{|a_{n}|}}\right|.$
-	&& $R=\lim_{i\rightarrow\infty}\left|\frac{1}{\; limsup\;^n\sqrt{|a_{n}|}}\right|.$
+	& If $P(z)$ diverges at $z=d$ then it diverges absolutely  for all $|z|>|d|.$
+	& If two power series $A(z)=\ddsum{n}{0}{\infty} a_n z^n$ and $ B(z)=\ddsum{n}{0}{\infty} b_n z^n$ agree on an infinite sequence ($\neq 0$) converging to zero then they are same i.e. $a_i=b_i \; \forall i.$
+	& In general for $P_b(z)=\ddsum{n}{0}{\infty}a_n(z-b)^n$ above holds as in displacement or translation of $b$ to $0$ i.e. $P_b(z)=P(w)\; for \; w=z-b.$
+	& if radius of convergence of $P(z)=\ddsum{n}{0}{\infty} a_n z^n$ is $R$ then:
+	&& $R=\lim\limits_{n\rightarrow\infty}\left|\frac{a_n}{a_{n+1}}\right|.$
+	&& $R=\lim\limits_{n\rightarrow\infty}\left|\frac{1}{{|a_{n}|}^{1/n}}\right|.$
+	&& $R=\lim\limits_{n\rightarrow\infty}\left|\frac{1}{\; limsup\;{|a_{n}|}^{1/n}}\right|.$
 	& Radius of convergence of the power series of $f(z)$ at $k$ is equal to distance between $k$ and closest singularity of $f(z)$ to $k.$
 \end{easylist}
 
@@ -346,25 +346,25 @@ where $A=\frac{ad-bc}{-c^2}, u\equiv\{|z|=1\}.$
 && every mobius transform maps circles and straight lines onto circles and straight lines. 
 && above point may not be same order i.e. some circles can be mapped to straight lines and vis-a-viz. namely a
 straight line or a circle maps onto a straight line if it passes through the point
-$z =-d/c$, and onto a circle if it does not (also lines not passing trough $ -d/c .$).
+$z =-d/c$, and onto a circle if it does not i.e. lines and circles not passing trough $ -d/c $ are mapped to circle.
 && mobius transform is conformal
 && more over mobius transforms are the only transforms that \textbf{map circles to circles}
-&& To be specific A Mobius transformation maps an oriented circle $C$ to an oriented circle $\tilde{C}$ in such a way that the region to the left of $C$ is mapped to the region to the left of $\tilde{C}.$.
+&& To be specific A Mobius transformation maps an oriented circle $C$ to an oriented circle $\tilde{C}$ in such a way that the region to the left of $C$ is mapped to the region to the left of $\tilde{C}.$
 && Symmetric principle: If two points are symmetric with respect to a circle i.e. inverse points w.r.t a circle, then their images under a Mobius transformation are symmetric with respect to the image circle.
 transformation are symmetric with respect to the image circle.
 && every mobius transform has only 2 fixed points
 && there exist a unique mobius transform sending any three points to any three points.
 & the coefficients of a mobius transform $\{a,b,c,d\}$ are not unique as any $k\neq0.$
 $\{ka,kb,kc,kd\}$ gives same mobius transform
-& cross ration $[z,a,b,c]=\frac{(z-a)(b-c)}{(z-c)(b-a)}.$
-& if $ p,q,r,s $ are mapped to $ \tilde{p},\tilde{q},\tilde{r},\tilde{s} $ by a Mobius Transformation iff 
+& define cross ratio as $[z,a,b,c]=\frac{(z-a)(b-c)}{(z-c)(b-a)}.$
+& $ p,q,r,s $ are mapped to $ \tilde{p},\tilde{q},\tilde{r},\tilde{s} $ by a Mobius Transformation iff 
 \[[p,q,r,s]=[\tilde{p},\tilde{q},\tilde{r},\tilde{s}].\]
 i.e. Mobius transforms are cross-ratio invariant.
 & Unique Mobius transform $M(z)=w$ that transforms $a\rightarrow r,b\rightarrow s,c\rightarrow t$ is \[[w,r,s,t]=[z,a,b,c]\] or \[\frac{(z-a)(b-c)}{(z-c)(b-a)}=\frac{(w-r)(s-t)}{(w-t)(s-r)}.\]
 \end{easylist}
 \subsection{More on Mobius Transforms}
 \begin{easylist}
-	& now as coefficients of mobius transform are not unique if $ad-bc=1$ in $M(z)$ then
+	& now as coefficients of mobius transform are not unique if $ad-bc=1$ in $M(z)$ then we can associate a matrix for each of these mobius transforms from which resembling matrix properties can be associated to properties of transform i.e.
 \end{easylist}
 $M(z)=\frac{az+b}{cz+d} \leftarrow\!\rightarrow [M]
 =\begin{bmatrix}
@@ -378,7 +378,7 @@ $M(z)=\frac{az+b}{cz+d} \leftarrow\!\rightarrow [M]
 	&& identity transform $[I]=[1,0;0,1].$
 	&& Thus $M(z)$ of form a group (for $ad-bc \neq 0,=1$) as $\mathbb{SL}(\mathbb{R},2)$ is a subgroup of $\mathbb{GL}(\mathbb{R},2).$ 
 	& Homogeneous coordinates $z=\frac{\nu_1}{\nu_2}$ for $\nu_i\in \mathbb{C}.$
-	& $[M]$ is a liner transform on homogeneous coordinates of $z$ transforms to homogeneous coordinates of $M(z)$i.e if $z=\nu_1/\nu_2$ , $M(z)=w=\rho_1/\rho_2.$ then
+	& $[M]$ is a liner transform on homogeneous coordinates of $z$ that transforms homogeneous coordinates of  $ z $  to homogeneous coordinates of $M(z)$ i.e if $z=\nu_1/\nu_2$ , $M(z)=w=\rho_1/\rho_2.$ then
 	\[
 	\begin{bmatrix}
 		a\quad&b\\
@@ -399,26 +399,26 @@ $M(z)=\frac{az+b}{cz+d} \leftarrow\!\rightarrow [M]
 \end{easylist}
 \section{Automorphisms, Conformality and map of unit disks}
 \begin{easylist}
-	& any disk or half plain can be mapped to itself using mobius transform i.e. under specified mobius transforms say $ M_1 $ we can have $ M_1(D)=D $ for a disk $ D =\{z||z-a|\leq r\}$  and for $ M_2(\mathbb{H})=\mathbb{H} $ for any half plane $ \{z=x+iy| ax+by\geq c \} .$\snote{note : this is mere a bijection with restrictions, not the identity map in disk or half plane.}
+	& any disk or half plain can be mapped to itself using mobius transform i.e. under specified mobius transforms say $ M_1 $ we can have $ M_1(D)=D $ for a disk $ D =\{z||z-a|\leq r\}$  and for $ M_2(\mathbb{H})=\mathbb{H} $ for any half plane $ \{z=x+iy| ax+by\geq c \} $ \snote{note : this is mere a bijection with restrictions, not the identity map in disk or half plane}.
 	& more over the only conformal bijections (automorphisms) of disks $ \mapsto $ disks, 
 	half planes $ \mapsto $ half planes are \textbf{Mobius Transforms only.} 
-	& Let $C$ be a unit circle in $\mathbb{C}$ and $D$ be the unit disk it covers then
-	& mobius transform's are the only automorphisms conformal on this disk
-	& this mobius automorphism's have 3 degree of freedom (only 3 real numbers specify it)
-	& Now if two Mobius automorphisms M and N map two interior points to same image points i.e. the agree on two interior points then M=N (as this takes 4 degree of freedom from both transforms)
-	& if $D$ is centered at origin then these 3 degrees of freedom are a point in $D$ ($a=(x+iy)$) that maps to origin and $1$ is mapped to a point on $C.$.
-	& as $a$ is mapped to 0, and mobius transform preserves symmetry b/w points and their images (inversion) we have the point $1/ \overline{a}$ is mapped to $\infty$ (as $C$ maps to itself, $a,1/ \overline{a}$ are symmetric w.r.t $C$ so should be their images $0,\infty$ ).
-	& so now $a \mapsto 0\; \implies M(z)=\frac{k(z-a)}{d}$, $1/ \overline{a}\mapsto \infty\; \implies M(z)=k \frac{z-a}{ \overline{a}z-1}$ and as $M(1)\in C \; \implies |M(1)|=1\implies k=e^{i\phi}$ so the automorphism of unit disk \snote{|$z|\leq 1$} i.e. mobius transform is determined only by $a=x+iy \mapsto 0$ \snote{$ |a|<1 $} and $ p\mapsto 1 $ \snote{$ |p|=1 $} this is given by :
+	& Let $C$ be a unit circle in $\mathbb{C}$ and $D$ be the unit disk it covers then :
+	&& mobius transform's are the only automorphisms conformal on this unit disk
+	&& this mobius automorphism's on unit disk has 3 degree of freedom (only 3 real numbers specify it)
+	&& Now if two Mobius automorphisms on unit disk are say M and N map two interior points to same image points i.e. the agree on two interior points then M=N (as this takes 4 degree of freedom from both transforms)
+	&& if $D$ is centered at origin then these 3 degrees of freedom are a point in $D$ ($a=(x+iy)$, $x,y \;\ra 2 $ degrees) that maps to origin and a point $e^{i\theta}$ on the disk $ C $ ($ \theta \; \ra 1$ degree) that $1$ is mapped to \snote{i.e. $ a=x+iy\mapsto 0,\; 1\mapsto e^{i\theta} $}.
+	&& as $a$ is mapped to 0, and mobius transform preserves symmetry between points and their images (inversion) we have the point $1/ \overline{a}$ is mapped to $\infty$ (as $C$ maps to itself, $a,1/ \overline{a}$ are symmetric w.r.t $C$ their images should be  $0,\infty$).
+	&& so now $a \mapsto 0\; \implies M(z)=\frac{k(z-a)}{d}$, $1/ \overline{a}\mapsto \infty\; \implies M(z)=k \frac{z-a}{ \overline{a}z-1}$ and as $M(1)\in C \; \implies |M(1)|=1\implies k=e^{i\phi}$ so the automorphism of unit disk \snote{|$z|\leq 1$} i.e. mobius transform is determined only by $a=x+iy \mapsto 0$ \snote{$ |a|<1 $} and $ p\mapsto 1 $ \snote{$ |p|=1 $} this is given by :
 	\[ M_a^\phi(z)=e^{i\phi}\frac{z-a}{ \overline{a}z-1}.\]
 	& now for \[ M(w)=\frac{ pz+q }{\overline{q}z+\overline{p}} \]for $ |p|>|q| $ then $ M(w) $ is an automorphism of unit disk \snote{transform this to $ M_a^\phi $ for $ a=q/p $ and $ e^{i\phi}=p/\overline{p} $. }
 	& clearly $M_a^\phi(z)=e^{i\phi}M_a^0(z)$ so is just rotation of $M_a^0=M_a(z).$
-	& properties of $M_a.$
-	& $M_a$ is he only Mobius automorphism that swaps $a$ and $0$ (i.e. $M_a(a)=0,M_a(0)=a.$)
-	& now as an inversion about circle $ c $ maps circles orthogonal $ c $ to themselves (automorphism) thus automorphisms of unit circle can be viewed as inversions about circles orthogonal to unit circle to uncover this we break down that as $a\mapsto0$ and inversion circle is orthogonal to unit circle the center of inversion is on the line b/w $a$ to $0$ and as inversion is symmetric $1/ \overline{a}\mapsto \infty$ we conclude that center of inversion is $1/ \overline{a}.$
-	& as $M_a$ is conformal the above inversion should be coupled with reflection (on line perhaps) to give the exact map, as this reflection leaves $a,0$ fixed we conclude this is reflection about line $a$ to $0$ ($L_{a,0}.$)
-	& thus $M_a= \mathfrak{R}_{L_{a,0}}\circ \mathfrak{J}_{j}.$
-	& thus fixed points ($\pm \xi$) of $M_a$ is the intersection of $L_{a,0}$ and $j.$
-	& $M_a$ is Involutory.
+	& properties of $M_a$ :
+	&& $M_a$ is the only Mobius automorphism that swaps $a$ and $0$ (i.e. $M_a(a)=0,M_a(0)=a.$)
+	&& now as an inversion about circle $ c $ maps circles orthogonal $ c $ to themselves (automorphism) thus automorphisms of unit circle can be viewed as inversions about circles orthogonal to unit circle to uncover this we break down that as $a\mapsto0$ and inversion circle is orthogonal to unit circle the center of inversion is on the line between $a$ to $0$ and as inversion is symmetric $1/ \overline{a}\mapsto \infty$ we conclude that center of inversion is $1/ \overline{a}.$
+	&& as $M_a$ is conformal the above inversion should be coupled with reflection (on line perhaps) to give the exact map, as this reflection leaves $a,0$ fixed we conclude this is reflection about line $a$ to $0$ ($L_{a,0}.$)
+	&& thus $M_a= \mathfrak{R}_{L_{a,0}}\circ \mathfrak{J}_{j}.$
+	&& thus fixed points ($\pm \xi$) of $M_a$ is the intersection of $L_{a,0}$ and $j.$
+	&& $M_a$ is Involutory.
 	
 	 
 	\begin{flushleft}
@@ -455,7 +455,7 @@ $M(z)=\frac{az+b}{cz+d} \leftarrow\!\rightarrow [M]
 	&& for fixed $\beta \in \mathbb{C},\theta\in \mathbb{R}$ if $Im(\beta)>0$ then \[w=f(z)=e^{i\theta}\frac{z-\beta}{z-\overline{\beta}}.\]
 	are the only conformal maps that maps \\
 	$\mathbb{H}^+ \mapsto \delta$ , $\beta \mapsto 0$ and real line$ +\infty= \mathbb{R}_\infty \mapsto \partial \Delta$ (to see assume $|w|<1 \iff |z-\overline{\beta}|^2-|z-\beta|^2>0 \iff -2Re(z(\beta-\overline{\beta}))=4(Im(z))(Im(\beta))>0.$)
-	& now if we use transform $R_0^\pi(z) = e^{i\pi}z=-z$ which rotates $\mathbb{H}^+$ to $\mathbb{H}^-$ we get $g=f\circ\phi(Z).$ 
+	& now if we use transform $R_0^\pi(z) = e^{i\pi}z=-z$ which rotates $\mathbb{H}^+$ to $\mathbb{H}^-$ we get $g=f\circ R_0^\pi (z).$ 
 	\[ g(z)=e^{i\theta} \frac{z-b}{z- \overline{b}}.\]
 	for $Im(b)<0$, are the only conformal maps that map 
 	$\mathbb{H}^- \mapsto \delta$ , $b \mapsto 0$ and $\mathbb{R}_\infty \mapsto \partial \Delta.$
@@ -568,11 +568,11 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	&& if $f,g$ are analytic then $f+g,f\times g,f\circ g,f^{-1}$ are analytic when ever they are defined,  in particular as $f$ is amplitwist locally there is a 1-1 correspondence in a neighbourhood of non critical points to their images $\implies$ that local inverse exists. 
 	&& if $f$ is analytic in $E$ then so is $f'$ (i.e. $f$ is infinitely differentiable in the defined region)
 	&& every zero or an analytic point is isolated (generally $p$-point of $f$ or pre-image of $p$ in $f$ doesn't have a limit point.)
-	&& \textbf{Identity/Uniqueness Theorem}: restating the above we have, if $f(z)$ is analytic in $D$ and if $S$ set of zeroes has a limit point in $D$ then $f(0)\equiv 0$ in $D$ (in general if $p$-points of $f$ has a limit point then $f(z)\equiv p$).
+	&& \textbf{Identity/Uniqueness Theorem}: restating the above we have, if $f(z)$ is analytic in $D$ and if $S$ set of zeroes of $ f(z) $ and if $ S $ has a limit point in $D$ then $f(0)\equiv 0$ in $D$ (in general if $p$-points of $f$ has a limit point then $f(z)\equiv p$).
 	&& Extending the above we get, if even an arbitrarily small segment of curve is crushed to a point by an analytic mapping, then its entire domain will be collapsed down to that
 	point (i.e. the function is constant) (this property is known as \textbf{Rigidity})
 	&& from above if $f,g$ analytic agree on a curve or more generally $\{a_n\}\mapsto a$ then $f\equiv g.$ 
-	&& if some identity for $f$ analytic holds when restricted to $\mathbb{R}$ then it holds for entire $\mathbb{C}.$ (eg: odd and evenness.)
+	&& if some identity of analytic function $f(z)$ holds when restricted to $\mathbb{R}$ then it holds for entire $\mathbb{C}.$ (eg: odd and evenness.)
 	
 \end{easylist}
 
@@ -723,7 +723,7 @@ now in Polar-Cartesian (P-C) form we have $f(re^{i\theta})=u+iv$ and C-R equatio
 	&& $\phi(x,y)$ a real valued function is harmonic iff $\nabla^2\phi=0.$ 
 	&& real and imaginary parts of analytical function's are harmonic (in the defined "Domain"(a connected open set) ) (converse is not true).
 	&& $f(z)$ is analytic in  Domain $D$ iff real and imaginary parts of both $f(z)$ and $zf(z)$ are harmonic. 
-	&& if $\phi$ is a harmonic function in a Domain the $f=\phi_x-i\phi_y$ is analytic in the domain.
+	&& if $\phi$ is a harmonic function in a Domain then $f=\phi_x-i\phi_y$ is analytic in the domain.
 	&& Harmonic conjugate of harmonic function $\phi$ is another harmonic function $\psi$ such that $f=\phi+i\psi$ (i.e $\psi$ is the imaginary part od anlytic function whose real part is $\phi$).
 	&& if $\phi$ is harmonic in a simply connected region then it has a harmonic conjugate in this region.
 	

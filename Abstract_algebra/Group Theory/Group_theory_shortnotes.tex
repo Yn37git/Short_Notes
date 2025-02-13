@@ -125,10 +125,10 @@
 	\section{Preliminaries}
 	\tbx[ G.C.D ]{ greatest common divisor : $(a,b)=d$ i.e. $gcd(a,b)=d$ if $d|a,d|b$ and if 
 		there exist $e$
-		such that $e|a,e|d$ then $e|d$ ({\footnotesize here $a,b,m,e \in \Z^+$)}
+		such that $e|a,e|b$ then $e|d$ \snote{ here $a,b,d,e \in \Z^+$}
 	} 
 	\tbx[ L.C.M ]{ $lcm(a,b)=c$ then $a|c,b|c$ and if there exist $e$ such that $a|e,b|e$ then
-		$c|e$ (here $a,b,m,e \in \Z^+$)
+		$c|e$ \snote{here $a,b,c,e \in \Z^+$}
 	} 
 	\tbx[ Euclidean algorithm ]{ if $a,b\in \Z^+$ then
 		
@@ -140,7 +140,7 @@
 			$r_{n-2}=q_{n}r_{n-1}+r_n$\\
 			$r_{n-1}=q_{n+1} r_n$
 		\end{center}
-		here $r_n$ is the $gcd(a,b)$
+		here $ r_0<b $, $ r_{i+1}<r_i $ and $r_n$ is the $gcd(a,b)$ \snote{i.e. when $ r_{n+1}=0 $}.
 	} 
 	\tbx{ if we reverse the Euclidean algorithm i.e. write $r_n=r_{n-2}-q_nr_{n-1}$ and use the 
 		preceding equation for $r_{n-2},r_{n-1}$ to write $r_n$ in terms of $r_{n-3},r_{n-2}$ and 
@@ -485,7 +485,7 @@
 		we have $x^d=1.$ and in particular $x^m=1\implies m||x|.$
 	}
 	\tbx{Any two cyclic groups of same finite order are isomorphic and a cyclic group of infinite order
-		is isomorphic to $\Z.$ So cyclic group of order $ n $ an be concidered as $ Z_n=\Z/n\Z $.
+		is isomorphic to $\Z.$ So cyclic group of order $ n $ can be considered as $ Z_n=\Z/n\Z $.
 	}
 	\tbx{for $x\in G$ (group) we have
 		
@@ -499,7 +499,7 @@
 	\tbx{for $H=\langle x \rangle $ :
 		
 			\y  if $|x|=\infty$ then $H=\langle x^a \rangle$ iff $a=\pm 1$ \\
-			\y   if $|x|=n<\infty$ the $H=\langle x^a \rangle$ iff $(n,a)=1$ \\ 
+			\y   if $|x|=n<\infty$ then $H=\langle x^a \rangle$ iff $(n,a)=1$ \\ 
 			so the number of generators of $H$ is $\varphi (n).$\\
 			\y   Every subgroup of $H$ is cyclic i.e. if $K \ll H$ then $K=\langle x^k \rangle$ \\ 
 			where $k$ is the smallest +ve integer such that $x^k\in K$\\
@@ -768,7 +768,7 @@
 		$ \{\sigma_g\}\cong G/C_G(H) $ so $ G/C_G(H) \cong $ subgroup of $ Aut(H) $ if $ H $ is normal in $ G $ 
 	}
 	\tbx{clearly $ K \trianglelefteq N_G(K) $ so we have \\
-		$ N_G(K)/C_G(K) \cong $ a subgroup of $ Aut(H) .$\\
+		$ N_G(K)/C_G(K) \cong $ a subgroup of $ Aut(K) .$\\
 		Particularly $ G/Z(G) \cong $ a subgroup of $ Aut(G) .$
 	}
 	\tbx{the preceding mentioned subgroup of $ Aut(G) $ formed by conjugation is called inner automorphism of $ G $ denoted by 
@@ -863,7 +863,7 @@
 		\y  $ Z(P) \neq \{1 \}.$ i.e. center of $ P $ is not trivial \\
 		\y  for non trivial $ H \trianglelefteq P $ then $ H \cap Z(P) \neq 1 .$ \\ 
 		\snote{ In particular every normal subgroup of order $ p $ of $ P $ is contained in $ Z(P) .$}\\
-		\y  for $ H \trianglelefteq P $ and if $ p^b | |H| $ then $ H $ contains a group of order $ p^b $ which is normal in $ P $ \snote{ In particular $ P $ has a normal subgroup $ p^b $ for every $b \in \{0,1,\ck , a\} $} \\
+		\y  for $ H \trianglelefteq P $ and if $ p^b | |H| $ then $ H $ contains a group of order $ p^b $ which is normal in $ P $ (In particular $ P $ has a normal subgroup of order $ p^b $ for every $b \in \{0,1,\ck , a\} $) \\
 		\y  if proper $ H \ll  P $ then proper $ H \ll N_P(H) $ i.e. every proper subgroup of $ P $ is a proper subgroup of its normaliser in $ P .$ \\
 		\y  Every maximal subgroup of $ P $ is of index $ p $  and is normal. 
 		
@@ -888,7 +888,7 @@
 		\y  $ G \cong A_1 \times A_2 \times \ck \times A_k $ where $ |A_i|=p_i^{\alpha_i} .$ \\
 		\y  each $ A_i \cong Z_{p_i^{\beta_{i1}}} \times Z_{p_i^{\beta_{i2}}}\times \ck \times Z_{p_i^{\beta_{it}}}$  with  
 		$ \beta_{i1}\geq \beta_{i2} \geq \ck \geq \beta_{it} $ and $ \beta_{i1}+\beta_{i2}+\ck +\beta_{it} = \alpha_i $\\
-		\snote{$ p^\beta_{ij} $ are called elementary divisors of $ G $}\\
+		\snote{$ p_i^{\beta_{ij}} $ are called elementary divisors of $ G $}\\
 		\y  This decomposition is unique (till isomorphism.) 
 		
 	}
@@ -1116,7 +1116,7 @@
 			$ \frac{ n! }{(k_1!m_{1}^{k_1})(k_2!m_{2}^{k_2})\ck (k_r!m_{r}^{k_r})}=\frac{ n! }{\prod_{i=1}^{r}k_i!m_i^{k_i}} .$
 		\end{center}
 	}
-	\tbx{from preceding point we have, if $ \mathcal{ K } $ is a transposition conjugacy class of $ S_n $ and $ \mathcal{ K }' $ is any other conjugacy class on an element of order $ 2 $ that is not a transposition of $ S_n $ then except for $ n=6 \; (S_6)$ $ |K|\neq |K'| $ (for $ S_6 $ $ |K|=15 $ and for class $ 3 $ disjoint transposition $ |K'|=15 $ only exception).
+	\tbx{from preceding point we have, if $ K $ is a transposition conjugacy class of $ S_n $ and $  K' $ is any other conjugacy class on an element of order $ 2 $ that is not a transposition of $ S_n $ then except for $ n=6 \; (S_6)$ $ |K|\neq |K'| $ (for $ S_6 $ $ |K|=15 $ and for class $ 3 $ disjoint transposition $ |K'|=15 $ only exception).
 	}
 		\tbx{from preceding two points we have :
 		\begin{center}
@@ -1225,7 +1225,7 @@ $ GL(F) = \{A_{n\tm n}=[a_{ij}]|| a_{ij}\in F, Det(A)\neq 0\}$ }
 	\tbx{ if $ |F|=q<\infty  $ then 
 	\[|SL_n(F)|= \frac{ |GL_n(F) |}{q-1} \]  
 	\snote{use the fact that determinant is homomorphism from $ GL_n(F)\ra F^* $ with kernel $ SL_n(F) $ and $ 1^{st} $ isomorphism theorem}.}
-	\tbx{ For a prime $ p $ is $ V $ is an abelian group(additive) of order $ p^n $ and property $ pv=v+\ck+v=0 \; \forall v\in V $ then $ V $ is a $ n $ dimensional vector space over $ F_p $ so automorphisms of $ V $ are precisely non singular linear transformations from $ V $ to itself i.e. $ Aut(V) \cong GL(V)\cong GL_n(F_p)$ so one can say $ Aut(\underbrace{Z_p\tm Z_p\tm \ck \tm Z_p}_{n\w{ time}}) \cong GL_n(F_p)$ or $ | Aut(\underbrace{Z_p\tm Z_p\tm \ck \tm Z_p}_{n\w{ time}}) |=(p^n-1)(p^n-p)\ck (p^n-p^{n-1}) $ }
+	\tbx{ For a prime $ p $ if $ V $ is an abelian group(additive) of order $ p^n $ with property that $ pv=v+\ck+v=0 \; \forall v\in V $ then $ V $ is a $ n $ dimensional vector space over $ F_p $ so automorphisms of $ V $ are precisely non singular linear transformations from $ V $ to itself i.e. $ Aut(V) \cong GL(V)\cong GL_n(F_p)$ so one can say $ Aut(\underbrace{Z_p\tm Z_p\tm \ck \tm Z_p}_{n\w{ time}}) \cong GL_n(F_p)$ or $ | Aut(\underbrace{Z_p\tm Z_p\tm \ck \tm Z_p}_{n\w{ time}}) |=(p^n-1)(p^n-p)\ck (p^n-p^{n-1}) $ }
 	\tbx[Semi direct relation and presentation of groups of order $ p^3 $  ]{ \y from Semi direct products we have a group of order $ p^3 $ has only $ 2 $ non-abelian groups i.e. $ Z_{p^2}\smdp Z_p$ and $ (Z_p\tm Z_p) \smdp Z_p$ now from preceding arguments if $ H=Z_p\tm Z_p $ them $ Aut(H)\cong GL_2(F_p) $ or $ |Aut(H)|=(p^2-1)(p^2-p)=p(p-1)(p^2-1) $ thus by cauchy's theorem $ Aut(H) $ has an non trivial group of order $ p $ \\
 	\y we define this automorphism by: if $H=\gen{a}\tm \gen{b}  $ and $ K=\gen{x} $ then define $ \phi: K\ra Aut(H) $ by  $ x.a=ab $ and $ x.b=b $ in additive sense if we look at $ H $ as vector space over $ F_p $ then $ x $ acts as a non-singular linear transformation of $ x(a)=a+b $ and $ x(b)=a $ where $ \{a,b\} $ forms a basis of $ H $ so matrix of $ x \; =\begin{bmatrix}
 		1&0\\
@@ -1254,8 +1254,8 @@ we  have $ h^p=I+\sum\limits_{k=1}^{p} {p \choose k } N^p \equiv I \pmod{p}$ if 
 if $ ch(F)=2 $ then $ {2 \choose 2}=1 $ so order may vary }
 
 \subsection{\small Familiar $ Q,\; Z,\; R,\; C $ and their quotient Groups properties }
-\tbx[Z]{ let $ Z\tm Z\tm \ck Z $ n times be written as $ Z^n $ then\\
-\y $ Z^n\not\cong Z^m $ iff $ m\neq n $ \snote{ $ Z^n $ is generated by a set of cardinality atleast $ n $ like basis}
+\tbx[Z]{ let $ Z\tm Z\tm \ck Z $ $ n-$times be written as $ Z^n $ then\\
+\y $ Z^n\not\cong Z^m $ iff $ m\neq n $ \snote{ as $ Z^n $ is generated by a set of cardinality atleast $ n $ like basis}
  }
 \tbx[$ Q $  ]{
 \y every element \snote{except $ 0 $ } in $ Q $ has infinite order.\\
