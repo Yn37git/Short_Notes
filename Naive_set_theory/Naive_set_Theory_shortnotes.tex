@@ -61,19 +61,19 @@
 	\item \textbf{Axiom of Powers} : For each set there exists a collection of sets that contains among its elements all the subsets of the given set i.e. 
 	for given set 
 	\begin{center}
-		$\exists P(A)={X:X\subset A}$
+		$\exists P(A)=\{X:X\subset A\}$
 	\end{center}
 	\item \textbf{Axiom of Infinity} : There exist a set containing $0$ and containing the successor of each element. (here it is customary to define $0=\phi$= empty set , successor of $x=x^+=x \cup \{x\}$).
 	
 	\item \textbf{Axiom of Choice} : The Cartesian product of non empty family of non empty sets is non empty.\\
 	Can be interpreted as : There exist a function ($f$) whose domain is collection of non empty sets ($\{A_i\}$) (can be infinitely many) such that $f(A_i)\in A_i$ for each $i$ (here the function chooses an element of the set so is called a choice function hence name of the theorem).
-	\item \textbf{Axiom of substitution} : If $S(a,b)$ is a sentence such that for each $a$ in a set $A$ the set $\{b:S(a,b)\}$ can be formed, then there exists a function $F$ with domain $A$ such that $F(a)=\{b: S(a, b)\}$ for each $a$ in $A$. (i.e. this axiom enables to make new sets out of old sets by substituting for old elements in the new elements, i.e. informally anything intelligent one can do to the elements of a set yields a set).
+	\item \textbf{Axiom of substitution} : If $S(a,b)$ is a sentence such that for each $a$ in a set $A$ the set $\{b:S(a,b)\}$ can be formed, then there exists a function $F$ with domain $A$ such that $F(a)=\{b: S(a, b)\}$ for each $a$ in $A$. (i.e. this axiom enables to make new sets out of old sets by substituting for old elements in the new elements, i.e. informally any manipulations one can do to the elements of a set yields a set).
 \end{enumerate}
 
 \section{Set properties and generalizations}
 \subsection{Standard Definitions}
 \begin{easylist}
-	&Complement of set $A$ $(A')$ : $A'=\{x:x\notin A\}$ where a set $E$ is assumed to contain all other sets in involved and $x$ is taken from $E$.
+	& Complement of set $A$ $(A')$ : $A'=\{x:x\notin A\}$, here $x$ is taken from set $E$, where a set $E$ is assumed to contain all other sets involved in the particular needed operations. 
 	& Subset : $B$ is subset of $A$ ($B\subset A$) iff $x\in B \implies x\in A$
 	& Proper subset : $A\subsetneqq B$ iff $A\subset B$ and $A\neq B$
 	& Union : $A\cup B=\{x: x\in A\w{ or }x\in B\}$,
@@ -106,38 +106,46 @@
 \begin{easylist}
 	\subsection{Relations}
 	& An ordered pair $(a,b)$ can be denoted by $\{\{a\},\{a,b\}\}$
-	& A relation from set $X\w{ to set }Y$ ($xRY$) is a subset of all ordered pairs from $X \w{ to t}$ i.e.\\ $R\subset \{(x,y):a\in X \w{ and }b\in Y\}$
-	& set $X$ is called Domain of $R$ ($Dom(R)$) and set $Y$ is called range of R ($Ran(Y)$).
-	& a Relation from $X \w{ to } Y$ is a equivalence iff it is  Reflexive ($xRX$ or $(x,x)\in R\; \forall x\in X$), Symmetric ($xRy\implies yRx$ or $(x,y)\in R \implies (y,x)\in R$) and Transitive ($xRy,yRz\implies xRz$ or $(x,y),(y,z)\in R\implies (x,z)\in R$)
+	& A relation from set $X\w{ to set }Y$ ($xRy$) is a subset of all ordered pairs from $X $ and $ Y $  in the form $R\subset \{(x,y):a\in X \w{ and }b\in Y\}$
+	& set $X$ is called Domain of $R$ ($Dom(R)$) and set $Y$ is called range of R ($Ran(R)$).
+	& a Relation from $X \w{ to } X$ is called an Equivalence Relation iff (if and only if) it is  Reflexive ($xRx$ or $(x,x)\in R\; \forall x\in X$), Symmetric ($xRy\implies yRx$ or $(x,y)\in R \implies (y,x)\in R$) and Transitive ($xRy,yRz\implies xRz$ or $(x,y),(y,z)\in R\implies (x,z)\in R$).
 	\subsection{Functions}
-	& A function from $f:X\ra Y$ is a relation $R:X \w{ to } Y$ such that $Dom(R)=X$ and for each $x\in X$ there exists a unique $y \in Y$ such that $f(x)=y$ ($xRy$).
-	& A function  $x:I\ra X$ is sometimes called a family , $I$ is an index set, $X$ is indexed set, $i\in I$ is called index and $x_i=x(i)$ and is often called ($x$) as a family $\{x_i\}$ in $X$ (here in general $I$ is some standard set like $\mathbb{N},(a,b)$). 
+	& A function from $f:X\ra Y$ is a relation $f:X \w{ to } Y$ such that $Dom(f)=X$ and for each $x\in X$ there exists a unique $y \in Y$ such that $f(x)=y$ (i.e. $xfy_1$ , $ xfy_2 $ then $ y_1=y_2 $).
+	& A function  $x:I\ra X$ is sometimes called a family , $I$ is an index set, $X$ is indexed set, $i\in I$ is called index and $x_i=x(i)$ and $ Ran(I) $ is often called as a family $\{x_i\}$ in $X$ (here in general $I$ is some standard set like $\mathbb{N},(a,b)$). 
 	& $\underset{i\in I}{\cup}A_i$ (say for $A:I\in P(X)$) means union of range of function $A$ (subsets of $X$) with domain in $I$. This is often called arbitrary union.
 	& Similarly  $\underset{i\in I}{\cap}A_i$ is arbitrary intersection.
 	& Laws or properties regarding unions and intersections hold for arbitrary indexes.\\
-	& \textbf{Inverse of a function} : if function $f:A\ra B$ the $f^{-1}:P(B)\ra P(A)$ such that for every $Y\subset B$ $f^{-1}(Y)=\{x\in A:f(x)\in Y\}$
+	& \textbf{preimage of a function $ f^{-1} $ } : for function $f:A\ra B$ define function $f^{-1}:P(B)\ra P(A)$ such that for every $Y\subset B,$ $f^{-1}(Y)=\{x\in A:f(x)\in Y\}$
 	& a function is one-one iff every distinct element in the domain is mapped to distinct element in the range
+	i.e. $ f $ is $ 1-1 $ function iff $ f(x_1)=f(x_2) \iff x_1=x_2$.
 	& a function $f:A\ra B$ is onto iff $Ran(f)=B$
 	& $f(f^{-1}(Y))\subset Y$ and $f(f^{-1}(Y)) = Y $ iff $f$ is onto 
-	& $X \subset f^{-1}(f(X))$ and $f^{-1}(f(X)) = X $ iff $f$ is one-one 
+	& $X= f^{-1}(f(X))$ and $f^{-1}(f(\{x\})) = \{x\} $ iff $f$ is one-one 
 
-	& for any function $f$ :
-	\begin{center} 
-		 $f(\underset{i\in I}{\cup}A_i) =\underset{i\in I}{\cup}f(A_i))$\\
-		$f(\underset{i\in I}{\cap}A_i) =\underset{i\in I}{\cap}f(A_i)) \iff f$ is one-one.\\
-		$f^{-1}(\underset{i\in I}{\cup}B_i) =\underset{i\in I}{\cup}f^{-1}(B_i))$\\
-		$f^{-1}(\underset{i\in I}{\cap}B_i) =\underset{i\in I}{\cap}f^{-1}(B_i))$\\ 
-	 \end{center} 
+	& for any function $f:A\ra B$ and if $ f(A_i)=\{f(a)|a\in A_i\} $ then 
+	 \end{easylist}
+
+	\begin{align*} 
+		 f(\underset{i\in I}{\cup}A_i) &=\underset{i\in I}{\cup}f(A_i).\\
+		 f(\underset{i\in I}{\cap}A_i) &\subset\underset{i\in I}{\cap}f(A_i). \\
+		f^{-1}(\underset{i\in I}{\cup}B_i)& =\underset{i\in I}{\cup}f^{-1}(B_i).\\
+		f^{-1}(\underset{i\in I}{\cap}B_i)& =\underset{i\in I}{\cap}f^{-1}(B_i).\\
+		\w{ for every} \underset{i\in I}{\cup}A_i &\subset A\; :\\
+		f(\underset{i\in I}{\cap}A_i) =\underset{i\in I}{\cap}f(A_i) &\iff f \w{ is one-one}.
+	 \end{align*} 
+	 
+	  \begin{easylist}
 	& $f^{-1}(B-Y)=A-f^{-1}(Y)$ (for $f:A\ra B$) \\
 	(i.e. $f^{-1}(Y^c)=(f^{-1}(Y))^c$ where $^c$ denotes respective complements)
-	& $f(A-X)\subset B-f(X)$ iff $f$ is one-one.\\
+	& for all $ X\subset A $ :\\
+	$f(A-X)\subset B-f(X)$ iff $f$ is one-one.\\
 	$B-f(X) \subset f(A-X)$ iff $f$ is onto.\\
 	$\implies f(A-X) = B-f(X)$ iff $f$ is bijective.
 	& if $ A $ and $ B $ are finite sets such that $ |A|=n $ and $ |B|=m $ then
 	&& Number of functions from $ A\ra B $ is equal to $ m^n $\\
-	 (each element of $ A $ has $ |B| $ choices to be mapped to )
-	&& Number of one-one functions from $ A\ra B $ is equal to $ {m \choose n} m!=\frac{ m! }{(m-n)!}  $ 
-	\\ (is possible iff $ |B|\geq |A| $ )
+	 (use : each element of $ A $ has $ |B| $ choices to be mapped to )
+	&& Number of one-one functions from $ A\ra B $ is equal to $ {m \choose n} n!=\frac{ m! }{(m-n)!}  $ 
+	\\ (is possible iff $ |B|\geq |A| $, use: first choose $ n $ elements from $ B $ and each of these can form $ n! $ ordered pairs  )
 		&& Number of onto functions from $ A\ra B $ is equal to $ \sm{i=0}{m-1}(-1)^i {m\choose i} (m-i)^n$ 
 	\\ (is possible iff $ |A|\geq |B| $ )
 	\subsection{Cartesian Product}
@@ -160,7 +168,7 @@
 
 	\end{enumerate}
 	& A \textbf{sequence} is a function from $\W$ to $X$(any set).
-	& \textbf{Recursion Theorem} : if $a$ is an element of set $X$ and if function $f:X\ra X$ then there exists a function $u:\W \ra X$ such that $u(0)=a$ and $u(n^+)=f(u(n))$ (i.e. there exists recursive sequences which can be defined from a single elements of a set and a function on the set0).
+	& \textbf{Recursion Theorem} : if $a$ is an element of set $X$ and if function $f:X\ra X$ then there exists a function $u:\W \ra X$ such that $u(0)=a$ and $u(n^+)=f(u(n))$ (i.e. there exists recursive sequences which can be defined from a single elements of a set and a function on the set).
 	& if $X$ is a partially ordered set then it can be converted to a totally ordered one by replacing the corresponding relation.
 	& if $\leqq$ is partial ordering of $X$ then:
 	&& $\forall x \in X$ if $x \leqq a$ then a is an upper bound if $a\in X$ and $a\leqq x \implies a=x$ then $a$ is maximal element.   
@@ -169,7 +177,7 @@
 	& a partially ordered set $X$ is well ordered iff every subset of $X$ has a least element
 	& Every well ordered set is a totally ordered.
 	& \textbf{Well ordering Theorem} : Every set can be well ordered \\
-	note: not every partial order can be made well ordering but the underlying set (domain) can be well ordered by `a' order).
+	(note: not every partial order can be made well ordering but the underlying set (domain) can be well ordered by `a' order).
 	& \textbf{Principle of Transfinite Induction} : If $X$ is well ordered set and $S\subset X$ such that if all elements $s\leqq x$ belong to $S$ then $x\in S$ then $S=X$
 	& Axiom of Choice $\iff$ Zorn's Lemma $\iff$ Well ordering theorem
 	& for a well ordered set $W$ and any set $X$ :
